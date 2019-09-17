@@ -1,0 +1,3 @@
+Recipes_RU = {
+    Recipe_Drink_exclusive_alcohol = "Пить эксклюзивный алкоголь",
+}

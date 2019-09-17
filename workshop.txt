@@ -1,0 +1,7 @@
+version=1
+id=
+title=Permanent Effects Drinks
+description=Modification to Project Zomboid that adds drinks with a permanent effect
+description=
+tags=
+visibility=private

@@ -1,0 +1,126 @@
+module Permanent
+{
+    imports
+    {
+        Base
+    }
+
+    item HastyHerring
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = HastyHerring,
+        Icon 			= WhiskeyFull,
+    }
+
+    item GreedyHammer
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = GreedyHammer,
+        Icon 			= WhiskeyFull,
+    }
+
+    item DoubleGreedyHammer
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = DoubleGreedyHammer,
+        Icon 			= WhiskeyFull,
+    }
+
+    item GreedyAxe
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = GreedyAxe,
+        Icon 			= WhiskeyFull,
+    }
+
+    item DoubleGreedyAxe
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = DoubleGreedyAxe,
+        Icon 			= WhiskeyFull,
+    }
+
+    item StrayBullet
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = StrayBullet,
+        Icon 			= WhiskeyFull,
+    }
+
+    item SlenderDoe
+    {
+        Weight    		= 0.7,
+        Type   			= Normal,
+        DisplayName     = SlenderDoe,
+        Icon 			= WhiskeyFull,
+    }
+
+    recipe Drink Exclusive Alcohol
+    {
+        HastyHerring,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkHastyHerring,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        GreedyHammer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkGreedyHammer,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        DoubleGreedyHammer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleGreedyHammer,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        GreedyAxe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkGreedyAxe,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        DoubleGreedyAxe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleGreedyAxe,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        StrayBullet,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkStrayBullet,
+        Time:     1500.0,
+    }
+
+    recipe Drink exclusive alcohol
+    {
+        SlenderDoe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkSlenderDoe,
+        Time:     1500.0,
+    }
+}
