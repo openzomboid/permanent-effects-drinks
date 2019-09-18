@@ -1,0 +1,54 @@
+module Permanent {
+    imports {
+        Base
+    }
+
+    item HastyHerring {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = HastyHerring,
+    }
+
+    item GreedyHammer {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = GreedyHammer,
+    }
+
+    item DoubleGreedyHammer {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = DoubleGreedyHammer,
+    }
+
+    item GreedyAxe {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = GreedyAxe,
+    }
+
+    item DoubleGreedyAxe {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = DoubleGreedyAxe,
+    }
+
+    item StrayBullet {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = StrayBullet,
+    }
+
+    item SlenderDoe {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = WhiskeyFull,
+        DisplayName = SlenderDoe,
+    }
+}
