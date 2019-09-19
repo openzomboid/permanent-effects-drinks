@@ -31,8 +31,6 @@ function PerkLevelup(player, perkType, addGlobalXP)
             player:LevelPerk(perkType);
             player:getXp():setXPToLevel(perkType, player:getPerkLevel(perkType));
         end
-    else
-        player:Say(getText("Permanent_i_shouldnt_have_done_it"))
     end
 end
 

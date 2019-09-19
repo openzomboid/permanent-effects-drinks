@@ -1,3 +1,0 @@
-Permanent_EN = {
-    Permanent_i_shouldnt_have_done_it = "I shouldn't have done it"
-}

@@ -1,3 +1,0 @@
-Permanent_RU = {
-    Permanent_i_shouldnt_have_done_it = "Не стоило мне этого делать"
-}
