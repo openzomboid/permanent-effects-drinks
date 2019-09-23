@@ -38,5 +38,5 @@ the Steam workshop or create issue in [github repository](https://github.com/gam
 ## Thanks
 Thanks to everyone for the help and interest in this mod. You make this mod better.
 
-[https://steamcommunity.com/profiles/76561198198109711](Ristisi) - For the main logo
-[https://steamcommunity.com/profiles/76561198028625569](Mixa100100100) - For the main mod preview
+* [Ristisi](https://steamcommunity.com/profiles/76561198198109711) - For the main logo
+* [Mixa100100100](https://steamcommunity.com/profiles/76561198028625569) - For the main mod preview
