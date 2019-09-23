@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [v0.2.2] - 2019-09-19
+## [v0.2.2] - 2019-09-23
 ### Added
 - Replaced logo image. Thanks for image to Ristisi
 
