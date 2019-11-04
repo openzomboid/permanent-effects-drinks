@@ -14,7 +14,7 @@ DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1,
 GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy by 1
 DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1
 StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1
-SlenderDoe         | Slender Doe          | Sets the character's weight to 77 kg (fix broken ingame weight loss)
+SlenderDoe         | Slender Doe          | Sets the character's weight to 80 kg (fix broken ingame weight loss)
 
 ## How to Use
 At this moment items can be only spawned by admin. Use /additem Permanent.Code to add drink to inventory.
