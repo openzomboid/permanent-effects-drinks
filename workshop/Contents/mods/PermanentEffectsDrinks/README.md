@@ -7,10 +7,11 @@ Modification to Project Zomboid that adds drinks with a permanent effects
 
 Code               | Name                 | Effect
 ------------------ | -------------------- | -------------
-HastyHerring       | Hasty Herring        | Permanently increases Fitness by 1, Sprinting by 1
-GreedyHammer       | Greedy Hammer        | Permanently increases Strength by 1, Blunt Accuracy by 1
-DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1, Blunt Accuracy by 2
-GreedyAxe          | Greedy Axe           | Permanently increases Strength by 1, Blade Accuracy by 1
+HastyHerring       | Hasty Herring        | Permanently increases Sprinting by 1
+DoubleHastyHerring | Double Hasty Herring | Permanently increases Fitness by 1, Sprinting by 1
+GreedyHammer       | Greedy Hammer        | Permanently increases Blunt Accuracy by 1
+DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1, Blunt Accuracy by 1
+GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy by 1
 DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1
 StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1
 SlenderDoe         | Slender Doe          | Sets the character's weight to 77 kg (fix broken ingame weight loss)

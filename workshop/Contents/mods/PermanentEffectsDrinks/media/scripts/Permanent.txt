@@ -5,25 +5,33 @@ module Permanent {
 
     item HastyHerring
     {
-        Weight      = 0.7,
+        Weight      = 0.5,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = HastyHerring,
         DisplayName = HastyHerring,
+    }
+
+    item DoubleHastyHerring
+    {
+        Weight      = 1.0,
+        Type        = Normal,
+        Icon        = HastyHerring,
+        DisplayName = DoubleHastyHerring,
     }
 
     item GreedyHammer
     {
         Weight      = 0.7,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = GreedyHammer,
         DisplayName = GreedyHammer,
     }
 
     item DoubleGreedyHammer
     {
-        Weight      = 0.7,
+        Weight      = 1.4,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = DoubleGreedyHammer,
         DisplayName = DoubleGreedyHammer,
     }
 
@@ -31,15 +39,15 @@ module Permanent {
     {
         Weight      = 0.7,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = GreedyAxe,
         DisplayName = GreedyAxe,
     }
 
     item DoubleGreedyAxe
     {
-        Weight      = 0.7,
+        Weight      = 1.4,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = DoubleGreedyAxe,
         DisplayName = DoubleGreedyAxe,
     }
 
@@ -47,7 +55,7 @@ module Permanent {
     {
         Weight      = 0.7,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = StrayBullet,
         DisplayName = StrayBullet,
     }
 
@@ -55,16 +63,26 @@ module Permanent {
     {
         Weight      = 0.7,
         Type        = Normal,
-        Icon        = WhiskeyFull,
+        Icon        = SlenderDoe,
         DisplayName = SlenderDoe,
     }
     
-        recipe Drink Exclusive Alcohol
+    recipe Drink Exclusive Alcohol
     {
         HastyHerring,
 
         Result:   WhiskeyEmpty,
         OnCreate: DrinkHastyHerring,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol
+    {
+        DoubleHastyHerring,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleHastyHerring,
         Time:     200.0,
         Sound:    DrinkingFromBottle,
     }
