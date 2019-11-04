@@ -7,10 +7,13 @@ All notable changes to this project will be documented in this file.
 
 ## [v0.3.1] - 2019-11-04
 ### Changed
-- Rebalanced drinks.
+- Removed the increase in strength and fitness from simple drinks. 
+- Removed the double increase in perks from double drinks. 
+- Drink Slender Doe sets the character's weight to 80 kg. instead of 77 kg.
 
 ### Added
-- Added icons.
+- Added custom icons.
+- Added drink Double Hasty Herring that permanently increases Fitness by 1 and Sprinting by 1 
 
 ## [v0.2.3] - 2019-09-24
 ### Fixed
