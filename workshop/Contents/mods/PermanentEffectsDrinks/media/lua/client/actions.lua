@@ -5,7 +5,7 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.3.1"
+local version = "0.4.0"
 
 -- SlenderDoeSetWeight contains the weight value that will be set to
 -- the character after applying the drink.
@@ -41,45 +41,52 @@ function PerkLevelup(player, perkType, addGlobalXP)
     end
 end
 
--- DrinkHastyHerring adds action to drink BarMenu.HastyHerring.
+-- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
 function DrinkHastyHerring(items, result, player)
     PerkLevelup(player, Perks.Sprinting, true);
 end
 
--- DrinkDoubleHastyHerring adds action to drink BarMenu.DoubleHastyHerring.
+-- DrinkDoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
 function DrinkDoubleHastyHerring(items, result, player)
     PerkLevelup(player, Perks.Sprinting, true);
     PerkLevelup(player, Perks.Fitness, false);
 end
 
--- DrinkGreedyHammer adds action to drink BarMenu.GreedyHammer.
+-- DrinkGreedyHammer adds action to drink Permanent.GreedyHammer.
 function DrinkGreedyHammer(items, result, player)
     PerkLevelup(player, Perks.Blunt, true);
 end
 
--- DrinkDoubleGreedyHammer adds action to drink BarMenu.DoubleGreedyHammer.
+-- DrinkDoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
 function DrinkDoubleGreedyHammer(items, result, player)
     PerkLevelup(player, Perks.Blunt, true);
     PerkLevelup(player, Perks.Strength, false);
 end
 
--- DrinkGreedyAxe adds action to drink BarMenu.GreedyAxe.
+-- DrinkGreedyAxe adds action to drink Permanent.GreedyAxe.
 function DrinkGreedyAxe(items, result, player)
     PerkLevelup(player, Perks.Axe, true);
 end
 
--- DrinkDoubleGreedyAxe adds action to drink BarMenu.DoubleGreedyAxe.
+-- DrinkDoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
 function DrinkDoubleGreedyAxe(items, result, player)
     PerkLevelup(player, Perks.Axe, true);
     PerkLevelup(player, Perks.Strength, false);
 end
 
--- DrinkStrayBullet adds action to drink BarMenu.StrayBullet.
+-- DrinkStrayBullet adds action to drink Permanent.StrayBullet.
 function DrinkStrayBullet(items, result, player)
     PerkLevelup(player, Perks.Aiming, true);
 end
 
--- DrinkSlenderDoe adds action to drink BarMenu.SlenderDoe.
+-- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
 function DrinkSlenderDoe(items, result, player)
     player:getNutrition():setWeight(SlenderDoeSetWeight);
+end
+
+-- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
+function DrinkNicotineOverdose(items, result, player)
+    if player:HasTrait("Smoker") then
+        player:getTraits():remove("Smoker")
+    end
 end

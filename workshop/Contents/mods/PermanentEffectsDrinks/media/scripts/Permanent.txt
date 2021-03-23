@@ -66,6 +66,14 @@ module Permanent {
         Icon        = SlenderDoe,
         DisplayName = SlenderDoe,
     }
+
+    item NicotineOverdose
+    {
+        Weight      = 0.7,
+        Type        = Normal,
+        Icon        = NicotineOverdose,
+        DisplayName = NicotineOverdose,
+    }
     
     recipe Drink Exclusive Alcohol
     {
@@ -143,6 +151,16 @@ module Permanent {
 
         Result:   WhiskeyEmpty,
         OnCreate: DrinkSlenderDoe,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol
+    {
+        NicotineOverdose,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkNicotineOverdose,
         Time:     200.0,
         Sound:    DrinkingFromBottle,
     }

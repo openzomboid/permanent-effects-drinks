@@ -7,4 +7,5 @@ Items_RU = {
 	DisplayName_DoubleGreedyAxe = "Двойная Жадная Секира",
 	DisplayName_StrayBullet = "Шальная Пуля",
 	DisplayName_SlenderDoe = "Стройная Лань",
+    DisplayName_NicotineOverdose = "Никотиновая Передозировка",
 }
