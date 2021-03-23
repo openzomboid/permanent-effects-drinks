@@ -15,6 +15,7 @@ GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy
 DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1
 StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1
 SlenderDoe         | Slender Doe          | Sets the character's weight to 80 kg (fix broken ingame weight loss)
+NicotineOverdose   | Nicotine Overdose    | The best way to quit smoking
 
 ## How to Use
 At this moment items can be only spawned by admin. Use /additem Permanent.Code to add drink to inventory.
