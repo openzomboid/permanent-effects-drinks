@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.4.0] - 2021-03-24
+### Added
+- Added drink Nicotine Overdose depriving the character of his addiction to smoking.
+
 ## [v0.3.1] - 2019-11-04
 ### Changed
 - Removed the increase in strength and fitness from simple drinks. 
@@ -33,7 +37,8 @@ All notable changes to this project will be documented in this file.
 Slender Doe. 
 - Added EN and RU translations.
 
-[Unreleased]: https://github.com/gorcon/rcon-cli/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/gorcon/rcon-cli/compare/v0.4.0...HEAD
+[v0.3.1]: https://github.com/gorcon/rcon-cli/compare/v0.3.1...v0.4.0
 [v0.3.1]: https://github.com/gorcon/rcon-cli/compare/v0.2.3...v0.3.1
 [v0.2.3]: https://github.com/gorcon/rcon-cli/compare/v0.2.2...v0.2.3
 [v0.2.2]: https://github.com/gorcon/rcon-cli/compare/v0.2.1...v0.2.2
