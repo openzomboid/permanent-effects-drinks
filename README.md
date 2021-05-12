@@ -1,5 +1,5 @@
 # Permanent Effects Drinks
-[![Steam Workshop](steam.svg)](https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334
+[![Steam Workshop](steam.svg)](https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334)
 
 Modification to Project Zomboid that adds drinks with a permanent effects
 
