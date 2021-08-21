@@ -3,8 +3,7 @@
 
 Permanent Effects Drinks adds drinks with a permanent effects to Project Zomboid game.  
 
-## Description
-### Drink list
+## Drink list
 Code               | Name                 | Effect
 ------------------ | -------------------- | -------------
 HastyHerring       | Hasty Herring        | Permanently increases Sprinting by 1
