@@ -9,6 +9,7 @@ module Permanent {
         Type        = Normal,
         Icon        = HastyHerring,
         DisplayName = HastyHerring,
+        Tooltip     = Tooltip_item_HastyHerring,
     }
 
     item DoubleHastyHerring
@@ -17,6 +18,7 @@ module Permanent {
         Type        = Normal,
         Icon        = HastyHerring,
         DisplayName = DoubleHastyHerring,
+        Tooltip     = Tooltip_item_DoubleHastyHerring,
     }
 
     item GreedyHammer
@@ -25,6 +27,7 @@ module Permanent {
         Type        = Normal,
         Icon        = GreedyHammer,
         DisplayName = GreedyHammer,
+        Tooltip     = Tooltip_item_GreedyHammer,
     }
 
     item DoubleGreedyHammer
@@ -33,6 +36,7 @@ module Permanent {
         Type        = Normal,
         Icon        = DoubleGreedyHammer,
         DisplayName = DoubleGreedyHammer,
+        Tooltip     = Tooltip_item_DoubleGreedyHammer,
     }
 
     item GreedyAxe
@@ -41,6 +45,7 @@ module Permanent {
         Type        = Normal,
         Icon        = GreedyAxe,
         DisplayName = GreedyAxe,
+        Tooltip     = Tooltip_item_GreedyAxe,
     }
 
     item DoubleGreedyAxe
@@ -49,6 +54,7 @@ module Permanent {
         Type        = Normal,
         Icon        = DoubleGreedyAxe,
         DisplayName = DoubleGreedyAxe,
+        Tooltip     = Tooltip_item_DoubleGreedyAxe,
     }
 
     item StrayBullet
@@ -57,6 +63,7 @@ module Permanent {
         Type        = Normal,
         Icon        = StrayBullet,
         DisplayName = StrayBullet,
+        Tooltip     = Tooltip_item_StrayBullet,
     }
 
     item SlenderDoe
@@ -65,6 +72,7 @@ module Permanent {
         Type        = Normal,
         Icon        = SlenderDoe,
         DisplayName = SlenderDoe,
+        Tooltip     = Tooltip_item_SlenderDoe,
     }
 
     item NicotineOverdose
@@ -73,6 +81,7 @@ module Permanent {
         Type        = Normal,
         Icon        = NicotineOverdose,
         DisplayName = NicotineOverdose,
+        Tooltip     = Tooltip_item_NicotineOverdose,
     }
     
     recipe Drink Exclusive Alcohol
