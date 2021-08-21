@@ -1,8 +1,7 @@
 version=1
 id=1866992334
 title=Permanent Effects Drinks
-description=[h1]Description[/h1]
-description=Modification to Project Zomboid that adds drinks with a permanent effects
+description=Modification to Project Zomboid that adds drinks with a permanent effects.
 description=
 description=[h1]Drink List[/h1]
 description=[table]
