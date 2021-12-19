@@ -5,7 +5,9 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.4.0"
+local version = "0.6.0"
+
+local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
 -- SlenderDoeSetWeight contains the weight value that will be set to
 -- the character after applying the drink.
@@ -21,7 +23,7 @@ function PerkLevelup(player, perkType, addGlobalXP)
 
         player:getXp():AddXP(perkType, amount, false, false, false, true);
 
-        if not perk:isPassiv() then
+        if not perk:isPassiv() and pzversion == "40" then
             -- if addGlobalXP is false current skill points will be used.
             if addGlobalXP then
                 -- add XP only for one level.
