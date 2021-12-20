@@ -74,6 +74,7 @@ description=[h1]Translations[/h1]
 description=[list]
 description=    [*]English (EN)
 description=    [*]Russian (RU)
+description=    [*]Spanish (ES) - Thanks to [url=https://steamcommunity.com/profiles/76561198170110257]@SolidShadow[/url]!
 description=[/list]
 description=I would like to ask you not to upload localized versions of this mod to Steam, but rather post your translations to [url=https://steamcommunity.com/workshop/filedetails/discussion/1866992334/1628538005517020523]translations topic[/url] and I will include it.
 description=That way there won't be extra unsupported copies of the mod and users won't be confused.

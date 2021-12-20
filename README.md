@@ -22,6 +22,7 @@ At this moment items can be only spawned by admin. Use /additem Permanent.Code t
 ## Translations
 * English (EN)  
 * Russian (RU)  
+* Spanish (ES) - Thanks to [@SolidShadow](https://steamcommunity.com/profiles/76561198170110257)!
 
 I would like to ask you not to upload localized versions of this mod to Steam, but rather post your translations to
 [translations topic](https://steamcommunity.com/workshop/filedetails/discussion/1866992334/1628538005517020523) and

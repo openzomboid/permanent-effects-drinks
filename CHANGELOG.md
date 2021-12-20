@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v0.7.0] - 2021-12-20
 ### Added
-- Added Spanish translation.
+- Added Spanish translation. Thanks to [@SolidShadow](https://steamcommunity.com/profiles/76561198170110257)!
 
 ## [v0.6.0] - 2021-12-19
 ### Fixed
