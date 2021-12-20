@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.7.0] - 2021-12-20
+### Added
+- Added Spanish translation.
+
 ## [v0.6.0] - 2021-12-19
 ### Fixed
 - Fix for 41 mp build.
@@ -45,7 +49,8 @@ All notable changes to this project will be documented in this file.
 Slender Doe. 
 - Added EN and RU translations.
 
-[Unreleased]: https://github.com/gorcon/rcon-cli/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/gorcon/rcon-cli/compare/v0.7.0...HEAD
+[v0.5.0]: https://github.com/gorcon/rcon-cli/compare/v0.6.0...v0.7.0
 [v0.5.0]: https://github.com/gorcon/rcon-cli/compare/v0.5.0...v0.6.0
 [v0.5.0]: https://github.com/gorcon/rcon-cli/compare/v0.4.0...v0.5.0
 [v0.4.0]: https://github.com/gorcon/rcon-cli/compare/v0.3.1...v0.4.0

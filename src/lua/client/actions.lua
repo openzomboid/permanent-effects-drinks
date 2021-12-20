@@ -5,7 +5,7 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.6.0"
+local version = "0.7.0"
 
 local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
