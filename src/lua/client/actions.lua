@@ -1,5 +1,5 @@
 --
--- Copyright (c) 2021 outdead.
+-- Copyright (c) 2022 outdead.
 -- Use of this source code is governed by the Apache 2.0 license.
 --
 -- Permanent Effects Drinks adds drinks with a permanent effect
@@ -18,15 +18,6 @@ function PerkLevelup(player, perkType)
     local perkLevel = player:getPerkLevel(perkType);
 
     if perkLevel < 10 then
-        if pzversion == "41.65" then
-            local perk = PerkFactory.getPerk(perkType);
-            local amount = perk:getXpForLevel(perkLevel + 1);
-
-            player:getXp():AddXP(perkType, amount, false, false, false, true);
-
-            return
-        end
-
         player:LevelPerk(perkType, false);
         player:getXp():setXPToLevel(perkType, player:getPerkLevel(perkType));
         SyncXp(player)
