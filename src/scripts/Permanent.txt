@@ -5,83 +5,119 @@ module Permanent {
 
     item HastyHerring
     {
-        Weight      = 0.5,
-        Type        = Normal,
-        Icon        = HastyHerring,
-        DisplayName = HastyHerring,
-        Tooltip     = Tooltip_item_HastyHerring,
+        Weight          = 0.5,
+        Type            = Normal,
+        Icon            = HastyHerring,
+        DisplayName     = HastyHerring,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_HastyHerring,
     }
 
     item DoubleHastyHerring
     {
-        Weight      = 1.0,
-        Type        = Normal,
-        Icon        = HastyHerring,
-        DisplayName = DoubleHastyHerring,
-        Tooltip     = Tooltip_item_DoubleHastyHerring,
+        Weight          = 1.0,
+        Type            = Normal,
+        Icon            = HastyHerring,
+        DisplayName     = DoubleHastyHerring,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_DoubleHastyHerring,
     }
 
     item GreedyHammer
     {
-        Weight      = 0.7,
-        Type        = Normal,
-        Icon        = GreedyHammer,
-        DisplayName = GreedyHammer,
-        Tooltip     = Tooltip_item_GreedyHammer,
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = GreedyHammer,
+        DisplayName     = GreedyHammer,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_GreedyHammer,
     }
 
     item DoubleGreedyHammer
     {
-        Weight      = 1.4,
-        Type        = Normal,
-        Icon        = DoubleGreedyHammer,
-        DisplayName = DoubleGreedyHammer,
-        Tooltip     = Tooltip_item_DoubleGreedyHammer,
+        Weight          = 1.4,
+        Type            = Normal,
+        Icon            = DoubleGreedyHammer,
+        DisplayName     = DoubleGreedyHammer,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_DoubleGreedyHammer,
     }
 
     item GreedyAxe
     {
-        Weight      = 0.7,
-        Type        = Normal,
-        Icon        = GreedyAxe,
-        DisplayName = GreedyAxe,
-        Tooltip     = Tooltip_item_GreedyAxe,
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = GreedyAxe,
+        DisplayName     = GreedyAxe,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_GreedyAxe,
     }
 
     item DoubleGreedyAxe
     {
-        Weight      = 1.4,
-        Type        = Normal,
-        Icon        = DoubleGreedyAxe,
-        DisplayName = DoubleGreedyAxe,
-        Tooltip     = Tooltip_item_DoubleGreedyAxe,
+        Weight          = 1.4,
+        Type            = Normal,
+        Icon            = DoubleGreedyAxe,
+        DisplayName     = DoubleGreedyAxe,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_DoubleGreedyAxe,
     }
 
     item StrayBullet
     {
-        Weight      = 0.7,
-        Type        = Normal,
-        Icon        = StrayBullet,
-        DisplayName = StrayBullet,
-        Tooltip     = Tooltip_item_StrayBullet,
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = StrayBullet,
+        DisplayName     = StrayBullet,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_StrayBullet,
     }
 
     item SlenderDoe
     {
-        Weight      = 0.7,
-        Type        = Normal,
-        Icon        = SlenderDoe,
-        DisplayName = SlenderDoe,
-        Tooltip     = Tooltip_item_SlenderDoe,
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = SlenderDoe,
+        DisplayName     = SlenderDoe,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_SlenderDoe,
     }
 
     item NicotineOverdose
     {
-        Weight      = 0.7,
-        Type        = Normal,
-        Icon        = NicotineOverdose,
-        DisplayName = NicotineOverdose,
-        Tooltip     = Tooltip_item_NicotineOverdose,
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = NicotineOverdose,
+        DisplayName     = NicotineOverdose,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_NicotineOverdose,
+    }
+
+    item GreedySalvation
+    {
+        Weight            = 0.7,
+        Type              = Food,
+        Icon              = GreedySalvation,
+        DisplayName       = GreedySalvation,
+        DisplayCategory   = Food,
+        CustomContextMenu = Drink_GreedySalvation,
+        CustomEatSound    = DrinkingFromBottleGlass,
+        ReplaceOnUse      = WhiskeyEmpty,
+        EatType           = Bourbon,
+        OnEat             = OnEat_GreedySalvation,
+        Alcoholic         = true,
+        AlcoholPower      = 2,
+        BoredomChange     = -100,
+        UnhappyChange     = -100,
+        StressChange      = -100,
+        Calories          = 1500,
+        Carbohydrates     = 0,
+        Lipids            = 0,
+        Proteins          = 0,
+        CantBeFrozen      = true,
+        Medical           = true,
+        Tags              = Liquor,
+        Tooltip           = Tooltip_item_GreedySalvation,
     }
     
     recipe Drink Exclusive Alcohol

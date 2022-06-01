@@ -1,0 +1,3 @@
+ContextMenu_EN = {
+	ContextMenu_Drink_GreedySalvation = "Drink Greedy Salvation",
+}

@@ -8,4 +8,5 @@ Items_EN = {
 	DisplayName_StrayBullet = "Stray Bullet",
 	DisplayName_SlenderDoe = "Slender Doe",
 	DisplayName_NicotineOverdose = "Nicotine Overdose",
+	DisplayName_GreedySalvation = "Greedy Salvation",
 }

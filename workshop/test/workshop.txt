@@ -1,6 +1,6 @@
 version=1
-id=1866992334
-title=Permanent Effects Drinks
+id=2815356625
+title=Permanent Effects Drinks Test
 description=Modification to Project Zomboid that adds drinks with a permanent effects.
 description=
 description=[h1]Drink List[/h1]
@@ -27,25 +27,25 @@ description=[tr]
 description=[td][img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/src/textures/Item_GreedyHammer.png[/img][/td]
 description=[td]GreedyHammer[/td]
 description=[td]Greedy Hammer[/td]
-description=[td]Permanently increases Blunt Accuracy by 1[/td]
+description=[td]Permanently increases Long Blunt Accuracy by 1[/td]
 description=[/tr]
 description=[tr]
 description=[td][img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/src/textures/Item_DoubleGreedyHammer.png[/img][/td]
 description=[td]DoubleGreedyHammer[/td]
 description=[td]Double Greedy Hammer[/td]
-description=[td]Permanently increases Strength by 1, Blunt Accuracy by 1[/td]
+description=[td]Permanently increases Strength by 1, Long Blunt Accuracy by 1[/td]
 description=[/tr]
 description=[tr]
 description=[td][img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/src/textures/Item_GreedyAxe.png[/img][/td]
 description=[td]GreedyAxe[/td]
 description=[td]Greedy Axe[/td]
-description=[td]Permanently increases Blade Accuracy by 1[/td]
+description=[td]Permanently increases Axe Accuracy by 1[/td]
 description=[/tr]
 description=[tr]
 description=[td][img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/src/textures/Item_DoubleGreedyAxe.png[/img][/td]
 description=[td]DoubleGreedyAxe[/td]
 description=[td]Double Greedy Axe[/td]
-description=[td]Permanently increases Strength by 1, Blade Accuracy by 1[/td]
+description=[td]Permanently increases Strength by 1, Axe Accuracy by 1[/td]
 description=[/tr]
 description=[tr]
 description=[td][img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/src/textures/Item_StrayBullet.png[/img][/td]
@@ -100,5 +100,12 @@ description=    [*][url=https://steamcommunity.com/profiles/76561198198109711]Ri
 description=    [*][url=https://steamcommunity.com/profiles/76561198028625569]Mixa100100100[/url] - For the main mod preview
 description=    [*][url=https://steamcommunity.com/profiles/76561198080983473]Tasnex[/url] - For Nicotine Overdose and Greedy Salvation icons
 description=[/list]
+description=
+description=[h1]Warning[/h1]
+description=THIS IS TEST. DON'T USE THIS MOD.
+description=THIS IS TEST. DON'T USE THIS MOD.
+description=THIS IS TEST. DON'T USE THIS MOD.
+description=
+description=Please use [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334]Stable version[/url].
 tags=Build 41;Multiplayer
-visibility=public
+visibility=unlisted

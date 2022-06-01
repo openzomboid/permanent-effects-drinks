@@ -1,11 +1,12 @@
 Tooltip_RU = {
-    Tooltip_item_HastyHerring = "Перманентно повышает скорость бега на 1"
-    Tooltip_item_DoubleHastyHerring = "Перманентно повышает скорость и фитнес бега на 1"
-    Tooltip_item_GreedyHammer = "Перманентно повышает точность дробящего оружия на 1"
-    Tooltip_item_DoubleGreedyHammer = "Перманентно повышает точность дробящего оружия и силу на 1"
-    Tooltip_item_GreedyAxe = "Перманентно повышает точность режущего оружия на 1"
-    Tooltip_item_DoubleGreedyAxe = "Перманентно повышает точность режущего оружия и фитнес на 1"
-    Tooltip_item_StrayBullet = "Перманентно повышает точность огнестрельного оружия на 1"
-    Tooltip_item_SlenderDoe = "Устанавливает вес персонажа в 80 кг."
-    Tooltip_item_NicotineOverdose = "Лучший способ бросить курить"
+    Tooltip_item_HastyHerring = "Перманентно повышает скорость бега на 1",
+    Tooltip_item_DoubleHastyHerring = "Перманентно повышает скорость и фитнес бега на 1",
+    Tooltip_item_GreedyHammer = "Перманентно повышает точность длинного дробящего оружия на 1",
+    Tooltip_item_DoubleGreedyHammer = "Перманентно повышает точность длинного дробящего оружия и силу на 1",
+    Tooltip_item_GreedyAxe = "Перманентно повышает точность топоров на 1",
+    Tooltip_item_DoubleGreedyAxe = "Перманентно повышает точность топоров и фитнес на 1",
+    Tooltip_item_StrayBullet = "Перманентно повышает точность огнестрельного оружия на 1",
+    Tooltip_item_SlenderDoe = "Устанавливает вес персонажа в 80 кг.",
+    Tooltip_item_NicotineOverdose = "Лучший способ бросить курить",
+    Tooltip_item_GreedySalvation = "Лечит зомби-вирус",
 }

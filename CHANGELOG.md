@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Added drink Greedy Salvation that cures Zombie Virus.
 
 ## [v0.7.1] - 2022-02-26
 ### Fixed
