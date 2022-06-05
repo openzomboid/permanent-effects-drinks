@@ -7,7 +7,10 @@
 
 -- OnEat_GreedySalvation cures zombie virus.
 function OnEat_GreedySalvation(food, player, percent)
-    player:Say("I Think I'm Paranoid")
+    if percent < 1 then
+        player:Say(getText("Moodles_nothing_happened"))
+        return
+    end
 
     local bodyDamage = player:getBodyDamage();
 

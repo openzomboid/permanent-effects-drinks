@@ -110,7 +110,7 @@ module Permanent {
         BoredomChange     = -100,
         UnhappyChange     = -100,
         StressChange      = -100,
-        Calories          = 1500,
+        Calories          = 0,
         Carbohydrates     = 0,
         Lipids            = 0,
         Proteins          = 0,
