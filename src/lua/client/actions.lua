@@ -70,6 +70,8 @@ end
 -- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
 function DrinkNicotineOverdose(items, result, player)
     if player:HasTrait("Smoker") then
-        player:getTraits():remove("Smoker")
+        player:getTraits():remove("Smoker");
+        player:getStats():setStressFromCigarettes(0);
+        player:setTimeSinceLastSmoke(0);
     end
 end

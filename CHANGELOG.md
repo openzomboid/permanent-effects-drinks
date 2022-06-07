@@ -7,6 +7,9 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Added drink Greedy Salvation that cures Zombie Virus.
 
+### Fixed
+- Fixed stress from cigarettes in Nicotine Overdose drink.
+
 ## [v0.7.1] - 2022-02-26
 ### Fixed
 - Fix for 41.66 mp build.
