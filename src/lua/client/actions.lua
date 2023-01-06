@@ -75,3 +75,5 @@ function DrinkNicotineOverdose(items, result, player)
         player:setTimeSinceLastSmoke(0);
     end
 end
+
+-- TODO: Add maintenance drink
