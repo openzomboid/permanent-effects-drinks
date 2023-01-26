@@ -62,6 +62,12 @@ function DrinkStrayBullet(items, result, player)
     PerkLevelup(player, Perks.Aiming);
 end
 
+-- DrinkSlipperyFish adds action to drink Permanent.SlipperyFish.
+-- Permanently increases Nimble by 1.
+function DrinkSlipperyFish(items, result, player)
+    PerkLevelup(player, Perks.Nimble);
+end
+
 -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
 function DrinkSlenderDoe(items, result, player)
     player:getNutrition():setWeight(SlenderDoeSetWeight);

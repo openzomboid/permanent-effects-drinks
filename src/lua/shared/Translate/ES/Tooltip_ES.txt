@@ -6,6 +6,7 @@ Tooltip_ES = {
     Tooltip_item_GreedyAxe = "Aumenta permanentemente la precisión con armas de hoja en 1",
     Tooltip_item_DoubleGreedyAxe = "Aumenta permanentemente la fuerza en 1, la precisión con armas de hoja en 1",
     Tooltip_item_StrayBullet = "Aumenta permanentemente la puntería con armas de fuego en 1",
+    Tooltip_item_SlipperyFish = "Incrementa permanentemente Nimble en 1",
     Tooltip_item_SlenderDoe = "Establece el peso del personaje a 80 kg",
     Tooltip_item_NicotineOverdose = "La mejor manera de dejar de fumar",
     Tooltip_item_GreedySalvation = "Cura el virus zombie",

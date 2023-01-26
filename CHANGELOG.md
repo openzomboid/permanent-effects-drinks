@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+## Fixed
+- Fixed russian tooltip for DoubleHastyHerring.
+
+## Added
+- Added drink SlipperyFish that permanently increases Nimble by 1.
 
 ## [v0.8.0] - 2022-06-09
 ### Added

@@ -6,6 +6,7 @@ Items_EN = {
 	DisplayName_GreedyAxe = "Greedy Axe",
 	DisplayName_DoubleGreedyAxe = "Double Greedy Axe",
 	DisplayName_StrayBullet = "Stray Bullet",
+	DisplayName_SlipperyFish = "Slippery Fish",
 	DisplayName_SlenderDoe = "Slender Doe",
 	DisplayName_NicotineOverdose = "Nicotine Overdose",
 	DisplayName_GreedySalvation = "Greedy Salvation",

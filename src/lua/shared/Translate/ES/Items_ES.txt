@@ -6,6 +6,7 @@ Items_ES = {
     DisplayName_GreedyAxe = "Hacha codiciosa",
     DisplayName_DoubleGreedyAxe = "Doble hacha codiciosa",
     DisplayName_StrayBullet = "Bala perdida",
+    DisplayName_SlipperyFish = "Pescado resbaladizo",
     DisplayName_SlenderDoe = "Tipo delgado",
     DisplayName_NicotineOverdose = "Sobredosis de nicotina",
     DisplayName_GreedySalvation = "Salvación codiciosa",
