@@ -5,10 +5,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ## Fixed
-- Fixed russian tooltip for DoubleHastyHerring.
+- Fixed russian tooltip for Double Hasty Herring.
+- After gaining a level, the accumulated experience of the previous level is added to the skill.
+- Improved English tooltips to GreedyHammer, DoubleGreedyHammer, GreedyAxe, DoubleGreedyAxe.
+- Improved Russian tooltips to GreedyHammer, DoubleGreedyHammer, GreedyAxe, DoubleGreedyAxe.
 
 ## Added
 - Added drink SlipperyFish that permanently increases Nimble by 1.
+- Slender Doe immediately removes perks: Overweight, Underweight, Obese and Very Underweight.
 
 ## [v0.8.0] - 2022-06-09
 ### Added

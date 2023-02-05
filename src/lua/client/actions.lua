@@ -5,7 +5,7 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.8.0"
+local version = "0.9.0"
 
 local pzversion = getCore():getVersionNumber()
 
@@ -18,8 +18,18 @@ function PerkLevelup(player, perkType)
     local perkLevel = player:getPerkLevel(perkType);
 
     if perkLevel < 10 then
+        local xp = player:getXp()
+        local xpTotal = xp:getXP(perkType)
+        local xpInLevel = xpTotal - ISSkillProgressBar.getPreviousXpLvl(perkType, perkLevel)
+        if xpInLevel < 0 then
+            xpInLevel = 0
+        end
+
         player:LevelPerk(perkType, false);
         player:getXp():setXPToLevel(perkType, player:getPerkLevel(perkType));
+        SyncXp(player)
+
+        player:getXp():AddXPNoMultiplier(perkType, xpInLevel);
         SyncXp(player)
     end
 end
@@ -71,6 +81,22 @@ end
 -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
 function DrinkSlenderDoe(items, result, player)
     player:getNutrition():setWeight(SlenderDoeSetWeight);
+
+    if player:HasTrait("Overweight") then
+        player:getTraits():remove("Overweight");
+    end
+
+    if player:HasTrait("Underweight") then
+        player:getTraits():remove("Underweight");
+    end
+
+    if player:HasTrait("Obese") then
+        player:getTraits():remove("Obese");
+    end
+
+    if player:HasTrait("Very Underweight") then
+        player:getTraits():remove("Very Underweight");
+    end
 end
 
 -- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
