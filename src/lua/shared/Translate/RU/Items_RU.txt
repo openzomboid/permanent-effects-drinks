@@ -7,6 +7,7 @@ Items_RU = {
 	DisplayName_DoubleGreedyAxe = "Двойная Жадная Секира",
 	DisplayName_StrayBullet = "Шальная Пуля",
 	DisplayName_SlipperyFish = "Скользкий Тип",
+	DisplayName_SolidAdventurer = "Солидный Авантюрист",
 	DisplayName_SlenderDoe = "Стройная Лань",
     DisplayName_NicotineOverdose = "Никотиновая Передозировка",
     DisplayName_GreedySalvation = "Жадное Спасение",

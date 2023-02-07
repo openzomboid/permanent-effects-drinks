@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 
 ## Added
 - Added drink SlipperyFish that permanently increases Nimble by 1.
+- Added drink SolidAdventurer that permanently increases Maintenance by 1.
 - Slender Doe immediately removes perks: Overweight, Underweight, Obese and Very Underweight.
 
 ## [v0.8.0] - 2022-06-09

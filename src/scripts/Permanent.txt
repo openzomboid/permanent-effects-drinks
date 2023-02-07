@@ -83,6 +83,16 @@ module Permanent {
         Tooltip         = Tooltip_item_SlipperyFish,
     }
 
+    item SolidAdventurer
+    {
+        Weight          = 0.7,
+        Type            = Normal,
+        Icon            = SolidAdventurer,
+        DisplayName     = SolidAdventurer,
+        DisplayCategory = Food,
+        Tooltip         = Tooltip_item_SolidAdventurer,
+    }
+
     item SlenderDoe
     {
         Weight          = 0.7,
@@ -206,6 +216,16 @@ module Permanent {
 
         Result:   WhiskeyEmpty,
         OnCreate: DrinkSlipperyFish,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol
+    {
+        SolidAdventurer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkSolidAdventurer,
         Time:     200.0,
         Sound:    DrinkingFromBottle,
     }

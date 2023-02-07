@@ -7,6 +7,7 @@ Tooltip_RU = {
     Tooltip_item_DoubleGreedyAxe = "Перманентно повышает навык топоров и фитнес на 1",
     Tooltip_item_StrayBullet = "Перманентно повышает точность огнестрельного оружия на 1",
     Tooltip_item_SlipperyFish = "Перманентно повышает проворность на 1",
+    Tooltip_item_SolidAdventurer = "Перманентно повышает прочность на 1",
     Tooltip_item_SlenderDoe = "Устанавливает вес персонажа в 80 кг.",
     Tooltip_item_NicotineOverdose = "Лучший способ бросить курить",
     Tooltip_item_GreedySalvation = "Лечит зомби-вирус",

@@ -78,6 +78,12 @@ function DrinkSlipperyFish(items, result, player)
     PerkLevelup(player, Perks.Nimble);
 end
 
+-- DrinkSolidAdventurer adds action to drink Permanent.SolidAdventurer.
+-- Permanently increases Maintenance by 1.
+function DrinkSolidAdventurer(items, result, player)
+    PerkLevelup(player, Perks.Maintenance);
+end
+
 -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
 function DrinkSlenderDoe(items, result, player)
     player:getNutrition():setWeight(SlenderDoeSetWeight);
