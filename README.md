@@ -5,7 +5,7 @@ Permanent Effects Drinks adds drinks with a permanent effects to Project Zomboid
 
 ## Drink list
 Code               | Name                 | Effect
------------------- | -------------------- | -------------
+------------------ |----------------------| -------------
 HastyHerring       | Hasty Herring        | Permanently increases Sprinting by 1
 DoubleHastyHerring | Double Hasty Herring | Permanently increases Fitness by 1, Sprinting by 1
 GreedyHammer       | Greedy Hammer        | Permanently increases Blunt Accuracy by 1
@@ -13,6 +13,8 @@ DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1,
 GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy by 1
 DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1
 StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1
+SlipperyFish       | Slippery Fish        | Permanently increases Nimble by 1
+SolidAdventurer    | Solid Adventurer     | Permanently increases Maintenance by 1
 SlenderDoe         | Slender Doe          | Sets the character's weight to 80 kg (fix broken ingame weight loss)
 NicotineOverdose   | Nicotine Overdose    | The best way to quit smoking
 GreedySalvation    | Greedy Salvation     | Cures Zombie Virus
@@ -43,6 +45,8 @@ Thanks to everyone for the help and interest in this mod. You make this mod bett
 
 * [Ristisi](https://steamcommunity.com/profiles/76561198198109711) - For the main logo
 * [Mixa100100100](https://steamcommunity.com/profiles/76561198028625569) - For the main mod preview
+* [Tasnex](https://steamcommunity.com/profiles/76561198080983473) - For Nicotine Overdose and Greedy Salvation icons
+* [Kilenhad](http://steamcommunity.com/profiles/76561198096794210) - For Slippery Fish and Solid Adventurer icons
 
 ## License
 Apache License 2.0, see [LICENCE](LICENSE)  
