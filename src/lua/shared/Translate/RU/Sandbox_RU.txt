@@ -1,0 +1,4 @@
+Sandbox_RU = {
+    Sandbox_Permanent = "Permanent Effects Drinks",
+    Sandbox_KeepExperience = "Keep Experience",
+}

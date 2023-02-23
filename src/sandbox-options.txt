@@ -1,0 +1,10 @@
+VERSION = 1,
+
+option Permanent.KeepExperience
+{
+  type = boolean,
+  default = false,
+
+  page = Permanent,
+  translation = Permanent_KeepExperience
+}

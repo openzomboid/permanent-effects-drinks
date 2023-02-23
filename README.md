@@ -22,6 +22,11 @@ GreedySalvation    | Greedy Salvation     | Cures Zombie Virus
 ## How to Use
 At this moment items can be only spawned by admin. Use /additem Permanent.Code to add drink to inventory.  
 
+## Configuration
+In the sandbox settings there is a "Permanent Effects Drinks" tab where you can change the following settings:  
+
+* KeepExperience - If enabled, the experience gained will be carried over to the next level when using drinks. Due to the nature of the game, there is a dependence on the state of the character. For example, with a greatly reduced weight or frailty of a character, the accumulated experience may be reduced by 30% or even not saved at all. For the best effect of the drink, the player must take care of the good condition of the character. **Anticheat Type15 must be disabled on the server.**
+
 ## Translations
 * English (EN)  
 * Russian (RU)  

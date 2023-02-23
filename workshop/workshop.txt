@@ -88,6 +88,12 @@ description=
 description=[h1]How to Use[/h1]
 description=At this moment items can be only spawned by admin. Use /additem Permanent.Code to add drink to inventory.
 description=
+description=[h1]Configuration[/h1]
+description=In the sandbox settings there is a "Permanent Effects Drinks" tab where you can change the following settings:
+description=[list]
+description=    [*][b]KeepExperience[/b] - If enabled, the experience gained will be carried over to the next level when using drinks. Due to the nature of the game, there is a dependence on the state of the character. For example, with a greatly reduced weight or frailty of a character, the accumulated experience may be reduced by 30% or even not saved at all. For the best effect of the drink, the player must take care of the good condition of the character. [b]Anticheat Type15 must be disabled on the server.[/b]
+description=[/list]
+description=
 description=[h1]Translations[/h1]
 description=[list]
 description=    [*]English (EN)
@@ -111,6 +117,7 @@ description=[list]
 description=    [*][url=https://steamcommunity.com/profiles/76561198198109711]Ristisi[/url] - For the main logo and icons
 description=    [*][url=https://steamcommunity.com/profiles/76561198028625569]Mixa100100100[/url] - For the main mod preview
 description=    [*][url=https://steamcommunity.com/profiles/76561198080983473]Tasnex[/url] - For Nicotine Overdose and Greedy Salvation icons
+description=    [*][url=http://steamcommunity.com/profiles/76561198096794210]Kilenhad[/url] - For Slippery Fish and Solid Adventurer icons
 description=[/list]
 tags=Build 41;Multiplayer
 visibility=public
