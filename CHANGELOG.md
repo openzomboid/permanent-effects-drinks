@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [v0.10.0] - 2023-02-24
 ## Fixed
 - Fixed kick wia Type15 anticheat when transfer collected XP. Added `KeepExperience` sandbox variable that transfers collected XP to next level if enabled. You need to turn off anticheat Type15 or disable transfer.
 
