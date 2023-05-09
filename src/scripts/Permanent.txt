@@ -3,118 +3,128 @@ module Permanent {
         Base
     }
 
-    item HastyHerring
-    {
-        Weight          = 0.5,
-        Type            = Normal,
-        Icon            = HastyHerring,
-        DisplayName     = HastyHerring,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_HastyHerring,
+    item HastyHerring {
+        Weight           = 0.5,
+        Type             = Normal,
+        Icon             = HastyHerring,
+        DisplayName      = HastyHerring,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_HastyHerring,
+		StaticModel		 = HastyHerring,
+		WorldStaticModel = HastyHerring,
     }
 
-    item DoubleHastyHerring
-    {
-        Weight          = 1.0,
-        Type            = Normal,
-        Icon            = HastyHerring,
-        DisplayName     = DoubleHastyHerring,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_DoubleHastyHerring,
+    item DoubleHastyHerring {
+        Weight           = 1.0,
+        Type             = Normal,
+        Icon             = DoubleHastyHerring,
+        DisplayName      = DoubleHastyHerring,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_DoubleHastyHerring,
+		StaticModel		 = DoubleHastyHerring,
+		WorldStaticModel = DoubleHastyHerring,
     }
 
-    item GreedyHammer
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = GreedyHammer,
-        DisplayName     = GreedyHammer,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_GreedyHammer,
+    item GreedyHammer {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = GreedyHammer,
+        DisplayName      = GreedyHammer,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_GreedyHammer,
+		StaticModel		 = GreedyHammer,
+		WorldStaticModel = GreedyHammer,
     }
 
-    item DoubleGreedyHammer
-    {
-        Weight          = 1.4,
-        Type            = Normal,
-        Icon            = DoubleGreedyHammer,
-        DisplayName     = DoubleGreedyHammer,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_DoubleGreedyHammer,
+    item DoubleGreedyHammer {
+        Weight           = 1.4,
+        Type             = Normal,
+        Icon             = DoubleGreedyHammer,
+        DisplayName      = DoubleGreedyHammer,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_DoubleGreedyHammer,
+		StaticModel		 = DoubleGreedyHammer,
+		WorldStaticModel = DoubleGreedyHammer,
     }
 
-    item GreedyAxe
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = GreedyAxe,
-        DisplayName     = GreedyAxe,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_GreedyAxe,
+    item GreedyAxe {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = GreedyAxe,
+        DisplayName      = GreedyAxe,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_GreedyAxe,
+		StaticModel		 = GreedyAxe,
+		WorldStaticModel = GreedyAxe,
     }
 
-    item DoubleGreedyAxe
-    {
-        Weight          = 1.4,
-        Type            = Normal,
-        Icon            = DoubleGreedyAxe,
-        DisplayName     = DoubleGreedyAxe,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_DoubleGreedyAxe,
+    item DoubleGreedyAxe {
+        Weight           = 1.4,
+        Type             = Normal,
+        Icon             = DoubleGreedyAxe,
+        DisplayName      = DoubleGreedyAxe,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_DoubleGreedyAxe,
+		StaticModel		 = DoubleGreedyAxe,
+		WorldStaticModel = DoubleGreedyAxe,
     }
 
-    item StrayBullet
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = StrayBullet,
-        DisplayName     = StrayBullet,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_StrayBullet,
+    item StrayBullet {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = StrayBullet,
+        DisplayName      = StrayBullet,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_StrayBullet,
+		StaticModel		 = StrayBullet,
+		WorldStaticModel = StrayBullet,
     }
 
-    item SlipperyFish
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = SlipperyFish,
-        DisplayName     = SlipperyFish,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_SlipperyFish,
+    item SlipperyFish {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = SlipperyFish,
+        DisplayName      = SlipperyFish,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_SlipperyFish,
+		StaticModel		 = SlipperyFish,
+		WorldStaticModel = SlipperyFish,
     }
 
-    item SolidAdventurer
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = SolidAdventurer,
-        DisplayName     = SolidAdventurer,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_SolidAdventurer,
+    item SolidAdventurer {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = SolidAdventurer,
+        DisplayName      = SolidAdventurer,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_SolidAdventurer,
+		StaticModel		 = SolidAdventurer,
+		WorldStaticModel = SolidAdventurer,
     }
 
-    item SlenderDoe
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = SlenderDoe,
-        DisplayName     = SlenderDoe,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_SlenderDoe,
+    item SlenderDoe {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = SlenderDoe,
+        DisplayName      = SlenderDoe,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_SlenderDoe,
+		StaticModel		 = SlenderDoe,
+		WorldStaticModel = SlenderDoe,
     }
 
-    item NicotineOverdose
-    {
-        Weight          = 0.7,
-        Type            = Normal,
-        Icon            = NicotineOverdose,
-        DisplayName     = NicotineOverdose,
-        DisplayCategory = Food,
-        Tooltip         = Tooltip_item_NicotineOverdose,
+    item NicotineOverdose {
+        Weight           = 0.7,
+        Type             = Normal,
+        Icon             = NicotineOverdose,
+        DisplayName      = NicotineOverdose,
+        DisplayCategory  = Food,
+        Tooltip          = Tooltip_item_NicotineOverdose,
+		StaticModel		 = NicotineOverdose,
+		WorldStaticModel = NicotineOverdose,
     }
 
-    item GreedySalvation
-    {
+    item GreedySalvation {
         Weight            = 0.7,
         Type              = Food,
         Icon              = GreedySalvation,
@@ -138,10 +148,11 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_GreedySalvation,
+		StaticModel		  = GreedySalvation,
+		WorldStaticModel  = GreedySalvation,
     }
     
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         HastyHerring,
 
         Result:   WhiskeyEmpty,
@@ -150,8 +161,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         DoubleHastyHerring,
 
         Result:   WhiskeyEmpty,
@@ -160,8 +170,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         GreedyHammer,
 
         Result:   WhiskeyEmpty,
@@ -170,8 +179,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         DoubleGreedyHammer,
 
         Result:   WhiskeyEmpty,
@@ -180,8 +188,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         GreedyAxe,
 
         Result:   WhiskeyEmpty,
@@ -190,8 +197,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         DoubleGreedyAxe,
 
         Result:   WhiskeyEmpty,
@@ -200,8 +206,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         StrayBullet,
 
         Result:   WhiskeyEmpty,
@@ -210,8 +215,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         SlipperyFish,
 
         Result:   WhiskeyEmpty,
@@ -220,8 +224,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         SolidAdventurer,
 
         Result:   WhiskeyEmpty,
@@ -230,8 +233,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         SlenderDoe,
 
         Result:   WhiskeyEmpty,
@@ -240,8 +242,7 @@ module Permanent {
         Sound:    DrinkingFromBottle,
     }
 
-    recipe Drink Exclusive Alcohol
-    {
+    recipe Drink Exclusive Alcohol {
         NicotineOverdose,
 
         Result:   WhiskeyEmpty,

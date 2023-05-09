@@ -1,10 +1,17 @@
 VERSION = 1,
 
-option Permanent.KeepExperience
-{
-  type = boolean,
-  default = false,
-
-  page = Permanent,
+option Permanent.KeepExperience {
+  type        = boolean,
+  default     = false,
+  page        = Permanent,
   translation = Permanent_KeepExperience
+}
+
+option Permanent.SlenderDoeSetWeight {
+  type        = integer,
+  min         = 50,
+  max         = 100,
+  default     = 80,
+  page        = Permanent,
+  translation = Permanent_SlenderDoeSetWeight
 }

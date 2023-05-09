@@ -5,13 +5,7 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.10.0"
-
-local pzversion = getCore():getVersionNumber()
-
--- SlenderDoeSetWeight contains the weight value that will be set to
--- the character after applying the drink.
-local SlenderDoeSetWeight = 80
+local version = "0.11.0"
 
 -- PerkLevelup creates level up for perk.
 function PerkLevelup(player, perkType)
@@ -88,8 +82,9 @@ function DrinkSolidAdventurer(items, result, player)
 end
 
 -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
+-- Sets characters weight to SlenderDoeSetWeight value.
 function DrinkSlenderDoe(items, result, player)
-    player:getNutrition():setWeight(SlenderDoeSetWeight);
+    player:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
 
     if player:HasTrait("Overweight") then
         player:getTraits():remove("Overweight");

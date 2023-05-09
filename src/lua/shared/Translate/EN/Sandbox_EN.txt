@@ -1,4 +1,5 @@
 Sandbox_EN = {
     Sandbox_Permanent = "Permanent Effects Drinks",
-    Sandbox_KeepExperience = "Keep Experience",
+    Sandbox_KeepExperience = "Keep Experience (Anticheat Type15 must be turned off)",
+    Sandbox_SlenderDoeSetWeight = "Slender Doe sets weight",
 }

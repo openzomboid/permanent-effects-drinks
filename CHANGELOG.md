@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Changed all drinks icons.
+
+## Added
+- Added SlenderDoeSetWeight sandbox option.
+- Added 3d models (thanks for Unfainthful).
 
 ## [v0.10.0] - 2023-02-24
 ## Fixed
