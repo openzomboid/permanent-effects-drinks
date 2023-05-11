@@ -1,4 +1,5 @@
 Items_RU = {
+    DisplayName_MoonshineStill = "Самогонный аппарат",
 	DisplayName_HastyHerring = "Быстрая Селедка",
 	DisplayName_DoubleHastyHerring = "Двойная Быстрая Селедка",
 	DisplayName_GreedyHammer = "Жадный Молот",

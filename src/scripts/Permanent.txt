@@ -3,6 +3,16 @@ module Permanent {
         Base
     }
 
+    item MoonshineStill {
+        Weight           = 20.00,
+        Type             = Normal,
+        Icon             = MoonshineStill,
+        DisplayName      = MoonshineStill,
+        DisplayCategory  = Junk,
+        StaticModel      = MoonshineStill,
+        WorldStaticModel = MoonshineStill,
+    }
+
     item HastyHerring {
         Weight           = 0.5,
         Type             = Normal,
@@ -151,7 +161,7 @@ module Permanent {
 		StaticModel		  = GreedySalvation,
 		WorldStaticModel  = GreedySalvation,
     }
-    
+
     recipe Drink Exclusive Alcohol {
         HastyHerring,
 

@@ -8,8 +8,9 @@ All notable changes to this project will be documented in this file.
 - Changed all drinks icons.
 
 ## Added
-- Added SlenderDoeSetWeight sandbox option.
+- Added Moonshine still movable item (thanks for imopssi and Unfainthful).
 - Added 3d models (thanks for Unfainthful).
+- Added SlenderDoeSetWeight sandbox option.
 
 ## [v0.10.0] - 2023-02-24
 ## Fixed

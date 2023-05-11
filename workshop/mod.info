@@ -2,3 +2,5 @@ name=Permanent Effects Drinks
 id=PermanentEffectsDrinks
 description=Adds drinks with a permanent effect
 poster=poster.png
+tiledef=MoonshineStill 654
+pack=MoonshineStill_textures

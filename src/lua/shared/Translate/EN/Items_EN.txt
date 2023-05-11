@@ -1,4 +1,5 @@
 Items_EN = {
+    DisplayName_MoonshineStill = "Moonshine Still",
 	DisplayName_HastyHerring = "Hasty Herring",
 	DisplayName_DoubleHastyHerring = "Double Hasty Herring",
 	DisplayName_GreedyHammer = "Greedy Hammer",
