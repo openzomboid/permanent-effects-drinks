@@ -4,7 +4,7 @@ module Permanent {
     }
 
     item MoonshineStill {
-        Weight           = 20.00,
+        Weight           = 50.00,
         Type             = Normal,
         Icon             = MoonshineStill,
         DisplayName      = MoonshineStill,
