@@ -19,8 +19,8 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, admin
     end
 
     local sprite = {};
-    sprite.sprite1 = "MoonshineStill_0";
-    sprite.sprite2 = "MoonshineStill_1";
+    sprite.sprite1 = "MoonshineStill_1";
+    sprite.sprite2 = "MoonshineStill_0";
     sprite.northSprite1 = "MoonshineStill_2";
     sprite.northSprite2 = "MoonshineStill_3";
 
