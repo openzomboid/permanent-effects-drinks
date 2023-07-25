@@ -13,7 +13,7 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, admin
 
     local square = nil;
 
-    -- we get the thumpable item (like wall/door/furniture etc.) if exist on the tile we right clicked
+    -- Get the thumpable item (like wall/door/furniture etc.) if exist on the tile which right clicked.
     for i,v in ipairs(worldobjects) do
         square = v:getSquare();
     end

@@ -13,24 +13,6 @@ module Permanent {
         WorldStaticModel = MoonshineStill,
     }
 
-    item MoonshineStill0 {
-        Weight            = 50.00,
-        Type              = Moveable,
-        Icon              = MoonshineStill,
-        DisplayName       = MoonshineStill,
-        DisplayCategory   = Junk,
-        WorldObjectSprite = MoonshineStill_0,
-    }
-
-    item MoonshineStill1 {
-        Weight            = 50.00,
-        Type              = Moveable,
-        Icon              = MoonshineStill,
-        DisplayName       = MoonshineStill,
-        DisplayCategory   = Junk,
-        WorldObjectSprite = MoonshineStill_1,
-    }
-
     item HastyHerring {
         Weight           = 0.5,
         Type             = Normal,
