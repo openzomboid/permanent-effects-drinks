@@ -4,6 +4,7 @@
 -- that can be found in the LICENSE file.
 --
 
+-- PermanentBuildMenu contains build options.
 PermanentBuildMenu = {}
 
 PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, adminSubMenu)
