@@ -33,6 +33,7 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, admin
     tooltip:setTexture(sprite.sprite1);
 end
 
+-- onBuildMoonshineStill adds callback to build Moonshine Still option.
 PermanentBuildMenu.onBuildMoonshineStill = function(worldobjects, square, sprite, player)
     -- name, sprite, northSprite
     local furniture = ISDoubleTileFurniture:new("Moonshine Still", sprite.sprite1, sprite.sprite2, sprite.northSprite1, sprite.northSprite2);
