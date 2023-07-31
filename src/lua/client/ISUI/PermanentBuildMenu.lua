@@ -7,6 +7,7 @@
 -- PermanentBuildMenu contains build options.
 PermanentBuildMenu = {}
 
+-- RegisterLines adds options to click menu.
 PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, adminSubMenu)
     local buildOption = adminSubMenu:addOption("Build", worldobjects, nil);
     local buildSubMenu = adminSubMenu:getNew(adminSubMenu);
