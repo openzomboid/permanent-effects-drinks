@@ -3,16 +3,6 @@ module Permanent {
         Base
     }
 
-    item MoonshineStill {
-        Weight           = 50.00,
-        Type             = Normal,
-        Icon             = MoonshineStill,
-        DisplayName      = MoonshineStill,
-        DisplayCategory  = Junk,
-        StaticModel      = MoonshineStill,
-        WorldStaticModel = MoonshineStill,
-    }
-
     item HastyHerring {
         Weight           = 0.5,
         Type             = Normal,
