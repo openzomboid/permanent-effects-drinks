@@ -1,10 +1,4 @@
 module Base {
-    model MoonshineStill {
-        mesh = WorldItems/MoonshineStill,
-        texture = WorldItems/Texture_MoonshineStill,
-        scale = 0.35,
-    }
-
     model HastyHerring {
         mesh    = WorldItems/HastyHerring,
         scale   = 0.35,
