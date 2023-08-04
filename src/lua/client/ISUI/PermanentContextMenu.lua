@@ -21,6 +21,39 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
         end
     end
 
+    local character = getSpecificPlayer(player)
+    local inventory = character:getInventory()
+    local object = worldobjects[1];
+    local square = object:getSquare()
+    local sprite = object:getSprite()
+
+    if character:getVehicle() then
+        return true
+    end
+
+    local isMoonshineStill
+
+    for i=1, square:getObjects():size() do
+        local o = square:getObjects():get(i-1)
+
+        if sprite and sprite:getName() then
+            local spriteName = sprite:getName()
+
+            isMoonshineStill = spriteName == "MoonshineStill_0" or spriteName == "MoonshineStill_1" or
+                spriteName == "MoonshineStill_2" or spriteName == "MoonshineStill_3"
+        end
+    end
+
+    if isMoonshineStill then
+        if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
+            -- TODO: Implement me.
+        end
+
+        if SandboxVars.Permanent.AllowBrewingExclusiveAlcohol then
+            -- TODO: Implement me.
+        end
+    end
+
     return true
 end
 

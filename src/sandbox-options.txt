@@ -22,3 +22,17 @@ option Permanent.CanBuildMoonshineStill {
   page        = Permanent,
   translation = Permanent_CanBuildMoonshineStill
 }
+
+option Permanent.AllowBrewingVanillaAlcohol {
+  type        = boolean,
+  default     = true,
+  page        = Permanent,
+  translation = Permanent_AllowBrewingVanillaAlcohol
+}
+
+option Permanent.AllowBrewingExclusiveAlcohol {
+  type        = boolean,
+  default     = false,
+  page        = Permanent,
+  translation = Permanent_AllowBrewingExclusiveAlcohol
+}
