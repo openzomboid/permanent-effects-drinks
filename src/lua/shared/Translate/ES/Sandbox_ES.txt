@@ -2,4 +2,5 @@ Sandbox_ES = {
     Sandbox_Permanent = "Permanent Effects Drinks",
     Sandbox_KeepExperience = "Mantener la experiencia",
     Sandbox_SlenderDoeSetWeight = "Slender Doe establece el peso",
+    Sandbox_CanBuildMoonshineStill = "Permitir construir alcohol ilegal todavía",
 }

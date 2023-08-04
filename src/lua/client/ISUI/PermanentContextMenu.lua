@@ -11,15 +11,15 @@ PermanentContextMenu = {}
 PermanentContextMenu.doContextMenu = function(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
-    if not isAdmin() then
-        return
-    end;
-
-    local adminOption = context:addOption("Permanent", worldobjects, nil);
-    local adminSubMenu = ISContextMenu:getNew(context);
-    context:addSubMenu(adminOption, adminSubMenu);
-
-    PermanentBuildMenu.RegisterLines(player, context, worldobjects, adminSubMenu)
+    if SandboxVars.Permanent.CanBuildMoonshineStill or isAdmin() then
+        local buildOption = context:getOptionFromName(getText("ContextMenu_Build"))
+        if buildOption then
+            local buildMenu = context:getSubMenu(buildOption.subOption)
+            if buildMenu then
+                PermanentBuildMenu.RegisterLines(player, context, worldobjects, buildMenu)
+            end
+        end
+    end
 
     return true
 end

@@ -8,15 +8,11 @@
 PermanentBuildMenu = {}
 
 -- RegisterLines adds options to click menu.
-PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, adminSubMenu)
-    local buildOption = adminSubMenu:addOption("Build", worldobjects, nil);
-    local buildSubMenu = adminSubMenu:getNew(adminSubMenu);
-    context:addSubMenu(buildOption, buildSubMenu);
-
+PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, workbenchesSubMenu)
     local square = nil;
 
     -- Get the thumpable item (like wall/door/furniture etc.) if exist on the tile which right clicked.
-    for i,v in ipairs(worldobjects) do
+    for i, v in ipairs(worldobjects) do
         square = v:getSquare();
     end
 
@@ -26,8 +22,8 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, admin
     sprite.northSprite1 = "MoonshineStill_2";
     sprite.northSprite2 = "MoonshineStill_3";
 
-    local option = buildSubMenu:addOption("Moonshine Still", worldobjects, PermanentBuildMenu.onBuildMoonshineStill, square, sprite, player);
-    local tooltip = ISBuildMenu.canBuild(6, 4, 0, 0, 0, 4, option, player);
+    local option = workbenchesSubMenu:addOption("Moonshine Still", worldobjects, PermanentBuildMenu.onBuildMoonshineStill, square, sprite, player);
+    local tooltip = ISBuildMenu.canBuild(48, 12, 0, 0, 0, 10, option, player);
     tooltip:setName("Moonshine Still");
     tooltip.description = getText("Moonshine Still") .. tooltip.description;
     tooltip:setTexture(sprite.sprite1);

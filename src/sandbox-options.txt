@@ -15,3 +15,10 @@ option Permanent.SlenderDoeSetWeight {
   page        = Permanent,
   translation = Permanent_SlenderDoeSetWeight
 }
+
+option Permanent.CanBuildMoonshineStill {
+  type        = boolean,
+  default     = false,
+  page        = Permanent,
+  translation = Permanent_CanBuildMoonshineStill
+}

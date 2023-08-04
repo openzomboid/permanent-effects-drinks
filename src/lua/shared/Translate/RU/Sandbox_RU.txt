@@ -2,4 +2,5 @@ Sandbox_RU = {
     Sandbox_Permanent = "Permanent Effects Drinks",
     Sandbox_KeepExperience = "Сохранить накопленный опыт (требуется отключить античит Type15)",
     Sandbox_SlenderDoeSetWeight = "Стройная Лань устанавливает вес",
+    Sandbox_CanBuildMoonshineStill = "Разрешить строить самогонный аппарат",
 }
