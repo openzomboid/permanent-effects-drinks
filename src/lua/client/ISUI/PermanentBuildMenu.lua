@@ -23,7 +23,7 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, workb
     sprite.northSprite2 = "MoonshineStill_3";
 
     local option = workbenchesSubMenu:addOption("Moonshine Still", worldobjects, PermanentBuildMenu.onBuildMoonshineStill, square, sprite, player);
-    local tooltip = ISBuildMenu.canBuild(48, 12, 0, 0, 0, 10, option, player);
+    local tooltip = ISBuildMenu.canBuild(12, 48, 0, 0, 0, 10, option, player);
     tooltip:setName("Moonshine Still");
     tooltip.description = getText("Moonshine Still") .. tooltip.description;
     tooltip:setTexture(sprite.sprite1);
