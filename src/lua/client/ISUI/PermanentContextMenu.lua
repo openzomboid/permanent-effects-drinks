@@ -22,7 +22,7 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
     end
 
     local character = getSpecificPlayer(player)
-    local inventory = character:getInventory()
+
     local object = worldobjects[1];
     local square = object:getSquare()
     local sprite = object:getSprite()
