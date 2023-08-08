@@ -9,9 +9,7 @@ PermanentRecipes = {
         --animationType = "Shoveling",
         sound = "PourWaterIntoObject",
         time = 300,
-        skills = {
-          ["Cooking"] = 3,
-        },
+        cookingSkill = 3,
         usedItems = {
             ["Base.WhiskeyWaterFull"] = 1,
         },
