@@ -7,7 +7,7 @@
 -- PermanentContextMenu is the game context menu extender.
 PermanentContextMenu = {}
 
--- doContextMenu adds the "Permanent" item to the context menu.
+-- doContextMenu adds the "ContextMenu_Moonshine" item to the context menu.
 PermanentContextMenu.doContextMenu = function(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
