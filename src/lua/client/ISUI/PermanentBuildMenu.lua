@@ -22,17 +22,17 @@ PermanentBuildMenu.RegisterLines = function(player, context, worldobjects, workb
     sprite.northSprite1 = "MoonshineStill_2";
     sprite.northSprite2 = "MoonshineStill_3";
 
-    local option = workbenchesSubMenu:addOption("Moonshine Still", worldobjects, PermanentBuildMenu.onBuildMoonshineStill, square, sprite, player);
+    local option = workbenchesSubMenu:addOption(getText("ContextMenu_MoonshineStill"), worldobjects, PermanentBuildMenu.onBuildMoonshineStill, square, sprite, player);
     local tooltip = ISBuildMenu.canBuild(12, 48, 0, 0, 0, 10, option, player);
-    tooltip:setName("Moonshine Still");
-    tooltip.description = getText("Moonshine Still") .. tooltip.description;
+    tooltip:setName(getText("ContextMenu_MoonshineStill"));
+    tooltip.description = getText("ContextMenu_MoonshineStill_Description") .. tooltip.description;
     tooltip:setTexture(sprite.sprite1);
 end
 
 -- onBuildMoonshineStill adds callback to build Moonshine Still option.
 PermanentBuildMenu.onBuildMoonshineStill = function(worldobjects, square, sprite, player)
     -- name, sprite, northSprite
-    local furniture = ISDoubleTileFurniture:new("Moonshine Still", sprite.sprite1, sprite.sprite2, sprite.northSprite1, sprite.northSprite2);
+    local furniture = ISDoubleTileFurniture:new(getText("ContextMenu_MoonshineStill"), sprite.sprite1, sprite.sprite2, sprite.northSprite1, sprite.northSprite2);
     furniture.modData["xp:Woodwork"] = 5;
     furniture.modData["need:Base.Plank"] = "6";
     furniture.modData["need:Base.Nails"] = "4";
