@@ -11,4 +11,5 @@ Tooltip_ES = {
     Tooltip_item_SlenderDoe = "Establece el peso del personaje a 80 kg",
     Tooltip_item_NicotineOverdose = "La mejor manera de dejar de fumar",
     Tooltip_item_GreedySalvation = "Cura el virus zombie",
+    Tooltip_NoRequiredMaterials = "Faltan materiales necesarios",
 }

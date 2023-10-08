@@ -5,29 +5,15 @@
 --
 
 require "TimedActions/ISBaseTimedAction"
-require 'LandTransformation/LandTransformation'
-
-local function isItemBlocked(character, item)
-    if item:isBroken() then
-        return true
-    end
-
-    if item:isFavorite() then
-        return true
-    end
-
-    if item:isEquipped() then
-        return true
-    end
-
-    return character:isEquipped(item) or character:isAttachedItem(item)
-end
+require 'PermanentRecipes'
 
 PermanentsBrewingAction = ISBaseTimedAction:derive("PermanentsBrewingAction");
 
 function PermanentsBrewingAction:isValid()
-    -- TODO: Check items count here?
-    -- TODO: Check skills here?
+    if not PermanentRecipes.IsEnoughMaterials(self.character, self.recipe) then
+        return false
+    end
+
     return true
 end
 
@@ -66,7 +52,7 @@ function PermanentsBrewingAction:perform()
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not isItemBlocked(self.character, itemToRemove) then
+            if not PermanentRecipes.IsItemBlocked(self.character, itemToRemove) then
                 if removedItemsCount >= neededItemsCount then
                     break
                 end
@@ -82,7 +68,6 @@ function PermanentsBrewingAction:perform()
         end
 
         if removedItemsCount ~= neededItemsCount then
-            self.character:Say("I can't do this")
             return self:performNext()
         end
     end

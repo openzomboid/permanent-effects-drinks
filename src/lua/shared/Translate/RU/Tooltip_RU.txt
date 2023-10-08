@@ -11,4 +11,5 @@ Tooltip_RU = {
     Tooltip_item_SlenderDoe = "Устанавливает вес персонажа в 80 кг.",
     Tooltip_item_NicotineOverdose = "Лучший способ бросить курить",
     Tooltip_item_GreedySalvation = "Лечит зомби-вирус",
+    Tooltip_NoRequiredMaterials = "Отсутствуют необходимые материалы",
 }

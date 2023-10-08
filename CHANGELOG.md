@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file.
 - Changed all drinks icons.
 
 ## Added
-- Added Moonshine still movable item (thanks for imopssi and Unfainthful).
+- Added Moonshine still building item (thanks for imopssi and Unfainthful).
+- Added Make Whiskey option on Moonshine still. 
 - Added 3d models (thanks for Unfainthful).
 - Added SlenderDoeSetWeight sandbox option.
 
