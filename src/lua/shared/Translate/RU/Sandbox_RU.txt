@@ -1,6 +1,8 @@
 Sandbox_RU = {
     Sandbox_Permanent = "Permanent Effects Drinks",
-    Sandbox_KeepExperience = "РЎРѕС…СЂР°РЅРёС‚СЊ РЅР°РєРѕРїР»РµРЅРЅС‹Р№ РѕРїС‹С‚ (С‚СЂРµР±СѓРµС‚СЃСЏ РѕС‚РєР»СЋС‡РёС‚СЊ Р°РЅС‚РёС‡РёС‚ Type15)",
-    Sandbox_SlenderDoeSetWeight = "РЎС‚СЂРѕР№РЅР°СЏ Р›Р°РЅСЊ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РІРµСЃ",
-    Sandbox_CanBuildMoonshineStill = "Р Р°Р·СЂРµС€РёС‚СЊ СЃС‚СЂРѕРёС‚СЊ СЃР°РјРѕРіРѕРЅРЅС‹Р№ Р°РїРїР°СЂР°С‚",
+    Sandbox_KeepExperience = "Сохранить накопленный опыт (требуется отключить античит Type15)",
+    Sandbox_SlenderDoeSetWeight = "Стройная Лань устанавливает вес",
+    Sandbox_CanBuildMoonshineStill = "Разрешить строить самогонный аппарат",
+    Sandbox_AllowBrewingVanillaAlcohol = "Разрешить приготавливать ванильный алкоголь",
+    Sandbox_AllowBrewingExclusiveAlcohol = "Разрешить приготавливать эксклюзивный алкоголь",
 }

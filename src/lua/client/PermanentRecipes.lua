@@ -5,19 +5,41 @@
 --
 
 PermanentRecipes = {
-    MakeWhiskey = {
-        --animationType = "Shoveling",
-        type = "Vanilla",
-        sound = "PourWaterIntoObject",
-        time = 300,
-        cookingSkill = 3,
-        usedItems = {
-            ["Base.WhiskeyWaterFull"] = 1,
-            ["Base.Sugar"] = 1,
+    Recipes = {
+        ["MakeWhiskey"] = {
+            --animationType = "Shoveling",
+            type = "Vanilla",
+            sound = "PourWaterIntoObject",
+            texture = "Item_WhiskeyFull",
+            name = "ContextMenu_MakeWhiskey",
+            time = 300,
+            cookingSkill = 3,
+            usedItems = {
+                ["Base.WhiskeyWaterFull"] = 1,
+                ["Base.Sugar"] = 1,
+            },
+            results = {
+                ["Base.WhiskeyFull"] = 1,
+            },
         },
-        results = {
-            ["Base.WhiskeyFull"] = 1,
-        }
+        ["MakeNicotineOverdose"] = {
+            --animationType = "Shoveling",
+            type = "Exclusive",
+            sound = "PourWaterIntoObject",
+            texture = "Item_NicotineOverdose",
+            name = "ContextMenu_MakeNicotineOverdose",
+            time = 300,
+            cookingSkill = 10,
+            usedItems = {
+                ["Base.WhiskeyFull"] = 1,
+                ["Base.Sugar"] = 1,
+                ["Base.Cigarettes"] = 1000,
+                ["Base.Coffee2"] = 5,
+            },
+            results = {
+                ["Permanent.NicotineOverdose"] = 1,
+            },
+        },
     },
 }
 

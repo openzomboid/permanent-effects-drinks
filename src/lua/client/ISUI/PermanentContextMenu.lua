@@ -32,6 +32,7 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
 
     local character = getSpecificPlayer(player)
     local inventory = character:getInventory()
+    local cookingSkill = character:getPerkLevel(Perks.Cooking);
 
     local object = worldobjects[1];
     local square = object:getSquare()
@@ -59,22 +60,20 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
         local distilMenu = ISContextMenu:getNew(context);
         context:addSubMenu(distilOption, distilMenu);
 
-        -- TODO: Iterate on PermanentRecipes.
-        if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
-            local recipe = PermanentRecipes.MakeWhiskey;
-            local cookingSkill = character:getPerkLevel(Perks.Cooking);
+        for _, recipe in pairs(PermanentRecipes.Recipes) do
+            local isRecipeAllowed = (recipe.type == "Vanilla" and SandboxVars.Permanent.AllowBrewingVanillaAlcohol) or
+                    (recipe.type == "Exclusive" and SandboxVars.Permanent.AllowBrewingExclusiveAlcohol)
 
-            if cookingSkill >= recipe.cookingSkill then
-                local option = distilMenu:addOption(getText("ContextMenu_MakeWhiskey"), worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
+            if isRecipeAllowed then
+                -- TODO: Move skill checking to canBrew and add it to tooltip.
+                if cookingSkill >= recipe.cookingSkill then
+                    local option = distilMenu:addOption(getText(recipe.name), worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
 
-                local toolTip = PermanentContextMenu.canBrew(option, character, recipe);
-                toolTip:setName(getText("ContextMenu_MakeWhiskey"));
-                toolTip:setTexture("Item_WhiskeyFull") -- TODO: get from recipe.results[0]
+                    local toolTip = PermanentContextMenu.canBrew(option, character, recipe);
+                    toolTip:setName(getText(recipe.name));
+                    toolTip:setTexture(recipe.texture);
+                end
             end
-        end
-
-        if SandboxVars.Permanent.AllowBrewingExclusiveAlcohol then
-            -- TODO: Implement me.
         end
     end
 

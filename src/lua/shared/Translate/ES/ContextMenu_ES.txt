@@ -5,4 +5,5 @@ ContextMenu_ES = {
 	ContextMenu_MoonshineStill_Description = "Los alambiques de licor de luna Greedy Bastards son alambiques de cobre o acero inoxidable que se utilizan para hacer licor de luna tradicional u otros licores utilizando azúcar o granos variados como base",
 	ContextMenu_DistillAlcohol = "Destilar alcohol",
 	ContextMenu_MakeWhiskey = "Hacer Whisky",
+	ContextMenu_MakeNicotineOverdose = "Hacer una sobredosis de nicotina",
 }

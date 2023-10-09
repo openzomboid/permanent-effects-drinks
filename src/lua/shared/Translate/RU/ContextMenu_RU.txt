@@ -5,4 +5,5 @@ ContextMenu_RU = {
     ContextMenu_MoonshineStill_Description = "Самогонные аппараты Greedy Bastard представляют собой перегонные емкости из меди или нержавеющей стали, которые используются для приготовления традиционного самогона или других спиртных напитков с использованием сахара или различных зерен в качестве основы",
     ContextMenu_DistillAlcohol = "Перегнать алкоголь",
     ContextMenu_MakeWhiskey = "Приготовить Виски",
+    ContextMenu_MakeNicotineOverdose = "Приготовить Никотиновую Передозировку",
 }
