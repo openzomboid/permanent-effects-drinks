@@ -3,6 +3,17 @@ module Permanent {
         Base
     }
 
+    item ExclusiveRecipe {
+        Weight           = 0.1,
+        Type             = Normal,
+        Icon             = ExclusiveRecipe,
+        DisplayName      = ExclusiveRecipe,
+        DisplayCategory  = SkillBook,
+        Tooltip          = Tooltip_item_ExclusiveRecipe,
+        StaticModel      = Magazine,
+        WorldStaticModel = MagazineCrossword1_Ground,
+    }
+
     item HastyHerring {
         Weight           = 0.5,
         Type             = Normal,

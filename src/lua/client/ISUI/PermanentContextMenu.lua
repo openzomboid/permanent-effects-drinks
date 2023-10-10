@@ -31,11 +31,8 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
     end
 
     local character = getSpecificPlayer(player)
-    local inventory = character:getInventory()
-    local cookingSkill = character:getPerkLevel(Perks.Cooking);
 
     local object = worldobjects[1];
-    local square = object:getSquare()
     local sprite = object:getSprite()
 
     if character:getVehicle() then
@@ -44,15 +41,11 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
 
     local isMoonshineStill
 
-    for i=1, square:getObjects():size() do
-        local o = square:getObjects():get(i-1)
+    if sprite and sprite:getName() then
+        local spriteName = sprite:getName()
 
-        if sprite and sprite:getName() then
-            local spriteName = sprite:getName()
-
-            isMoonshineStill = spriteName == "MoonshineStill_0" or spriteName == "MoonshineStill_1" or
+        isMoonshineStill = spriteName == "MoonshineStill_0" or spriteName == "MoonshineStill_1" or
                 spriteName == "MoonshineStill_2" or spriteName == "MoonshineStill_3"
-        end
     end
 
     if isMoonshineStill and (SandboxVars.Permanent.AllowBrewingVanillaAlcohol or SandboxVars.Permanent.AllowBrewingExclusiveAlcohol) then
@@ -60,19 +53,17 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
         local distilMenu = ISContextMenu:getNew(context);
         context:addSubMenu(distilOption, distilMenu);
 
-        for _, recipe in pairs(PermanentRecipes.Recipes) do
-            local isRecipeAllowed = (recipe.type == "Vanilla" and SandboxVars.Permanent.AllowBrewingVanillaAlcohol) or
-                    (recipe.type == "Exclusive" and SandboxVars.Permanent.AllowBrewingExclusiveAlcohol)
+        for _, recipe in pairs(PermanentRecipes.Recipes.Vanilla) do
+            PermanentContextMenu.AddBrewOption(distilMenu, character, object, recipe)
+        end
 
-            if isRecipeAllowed then
-                -- TODO: Move skill checking to canBrew and add it to tooltip.
-                if cookingSkill >= recipe.cookingSkill then
-                    local option = distilMenu:addOption(getText(recipe.name), worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
+        if SandboxVars.Permanent.AllowBrewingExclusiveAlcohol then
+            local distilExclusiveOption = distilMenu:addOption(getText("ContextMenu_DistillExclusiveAlcohol"), worldobjects, nil);
+            local distilExclusiveMenu = ISContextMenu:getNew(context);
+            context:addSubMenu(distilExclusiveOption, distilExclusiveMenu);
 
-                    local toolTip = PermanentContextMenu.canBrew(option, character, recipe);
-                    toolTip:setName(getText(recipe.name));
-                    toolTip:setTexture(recipe.texture);
-                end
+            for _, recipe in pairs(PermanentRecipes.Recipes.Exclusive) do
+                PermanentContextMenu.AddBrewOption(distilExclusiveMenu, character, object, recipe)
             end
         end
     end
@@ -80,8 +71,24 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
     return true
 end
 
-PermanentContextMenu.canBrew = function(option, character, recipe)
+PermanentContextMenu.AddBrewOption = function(distilMenu, character, object, recipe)
+    local isRecipeAllowed = (recipe.type == "Vanilla" and SandboxVars.Permanent.AllowBrewingVanillaAlcohol) or
+            (recipe.type == "Exclusive" and SandboxVars.Permanent.AllowBrewingExclusiveAlcohol)
+
+    if isRecipeAllowed and recipe.disabled ~= true then
+        local optionName = getText("ContextMenu_MakeAlcohol") .. " " .. getItemNameFromFullType(recipe.result)
+        local option = distilMenu:addOption(optionName, worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
+        option.iconTexture = getTexture(recipe.texture);
+
+        local toolTip = PermanentContextMenu.CanBrew(option, character, recipe);
+        toolTip:setName(optionName);
+        toolTip:setTexture(recipe.texture);
+    end
+end
+
+PermanentContextMenu.CanBrew = function(option, character, recipe)
     local inventory = character:getInventory()
+    local cookingSkill = character:getPerkLevel(Perks.Cooking);
 
     local tooltip = ISWorldObjectContextMenu.addToolTip();
     option.toolTip = tooltip;
@@ -108,6 +115,14 @@ PermanentContextMenu.canBrew = function(option, character, recipe)
 
         tooltip.description = tooltip.description .. color .. getItemNameFromFullType(itemCode) .. " " .. itemsCount .. "/" .. neededItemsCount .. " <LINE>";
     end
+
+    local color = PermanentContextMenu.ghs;
+    if cookingSkill < recipe.cookingSkill then
+        color = PermanentContextMenu.bhs
+        result = false;
+    end
+
+    tooltip.description = tooltip.description .. "<LINE>" .. color .. getText("IGUI_perks_Cooking") .. " " .. cookingSkill .. "/" .. recipe.cookingSkill .. " <LINE>";
 
     if not result then
         option.onSelect = nil;

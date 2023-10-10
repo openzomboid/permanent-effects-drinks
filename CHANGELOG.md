@@ -13,8 +13,8 @@ All notable changes to this project will be documented in this file.
 
 ## Added
 - Added Moonshine still building item (thanks for imopssi and Unfainthful).
-- Added Make Whiskey option on Moonshine still. 
-- Added Make Nicotine Overdose option on Moonshine still. 
+- Added options to make vanilla Base.WhiskeyFull, Base.Wine2 and Base.BeerBottle on Moonshine still. 
+- Added options to make Permanent.SlenderDoe, Permanent.NicotineOverdose on Moonshine still.
 - Added 3d models (thanks for Unfainthful).
 - Added SlenderDoeSetWeight sandbox option.
 

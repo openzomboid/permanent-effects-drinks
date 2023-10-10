@@ -73,7 +73,8 @@ function PermanentsBrewingAction:perform()
     end
 
     -- Add results to player inventory.
-    for itemCode, addItemsCount in pairs(self.recipe.results) do
+    inventory:AddItems(self.recipe.result, 1)
+    for itemCode, addItemsCount in pairs(self.recipe.additionalResults) do
         inventory:AddItems(itemCode, addItemsCount)
     end
 

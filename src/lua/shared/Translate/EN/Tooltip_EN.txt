@@ -1,4 +1,6 @@
 Tooltip_EN = {
+    Tooltip_item_ExclusiveRecipe = "Contains recipes for Greedy Bastard's exclusive drinks",
+
     Tooltip_item_HastyHerring = "Permanently increases Sprinting by 1",
     Tooltip_item_DoubleHastyHerring = "Permanently increases Fitness by 1, Sprinting by 1",
     Tooltip_item_GreedyHammer = "Permanently increases Long Blunt skill by 1",
@@ -11,5 +13,4 @@ Tooltip_EN = {
     Tooltip_item_SlenderDoe = "Sets the character's weight to 80 kg",
     Tooltip_item_NicotineOverdose = "The best way to quit smoking",
     Tooltip_item_GreedySalvation = "Cures Zombie Virus",
-    Tooltip_NoRequiredMaterials = "Required materials are missing",
 }

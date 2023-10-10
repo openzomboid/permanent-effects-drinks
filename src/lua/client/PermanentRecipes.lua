@@ -5,39 +5,97 @@
 --
 
 PermanentRecipes = {
+    -- TODO: Add possibility to create custom recipes in server side Lua directory.
     Recipes = {
-        ["MakeWhiskey"] = {
-            --animationType = "Shoveling",
-            type = "Vanilla",
-            sound = "PourWaterIntoObject",
-            texture = "Item_WhiskeyFull",
-            name = "ContextMenu_MakeWhiskey",
-            time = 300,
-            cookingSkill = 3,
-            usedItems = {
-                ["Base.WhiskeyWaterFull"] = 1,
-                ["Base.Sugar"] = 1,
+        Vanilla = {
+            ["MakeWhiskey"] = {
+                name = "MakeWhiskey",
+                type = "Vanilla",
+                disabled = false,
+                sound = "PourWaterIntoObject",
+                texture = "Item_WhiskeyFull",
+                time = 300,
+                cookingSkill = 3,
+                usedItems = {
+                    ["Base.WhiskeyWaterFull"] = 1,
+                    ["Base.Yeast"] = 1,
+                    ["Base.Corn"] = 1,
+                    ["Base.UnusableWood"] = 1,
+                },
+                result = "Base.WhiskeyFull",
+                additionalResults = {},
             },
-            results = {
-                ["Base.WhiskeyFull"] = 1,
+            ["MakeWine"] = {
+                name = "MakeWine",
+                type = "Vanilla",
+                disabled = false,
+                sound = "PourWaterIntoObject",
+                texture = "Item_Wine2Full",
+                time = 300,
+                cookingSkill = 3,
+                usedItems = {
+                    ["Base.WineWaterFull"] = 1,
+                    ["Base.Sugar"] = 1,
+                    ["Base.Grapes"] = 1,
+                },
+                result = "Base.Wine2",
+                additionalResults = {},
+            },
+            ["MakeBeer"] = {
+                name = "MakeBeer",
+                type = "Vanilla",
+                disabled = false,
+                sound = "PourWaterIntoObject",
+                texture = "Item_BeerBottle",
+                time = 300,
+                cookingSkill = 3,
+                usedItems = {
+                    ["Base.BeerWaterFull"] = 1,
+                    ["Base.Sugar"] = 1,
+                    ["Base.Corn"] = 1,
+                },
+                result = "Base.BeerBottle",
+                additionalResults = {},
             },
         },
-        ["MakeNicotineOverdose"] = {
-            --animationType = "Shoveling",
-            type = "Exclusive",
-            sound = "PourWaterIntoObject",
-            texture = "Item_NicotineOverdose",
-            name = "ContextMenu_MakeNicotineOverdose",
-            time = 300,
-            cookingSkill = 10,
-            usedItems = {
-                ["Base.WhiskeyFull"] = 1,
-                ["Base.Sugar"] = 1,
-                ["Base.Cigarettes"] = 1000,
-                ["Base.Coffee2"] = 5,
+
+        Exclusive = {
+            ["MakeSlenderDoe"] = {
+                name = "MakeSlenderDoe",
+                type = "Exclusive",
+                disabled = false,
+                sound = "PourWaterIntoObject",
+                texture = "media/textures/Item_SlenderDoe.png",
+                time = 300,
+                cookingSkill = 10,
+                usedItems = {
+                    ["Permanent.ExclusiveRecipe"] = 1,
+                    ["Base.Wine2"] = 1,
+                    ["Base.Wine"] = 1,
+                    ["Base.GrapeLeaves"] = 4,
+                    ["Base.Milk"] = 1,
+                    ["Base.Pickles"] = 1,
+                },
+                result = "Permanent.SlenderDoe",
+                additionalResults = {},
             },
-            results = {
-                ["Permanent.NicotineOverdose"] = 1,
+            ["MakeNicotineOverdose"] = {
+                name = "MakeNicotineOverdose",
+                type = "Exclusive",
+                disabled = false,
+                sound = "PourWaterIntoObject",
+                texture = "media/textures/Item_NicotineOverdose.png",
+                time = 300,
+                cookingSkill = 10,
+                usedItems = {
+                    ["Permanent.ExclusiveRecipe"] = 1,
+                    ["Base.WhiskeyFull"] = 1,
+                    ["Base.Sugar"] = 1,
+                    ["Base.Cigarettes"] = 1000,
+                    ["Base.Coffee2"] = 5,
+                },
+                result = "Permanent.NicotineOverdose",
+                additionalResults = {},
             },
         },
     },

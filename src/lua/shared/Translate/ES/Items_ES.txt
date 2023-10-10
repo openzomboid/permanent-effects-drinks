@@ -1,5 +1,7 @@
 Items_ES = {
     DisplayName_MoonshineStill = "Todavía luz de la luna",
+    DisplayName_ExclusiveRecipe = "Receta exclusiva de alcohol",
+
     DisplayName_HastyHerring = "Arenque apresurado",
     DisplayName_DoubleHastyHerring = "Doble arenque apresurado",
     DisplayName_GreedyHammer = "Martillo codicioso",
