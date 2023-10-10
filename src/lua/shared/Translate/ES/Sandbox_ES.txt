@@ -5,4 +5,6 @@ Sandbox_ES = {
     Sandbox_CanBuildMoonshineStill = "Permitir construir alcohol ilegal todavía",
     Sandbox_AllowBrewingVanillaAlcohol = "Deje reposar alcohol de vainilla",
     Sandbox_AllowBrewingExclusiveAlcohol = "Dejar reposar Alcohol exclusivo",
+    Sandbox_AllowExclusiveRecipeInZombieLoot = "Permitir generar un libro de recetas de Moonshine en el botín de Zombies",
+    Sandbox_ExclusiveRecipeInAllZombiesLootChance = "Posibilidad de generar un libro de recetas de Moonshine en todo el botín de zombies",
 }

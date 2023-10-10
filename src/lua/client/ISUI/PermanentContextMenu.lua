@@ -92,6 +92,10 @@ PermanentContextMenu.CanBrew = function(option, character, recipe)
 
     local tooltip = ISWorldObjectContextMenu.addToolTip();
     option.toolTip = tooltip;
+    if recipe.type == "Vanilla" then
+        tooltip.footNote = getText("Tooltip_brew_footNote")
+    end
+
     local result = true;
     tooltip.description = getText("Tooltip_craft_Needs") .. ": <LINE>";
 

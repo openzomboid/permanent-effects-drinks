@@ -1,5 +1,6 @@
 Tooltip_EN = {
-    Tooltip_item_ExclusiveRecipe = "Contains recipes for Greedy Bastard's exclusive drinks",
+    Tooltip_item_ExclusiveRecipe = "Contains recipes for Greedy Bastard's exclusive drinks. Is an ingredient",
+    Tooltip_brew_footNote = "Used the appropriate bottle for the drink",
 
     Tooltip_item_HastyHerring = "Permanently increases Sprinting by 1",
     Tooltip_item_DoubleHastyHerring = "Permanently increases Fitness by 1, Sprinting by 1",

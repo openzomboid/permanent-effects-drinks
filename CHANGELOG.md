@@ -12,11 +12,12 @@ All notable changes to this project will be documented in this file.
 - Changed all drinks icons.
 
 ## Added
-- Added Moonshine still building item (thanks for imopssi and Unfainthful).
+- Added Moonshine still building item (thanks to imopssi and Unfainthful).
 - Added options to make vanilla Base.WhiskeyFull, Base.Wine2 and Base.BeerBottle on Moonshine still. 
 - Added options to make Permanent.SlenderDoe, Permanent.NicotineOverdose on Moonshine still.
-- Added 3d models (thanks for Unfainthful).
+- Added 3d models (thanks to Unfainthful).
 - Added SlenderDoeSetWeight sandbox option.
+- Added Turkish translation. Thanks to [@kylnx](https://steamcommunity.com/profiles/76561199200666453)!
 
 ## [v0.10.0] - 2023-02-24
 ## Fixed

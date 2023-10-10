@@ -1,6 +1,6 @@
 Items_RU = {
     DisplayName_MoonshineStill = "Самогонный аппарат",
-    DisplayName_ExclusiveRecipe = "Рецепты эксклюзивного алкоголя",
+    DisplayName_ExclusiveRecipe = "Книга рецептов самогона",
 
 	DisplayName_HastyHerring = "Быстрая Селедка",
 	DisplayName_DoubleHastyHerring = "Двойная Быстрая Селедка",

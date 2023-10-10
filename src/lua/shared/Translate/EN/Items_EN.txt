@@ -1,6 +1,6 @@
 Items_EN = {
     DisplayName_MoonshineStill = "Moonshine Still",
-	DisplayName_ExclusiveRecipe = "Exclusive Alcohol recipes",
+	DisplayName_ExclusiveRecipe = "Moonshine Recipe Book",
 
 	DisplayName_HastyHerring = "Hasty Herring",
 	DisplayName_DoubleHastyHerring = "Double Hasty Herring",
