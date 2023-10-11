@@ -129,5 +129,7 @@ description=    [*][url=https://steamcommunity.com/profiles/76561198080983473]@T
 description=    [*][url=http://steamcommunity.com/profiles/76561198041180030]@imopssi[/url] - For Moonshine still texture
 description=    [*][url=http://steamcommunity.com/profiles/76561198072217531]@Unfainthful[/url] - For Moonshine still texture and 3d models for bottles
 description=[/list]
+description=
+description=[img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/assets/steam-rate.gif[/img]
 tags=Build 41;Multiplayer
 visibility=public
