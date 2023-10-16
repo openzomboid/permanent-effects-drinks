@@ -10,6 +10,7 @@ require 'Items/SuburbsDistributions'
 
 PermanentSuburbsDistributions = {}
 
+-- addZombieLoot adds chance to spawn some loot in zombies.
 local function addZombieLoot()
     if not SandboxVars.Permanent.AllowExclusiveRecipeInZombieLoot then
         return
