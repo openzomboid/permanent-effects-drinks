@@ -31,5 +31,4 @@ PermanentSuburbsDistributions.postDistributionMerge = function()
     addZombieLoot()
 end
 
-Events.OnPostDistributionMerge.Add(PermanentSuburbsDistributions.postDistributionMerge)
-
+Events.OnPostDistributionMerge.Add(PermanentSuburbsDistributions.postDistributionMerge);
