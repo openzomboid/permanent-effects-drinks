@@ -2,4 +2,8 @@
 .vscode/
 
 devtools/
-release/
+.tmp/
+tests/mock/lua/mods/*
+!tests/mock/lua/mods/.gitkeep
+
+config-local.sh
