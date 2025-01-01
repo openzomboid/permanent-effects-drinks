@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file.
 - Fixed changelog links.
 
 ## Added
-- Added library for tests.
+- Added library for tests (WIP).
+- Added Build 42 support.
 
 ## [v0.11.0] - 2023-10-11
 ### Fixed
