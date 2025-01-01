@@ -19,21 +19,18 @@ touch .tmp/release/checksum.txt
 function make_release() {
   local dir_workshop=".tmp/release/${RELEASE_NAME}"
   local dir="${dir_workshop}/Contents/mods/${MOD_NAME}"
+  local dir_common="${dir}/common"
+  local dir_42="${dir}/42"
 
   mkdir -p "${dir}"
+  mkdir -p "${dir_common}"
+  mkdir -p "${dir_42}"
 
   case $STAGE in
-    local)
-      cp workshop/local/workshop.txt "${dir_workshop}"
-      cp workshop/local/mod.info "${dir}"
-      ;;
-    test)
-      cp workshop/test/workshop.txt "${dir_workshop}"
-      cp workshop/test/mod.info "${dir}"
-      ;;
-    prod)
-      cp workshop/workshop.txt "${dir_workshop}"
-      cp workshop/mod.info "${dir}"
+    local|test|prod)
+      cp workshop/$STAGE/workshop.txt "${dir_workshop}"
+      cp workshop/$STAGE/mod.info "${dir}"
+      cp workshop/$STAGE/mod.info "${dir_42}"
       ;;
     *)
       echo "incorrect stage" >&2
@@ -43,13 +40,19 @@ function make_release() {
 
   cp workshop/poster.png "${dir_workshop}/preview.png"
   cp workshop/poster.png "${dir}"
+  cp workshop/poster.png "${dir_42}"
   cp src -r "${dir}/media"
+  cp src -r "${dir_42}/media"
 
   find "${dir}/media" -name '*_test.lua' -type f -delete
+  find "${dir_42}/media" -name '*_test.lua' -type f -delete
 
   cp LICENSE "${dir}"
+  cp LICENSE "${dir_42}"
   cp README.md "${dir}"
+  cp README.md "${dir_42}"
   cp CHANGELOG.md "${dir}"
+  cp CHANGELOG.md "${dir_42}"
 
   cd "${dir_workshop}/Contents/mods/" && {
     tar -zcvf "../../../${RELEASE_NAME}.tar.gz" "${MOD_NAME}"
@@ -66,7 +69,7 @@ function make_release() {
 function install_release() {
   rm -r ~/Zomboid/Workshop/"${MOD_NAME}"
   cp -r  .tmp/release/"${RELEASE_NAME}" ~/Zomboid/Workshop/"${MOD_NAME}"
-  rm -r .tmp/release/"${RELEASE_NAME}"
+#  rm -r .tmp/release/"${RELEASE_NAME}"
 }
 
 make_release && install_release
