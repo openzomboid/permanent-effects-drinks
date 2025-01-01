@@ -132,5 +132,5 @@ description=
 description=[img]https://raw.githubusercontent.com/openzomboid/permanent-effects-drinks/master/assets/steam-rate.gif[/img]
 description=
 description=Please use [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334]Stable version[/url].
-tags=Build 41;Multiplayer
+tags=Build 41;Build 42;Multiplayer
 visibility=unlisted

@@ -38,9 +38,9 @@ function make_release() {
       ;;
   esac
 
-  cp workshop/poster.png "${dir_workshop}/preview.png"
-  cp workshop/poster.png "${dir}"
-  cp workshop/poster.png "${dir_42}"
+  cp workshop/preview.png "${dir_workshop}/preview.png"
+  cp workshop/preview.png "${dir}"
+  cp workshop/preview.png "${dir_42}"
   cp src -r "${dir}/media"
   cp src -r "${dir_42}/media"
 
