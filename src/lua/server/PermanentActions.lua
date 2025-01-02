@@ -33,92 +33,7 @@ end
 
 local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
-if pzversion == "42" then
-    require "recipecode";
-    Recipe = Recipe or {};
-    Recipe.OnCreate = Recipe.OnCreate or {};
-
-    -- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
-    function Recipe.OnCreate.DrinkHastyHerring(craftRecipeData, character)
-        PerkLevelup(character, Perks.Sprinting);
-    end
-
-    -- DrinkDoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
-    function Recipe.OnCreate.DrinkDoubleHastyHerring(craftRecipeData, character)
-        PerkLevelup(character, Perks.Sprinting);
-        PerkLevelup(character, Perks.Fitness);
-    end
-
-    -- DrinkGreedyHammer adds action to drink Permanent.GreedyHammer.
-    function Recipe.OnCreate.DrinkGreedyHammer(craftRecipeData, character)
-        PerkLevelup(character, Perks.Blunt);
-    end
-
-    -- DrinkDoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
-    function Recipe.OnCreate.DrinkDoubleGreedyHammer(craftRecipeData, character)
-        PerkLevelup(character, Perks.Blunt);
-        PerkLevelup(character, Perks.Strength);
-    end
-
-    -- DrinkGreedyAxe adds action to drink Permanent.GreedyAxe.
-    function Recipe.OnCreate.DrinkGreedyAxe(craftRecipeData, character)
-        PerkLevelup(character, Perks.Axe);
-    end
-
-    -- DrinkDoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
-    function Recipe.OnCreate.DrinkDoubleGreedyAxe(craftRecipeData, character)
-        PerkLevelup(character, Perks.Axe);
-        PerkLevelup(character, Perks.Strength);
-    end
-
-    -- DrinkStrayBullet adds action to drink Permanent.StrayBullet.
-    function Recipe.OnCreate.DrinkStrayBullet(craftRecipeData, character)
-        PerkLevelup(character, Perks.Aiming);
-    end
-
-    -- DrinkSlipperyFish adds action to drink Permanent.SlipperyFish.
-    -- Permanently increases Nimble by 1.
-    function Recipe.OnCreate.DrinkSlipperyFish(craftRecipeData, character)
-        PerkLevelup(character, Perks.Nimble);
-    end
-
-    -- DrinkSolidAdventurer adds action to drink Permanent.SolidAdventurer.
-    -- Permanently increases Maintenance by 1.
-    function Recipe.OnCreate.DrinkSolidAdventurer(craftRecipeData, character)
-        PerkLevelup(character, Perks.Maintenance);
-    end
-
-    -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
-    -- Sets characters weight to SlenderDoeSetWeight value.
-    function Recipe.OnCreate.DrinkSlenderDoe(craftRecipeData, character)
-        character:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
-
-        if character:HasTrait("Overweight") then
-            character:getTraits():remove("Overweight");
-        end
-
-        if character:HasTrait("Underweight") then
-            character:getTraits():remove("Underweight");
-        end
-
-        if character:HasTrait("Obese") then
-            character:getTraits():remove("Obese");
-        end
-
-        if character:HasTrait("Very Underweight") then
-            character:getTraits():remove("Very Underweight");
-        end
-    end
-
-    -- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
-    function Recipe.OnCreate.DrinkNicotineOverdose(craftRecipeData, character)
-        if character:HasTrait("Smoker") then
-            character:getTraits():remove("Smoker");
-            character:getStats():setStressFromCigarettes(0);
-            character:setTimeSinceLastSmoke(0);
-        end
-    end
-else
+if pzversion == "41" then
     -- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
     function DrinkHastyHerring(items, result, player)
         PerkLevelup(player, Perks.Sprinting);
@@ -198,6 +113,142 @@ else
             player:getStats():setStressFromCigarettes(0);
             player:setTimeSinceLastSmoke(0);
         end
+    end
+end
+
+-- OnEat_HastyHerring adds action to drink Permanent.HastyHerring.
+function OnEat_HastyHerring(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Sprinting);
+end
+
+-- OnEat_DoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
+function OnEat_DoubleHastyHerring(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Sprinting);
+    PerkLevelup(character, Perks.Fitness);
+end
+
+-- OnEat_GreedyHammer adds action to drink Permanent.GreedyHammer.
+function OnEat_GreedyHammer(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Blunt);
+end
+
+-- OnEat_DoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
+function OnEat_DoubleGreedyHammer(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Blunt);
+    PerkLevelup(character, Perks.Strength);
+end
+
+-- OnEat_GreedyAxe adds action to drink Permanent.GreedyAxe.
+function OnEat_GreedyAxe(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Axe);
+end
+
+-- OnEat_DoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
+function OnEat_DoubleGreedyAxe(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Axe);
+    PerkLevelup(character, Perks.Strength);
+end
+
+-- OnEat_StrayBullet adds action to drink Permanent.StrayBullet.
+function OnEat_StrayBullet(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Aiming);
+end
+
+-- OnEat_SlipperyFish adds action to drink Permanent.SlipperyFish.
+-- Permanently increases Nimble by 1.
+function OnEat_SlipperyFish(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Nimble);
+end
+
+-- OnEat_SolidAdventurer adds action to drink Permanent.SolidAdventurer.
+-- Permanently increases Maintenance by 1.
+function OnEat_SolidAdventurer(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    PerkLevelup(character, Perks.Maintenance);
+end
+
+-- OnEat_SlenderDoe adds action to drink Permanent.SlenderDoe.
+-- Sets characters weight to SlenderDoeSetWeight value.
+function OnEat_SlenderDoe(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    character:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
+
+    if character:HasTrait("Overweight") then
+        character:getTraits():remove("Overweight");
+    end
+
+    if character:HasTrait("Underweight") then
+        character:getTraits():remove("Underweight");
+    end
+
+    if character:HasTrait("Obese") then
+        character:getTraits():remove("Obese");
+    end
+
+    if character:HasTrait("Very Underweight") then
+        character:getTraits():remove("Very Underweight");
+    end
+end
+
+-- OnEat_NicotineOverdose adds action to drink Permanent.NicotineOverdose.
+function OnEat_NicotineOverdose(food, character, percent)
+    if percent < 1 then
+        character:Say(getText("Moodles_nothing_happened"))
+        return
+    end
+
+    if character:HasTrait("Smoker") then
+        character:getTraits():remove("Smoker");
+        character:getStats():setStressFromCigarettes(0);
+        character:setTimeSinceLastSmoke(0);
     end
 end
 
