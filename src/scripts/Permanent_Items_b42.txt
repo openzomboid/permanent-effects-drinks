@@ -38,8 +38,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_HastyHerring,
-		StaticModel		  = HastyHerring,
-		WorldStaticModel  = HastyHerring,
+        StaticModel       = HastyHerring,
+        WorldStaticModel  = HastyHerring,
     }
 
     item DoubleHastyHerring {
@@ -66,8 +66,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_DoubleHastyHerring,
-		StaticModel		  = DoubleHastyHerring,
-		WorldStaticModel  = DoubleHastyHerring,
+        StaticModel       = DoubleHastyHerring,
+        WorldStaticModel  = DoubleHastyHerring,
     }
 
     item GreedyHammer {
@@ -94,8 +94,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_GreedyHammer,
-		StaticModel		  = GreedyHammer,
-		WorldStaticModel  = GreedyHammer,
+        StaticModel       = GreedyHammer,
+        WorldStaticModel  = GreedyHammer,
     }
 
     item DoubleGreedyHammer {
@@ -122,8 +122,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_DoubleGreedyHammer,
-		StaticModel		  = DoubleGreedyHammer,
-		WorldStaticModel  = DoubleGreedyHammer,
+        StaticModel       = DoubleGreedyHammer,
+        WorldStaticModel  = DoubleGreedyHammer,
     }
 
     item GreedyAxe {
@@ -150,8 +150,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_GreedyAxe,
-		StaticModel		  = GreedyAxe,
-		WorldStaticModel  = GreedyAxe,
+        StaticModel       = GreedyAxe,
+        WorldStaticModel  = GreedyAxe,
     }
 
     item DoubleGreedyAxe {
@@ -178,8 +178,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_DoubleGreedyAxe,
-		StaticModel		  = DoubleGreedyAxe,
-		WorldStaticModel  = DoubleGreedyAxe,
+        StaticModel       = DoubleGreedyAxe,
+        WorldStaticModel  = DoubleGreedyAxe,
     }
 
     item StrayBullet {
@@ -206,8 +206,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_StrayBullet,
-		StaticModel		  = StrayBullet,
-		WorldStaticModel  = StrayBullet,
+        StaticModel       = StrayBullet,
+        WorldStaticModel  = StrayBullet,
     }
 
     item SlipperyFish {
@@ -234,8 +234,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_SlipperyFish,
-		StaticModel		  = SlipperyFish,
-		WorldStaticModel  = SlipperyFish,
+        StaticModel       = SlipperyFish,
+        WorldStaticModel  = SlipperyFish,
     }
 
     item SolidAdventurer {
@@ -262,8 +262,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_SolidAdventurer,
-		StaticModel		  = SolidAdventurer,
-		WorldStaticModel  = SolidAdventurer,
+        StaticModel       = SolidAdventurer,
+        WorldStaticModel  = SolidAdventurer,
     }
 
     item SlenderDoe {
@@ -290,8 +290,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_SlenderDoe,
-		StaticModel		  = SlenderDoe,
-		WorldStaticModel  = SlenderDoe,
+        StaticModel       = SlenderDoe,
+        WorldStaticModel  = SlenderDoe,
     }
 
     item NicotineOverdose {
@@ -318,8 +318,8 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_NicotineOverdose,
-		StaticModel		  = NicotineOverdose,
-		WorldStaticModel  = NicotineOverdose,
+        StaticModel       = NicotineOverdose,
+        WorldStaticModel  = NicotineOverdose,
     }
 
     item GreedySalvation {
@@ -346,7 +346,7 @@ module Permanent {
         Medical           = true,
         Tags              = Liquor,
         Tooltip           = Tooltip_item_GreedySalvation,
-		StaticModel		  = GreedySalvation,
-		WorldStaticModel  = GreedySalvation,
+        StaticModel       = GreedySalvation,
+        WorldStaticModel  = GreedySalvation,
     }
 }
