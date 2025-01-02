@@ -31,84 +31,173 @@ function PerkLevelup(player, perkType)
     end
 end
 
--- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
-function DrinkHastyHerring(items, result, player)
-    PerkLevelup(player, Perks.Sprinting);
-end
+local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
--- DrinkDoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
-function DrinkDoubleHastyHerring(items, result, player)
-    PerkLevelup(player, Perks.Sprinting);
-    PerkLevelup(player, Perks.Fitness);
-end
+if pzversion == "42" then
+    require "recipecode";
+    Recipe = Recipe or {};
+    Recipe.OnCreate = Recipe.OnCreate or {};
 
--- DrinkGreedyHammer adds action to drink Permanent.GreedyHammer.
-function DrinkGreedyHammer(items, result, player)
-    PerkLevelup(player, Perks.Blunt);
-end
-
--- DrinkDoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
-function DrinkDoubleGreedyHammer(items, result, player)
-    PerkLevelup(player, Perks.Blunt);
-    PerkLevelup(player, Perks.Strength);
-end
-
--- DrinkGreedyAxe adds action to drink Permanent.GreedyAxe.
-function DrinkGreedyAxe(items, result, player)
-    PerkLevelup(player, Perks.Axe);
-end
-
--- DrinkDoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
-function DrinkDoubleGreedyAxe(items, result, player)
-    PerkLevelup(player, Perks.Axe);
-    PerkLevelup(player, Perks.Strength);
-end
-
--- DrinkStrayBullet adds action to drink Permanent.StrayBullet.
-function DrinkStrayBullet(items, result, player)
-    PerkLevelup(player, Perks.Aiming);
-end
-
--- DrinkSlipperyFish adds action to drink Permanent.SlipperyFish.
--- Permanently increases Nimble by 1.
-function DrinkSlipperyFish(items, result, player)
-    PerkLevelup(player, Perks.Nimble);
-end
-
--- DrinkSolidAdventurer adds action to drink Permanent.SolidAdventurer.
--- Permanently increases Maintenance by 1.
-function DrinkSolidAdventurer(items, result, player)
-    PerkLevelup(player, Perks.Maintenance);
-end
-
--- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
--- Sets characters weight to SlenderDoeSetWeight value.
-function DrinkSlenderDoe(items, result, player)
-    player:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
-
-    if player:HasTrait("Overweight") then
-        player:getTraits():remove("Overweight");
+    -- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
+    function Recipe.OnCreate.DrinkHastyHerring(craftRecipeData, character)
+        PerkLevelup(character, Perks.Sprinting);
     end
 
-    if player:HasTrait("Underweight") then
-        player:getTraits():remove("Underweight");
+    -- DrinkDoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
+    function Recipe.OnCreate.DrinkDoubleHastyHerring(craftRecipeData, character)
+        PerkLevelup(character, Perks.Sprinting);
+        PerkLevelup(character, Perks.Fitness);
     end
 
-    if player:HasTrait("Obese") then
-        player:getTraits():remove("Obese");
+    -- DrinkGreedyHammer adds action to drink Permanent.GreedyHammer.
+    function Recipe.OnCreate.DrinkGreedyHammer(craftRecipeData, character)
+        PerkLevelup(character, Perks.Blunt);
     end
 
-    if player:HasTrait("Very Underweight") then
-        player:getTraits():remove("Very Underweight");
+    -- DrinkDoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
+    function Recipe.OnCreate.DrinkDoubleGreedyHammer(craftRecipeData, character)
+        PerkLevelup(character, Perks.Blunt);
+        PerkLevelup(character, Perks.Strength);
     end
-end
 
--- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
-function DrinkNicotineOverdose(items, result, player)
-    if player:HasTrait("Smoker") then
-        player:getTraits():remove("Smoker");
-        player:getStats():setStressFromCigarettes(0);
-        player:setTimeSinceLastSmoke(0);
+    -- DrinkGreedyAxe adds action to drink Permanent.GreedyAxe.
+    function Recipe.OnCreate.DrinkGreedyAxe(craftRecipeData, character)
+        PerkLevelup(character, Perks.Axe);
+    end
+
+    -- DrinkDoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
+    function Recipe.OnCreate.DrinkDoubleGreedyAxe(craftRecipeData, character)
+        PerkLevelup(character, Perks.Axe);
+        PerkLevelup(character, Perks.Strength);
+    end
+
+    -- DrinkStrayBullet adds action to drink Permanent.StrayBullet.
+    function Recipe.OnCreate.DrinkStrayBullet(craftRecipeData, character)
+        PerkLevelup(character, Perks.Aiming);
+    end
+
+    -- DrinkSlipperyFish adds action to drink Permanent.SlipperyFish.
+    -- Permanently increases Nimble by 1.
+    function Recipe.OnCreate.DrinkSlipperyFish(craftRecipeData, character)
+        PerkLevelup(character, Perks.Nimble);
+    end
+
+    -- DrinkSolidAdventurer adds action to drink Permanent.SolidAdventurer.
+    -- Permanently increases Maintenance by 1.
+    function Recipe.OnCreate.DrinkSolidAdventurer(craftRecipeData, character)
+        PerkLevelup(character, Perks.Maintenance);
+    end
+
+    -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
+    -- Sets characters weight to SlenderDoeSetWeight value.
+    function Recipe.OnCreate.DrinkSlenderDoe(craftRecipeData, character)
+        character:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
+
+        if character:HasTrait("Overweight") then
+            character:getTraits():remove("Overweight");
+        end
+
+        if character:HasTrait("Underweight") then
+            character:getTraits():remove("Underweight");
+        end
+
+        if character:HasTrait("Obese") then
+            character:getTraits():remove("Obese");
+        end
+
+        if character:HasTrait("Very Underweight") then
+            character:getTraits():remove("Very Underweight");
+        end
+    end
+
+    -- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
+    function Recipe.OnCreate.DrinkNicotineOverdose(craftRecipeData, character)
+        if character:HasTrait("Smoker") then
+            character:getTraits():remove("Smoker");
+            character:getStats():setStressFromCigarettes(0);
+            character:setTimeSinceLastSmoke(0);
+        end
+    end
+else
+    -- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
+    function DrinkHastyHerring(items, result, player)
+        PerkLevelup(player, Perks.Sprinting);
+    end
+
+    -- DrinkDoubleHastyHerring adds action to drink Permanent.DoubleHastyHerring.
+    function DrinkDoubleHastyHerring(items, result, player)
+        PerkLevelup(player, Perks.Sprinting);
+        PerkLevelup(player, Perks.Fitness);
+    end
+
+    -- DrinkGreedyHammer adds action to drink Permanent.GreedyHammer.
+    function DrinkGreedyHammer(items, result, player)
+        PerkLevelup(player, Perks.Blunt);
+    end
+
+    -- DrinkDoubleGreedyHammer adds action to drink Permanent.DoubleGreedyHammer.
+    function DrinkDoubleGreedyHammer(items, result, player)
+        PerkLevelup(player, Perks.Blunt);
+        PerkLevelup(player, Perks.Strength);
+    end
+
+    -- DrinkGreedyAxe adds action to drink Permanent.GreedyAxe.
+    function DrinkGreedyAxe(items, result, player)
+        PerkLevelup(player, Perks.Axe);
+    end
+
+    -- DrinkDoubleGreedyAxe adds action to drink Permanent.DoubleGreedyAxe.
+    function DrinkDoubleGreedyAxe(items, result, player)
+        PerkLevelup(player, Perks.Axe);
+        PerkLevelup(player, Perks.Strength);
+    end
+
+    -- DrinkStrayBullet adds action to drink Permanent.StrayBullet.
+    function DrinkStrayBullet(items, result, player)
+        PerkLevelup(player, Perks.Aiming);
+    end
+
+    -- DrinkSlipperyFish adds action to drink Permanent.SlipperyFish.
+    -- Permanently increases Nimble by 1.
+    function DrinkSlipperyFish(items, result, player)
+        PerkLevelup(player, Perks.Nimble);
+    end
+
+    -- DrinkSolidAdventurer adds action to drink Permanent.SolidAdventurer.
+    -- Permanently increases Maintenance by 1.
+    function DrinkSolidAdventurer(items, result, player)
+        PerkLevelup(player, Perks.Maintenance);
+    end
+
+    -- DrinkSlenderDoe adds action to drink Permanent.SlenderDoe.
+    -- Sets characters weight to SlenderDoeSetWeight value.
+    function DrinkSlenderDoe(items, result, player)
+        player:getNutrition():setWeight(SandboxVars.Permanent.SlenderDoeSetWeight);
+
+        if player:HasTrait("Overweight") then
+            player:getTraits():remove("Overweight");
+        end
+
+        if player:HasTrait("Underweight") then
+            player:getTraits():remove("Underweight");
+        end
+
+        if player:HasTrait("Obese") then
+            player:getTraits():remove("Obese");
+        end
+
+        if player:HasTrait("Very Underweight") then
+            player:getTraits():remove("Very Underweight");
+        end
+    end
+
+    -- DrinkNicotineOverdose adds action to drink Permanent.NicotineOverdose.
+    function DrinkNicotineOverdose(items, result, player)
+        if player:HasTrait("Smoker") then
+            player:getTraits():remove("Smoker");
+            player:getStats():setStressFromCigarettes(0);
+            player:setTimeSinceLastSmoke(0);
+        end
     end
 end
 
