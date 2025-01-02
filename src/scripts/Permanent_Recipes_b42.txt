@@ -1,0 +1,113 @@
+module Permanent {
+    imports {
+        Base
+    }
+
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
+
+        OnCreate = DrinkHastyHerring,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.HastyHerring],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
+        Sound = DrinkingFromBottle,
+
+        HastyHerring,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        DoubleHastyHerring,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleHastyHerring,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        GreedyHammer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkGreedyHammer,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        DoubleGreedyHammer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleGreedyHammer,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        GreedyAxe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkGreedyAxe,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        DoubleGreedyAxe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkDoubleGreedyAxe,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        StrayBullet,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkStrayBullet,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        SlipperyFish,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkSlipperyFish,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        SolidAdventurer,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkSolidAdventurer,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        SlenderDoe,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkSlenderDoe,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+
+    recipe Drink Exclusive Alcohol {
+        NicotineOverdose,
+
+        Result:   WhiskeyEmpty,
+        OnCreate: DrinkNicotineOverdose,
+        Time:     200.0,
+        Sound:    DrinkingFromBottle,
+    }
+}
