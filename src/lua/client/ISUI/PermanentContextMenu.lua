@@ -4,6 +4,8 @@
 -- that can be found in the LICENSE file.
 --
 
+local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
+
 require 'PermanentRecipes'
 
 -- PermanentContextMenu is the game context menu extender.

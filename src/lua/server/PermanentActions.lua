@@ -113,13 +113,13 @@ function DrinkNicotineOverdose(items, result, player)
 end
 
 -- OnEat_GreedySalvation cures zombie virus.
-function OnEat_GreedySalvation(food, player, percent)
+function OnEat_GreedySalvation(food, character, percent)
     if percent < 1 then
-        player:Say(getText("Moodles_nothing_happened"))
+        character:Say(getText("Moodles_nothing_happened"))
         return
     end
 
-    local bodyDamage = player:getBodyDamage();
+    local bodyDamage = character:getBodyDamage();
 
     bodyDamage:setInfected(false);
     bodyDamage:setInfectionMortalityDuration(-1);

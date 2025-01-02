@@ -50,6 +50,7 @@ function make_release() {
   # TODO: think about this.
   find "${dir}/media" -name '*_b42.txt' -type f -delete
   find "${dir_42}/media" -name '*_b41.txt' -type f -delete
+  find "${dir_42}/media" -name '*_b42.txt' -type f -delete
 
   cp LICENSE "${dir}"
   cp LICENSE "${dir_42}"

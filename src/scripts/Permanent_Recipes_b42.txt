@@ -16,98 +16,155 @@ module Permanent {
         outputs {
             item 1 Base.WhiskeyEmpty,
         }
-        Sound = DrinkingFromBottle,
-
-        HastyHerring,
     }
 
-    recipe Drink Exclusive Alcohol {
-        DoubleHastyHerring,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkDoubleHastyHerring,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkDoubleHastyHerring,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.DoubleHastyHerring],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        GreedyHammer,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkGreedyHammer,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkGreedyHammer,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.GreedyHammer],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        DoubleGreedyHammer,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkDoubleGreedyHammer,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkDoubleGreedyHammer,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.DoubleGreedyHammer],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        GreedyAxe,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkGreedyAxe,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkGreedyAxe,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.GreedyAxe],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        DoubleGreedyAxe,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkDoubleGreedyAxe,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkDoubleGreedyAxe,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.DoubleGreedyAxe],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        StrayBullet,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkStrayBullet,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkStrayBullet,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.StrayBullet],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        SlipperyFish,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkSlipperyFish,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkingFromBottle,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.SlipperyFish],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        SolidAdventurer,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkSolidAdventurer,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkSolidAdventurer,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.SolidAdventurer],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        SlenderDoe,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkSlenderDoe,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkSlenderDoe,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.SlenderDoe],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 
-    recipe Drink Exclusive Alcohol {
-        NicotineOverdose,
+    craftRecipe Drink Exclusive Alcohol {
+        timedAction = Making,
+        Time = 200,
+        category = Cooking,
 
-        Result:   WhiskeyEmpty,
-        OnCreate: DrinkNicotineOverdose,
-        Time:     200.0,
-        Sound:    DrinkingFromBottle,
+        OnCreate = DrinkNicotineOverdose,
+        Tags = InHandCraft;RightClickOnly,
+        inputs {
+            item 1 [Permanent.NicotineOverdose],
+        }
+        outputs {
+            item 1 Base.WhiskeyEmpty,
+        }
     }
 }

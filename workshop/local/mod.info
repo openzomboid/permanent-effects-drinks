@@ -1,0 +1,6 @@
+name=Permanent Effects Drinks Local
+id=PermanentEffectsDrinksLocal
+description=Adds drinks with a permanent effect
+poster=poster.png
+tiledef=MoonshineStill 515
+pack=MoonshineStill
