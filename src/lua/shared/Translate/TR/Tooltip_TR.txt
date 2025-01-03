@@ -1,5 +1,6 @@
 Tooltip_TR = {
     Tooltip_item_ExclusiveRecipe = "Greedy Bastard'ın özel içecekleri için tarifler içerir. Bir içeriktir",
+    Tooltip_craft_MoonshineStillDesc = "Üzerinde işlenerek kullanılabilen bir Moonshine Damıtma Cihazı.",
     Tooltip_brew_footNote = "İçecek için uygun şişe kullanıldı",
 
     Tooltip_item_HastyHerring = "Sprint'i kalıcı olarak 1 artırır"

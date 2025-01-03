@@ -1,5 +1,6 @@
 Tooltip_RU = {
     Tooltip_item_ExclusiveRecipe = "—одержит рецепты эксклюзивных напитков Greedy Bastard. явл€етс€ ингредиентом",
+    Tooltip_craft_MoonshineStillDesc = "—амогонный аппарат, на котором можно что-то изготовить.",
     Tooltip_brew_footNote = "»спользуетс€ соответствующа€ напитку бутылка",
 
     Tooltip_item_HastyHerring = "ѕерманентно повышает скорость бега на 1",

@@ -1,5 +1,6 @@
 Tooltip_ES = {
     Tooltip_item_ExclusiveRecipe = "Contiene recetas de bebidas exclusivas de Greedy Bastard. Es un ingrediente",
+    Tooltip_craft_MoonshineStillDesc = "Un alambique de alcohol ilegal con el que se pueden realizar trabajos manuales.",
     Tooltip_brew_footNote = "Utilice la botella adecuada para la bebida",
 
     Tooltip_item_HastyHerring = "Aumenta permanentemente carrera en 1",

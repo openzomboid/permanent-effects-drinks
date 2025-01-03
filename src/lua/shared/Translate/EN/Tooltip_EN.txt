@@ -1,4 +1,5 @@
 Tooltip_EN = {
+    Tooltip_craft_MoonshineStillDesc = "A Moonshine Still which can be crafted on.",
     Tooltip_item_ExclusiveRecipe = "Contains recipes for Greedy Bastard's exclusive drinks. Is an ingredient",
     Tooltip_brew_footNote = "Used the appropriate bottle for the drink",
 

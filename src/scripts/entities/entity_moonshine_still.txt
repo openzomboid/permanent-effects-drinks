@@ -7,13 +7,6 @@ module Base {
     }
 
     entity MoonshineStill {
-        /*component UiConfig
-        {
-            xuiSkin     = default,
-            entityStyle = ES_MoonshineStill,
-            uiEnabled   = false,
-        }*/
-
         component SpriteConfig {
             face S {
                 layer {
@@ -29,13 +22,16 @@ module Base {
         }
         
         component CraftRecipe {
-            OnAddToMenu = debugTest,
-            time        = 10,
-            category    = Debug,
-            ToolTip     = Tooltip_craft_debugModeDesc,
+            OnAddToMenu   = MoonshineStillBuildEnabled,
+            time          = 10,
+            SkillRequired = Woodwork:5,
+            xpAward       = Woodwork:10,
+            category      = Furniture,
+            tags          = Carpentry;Furniture,
+            ToolTip       = Tooltip_craft_MoonshineStillDesc,
             inputs {
                 item 1 tags[Hammer] mode:keep flags[Prop1],
-                item 2 [Base.Plank],
+                item 6 [Base.Plank],
                 item 4 [Base.Nails],
             }
         }
