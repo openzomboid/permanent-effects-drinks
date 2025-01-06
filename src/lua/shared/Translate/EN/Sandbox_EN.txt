@@ -5,6 +5,5 @@ Sandbox_EN = {
     Sandbox_CanBuildMoonshineStill = "Allow to build moonshine still",
     Sandbox_AllowBrewingVanillaAlcohol = "Allow to brew Vanilla alcohol",
     Sandbox_AllowBrewingExclusiveAlcohol = "Allow to brew Exclusive alcohol",
-    Sandbox_AllowExclusiveRecipeInZombieLoot = "Allow to spawn Moonshine Recipe Book in Zombies loot",
-    Sandbox_ExclusiveRecipeInAllZombiesLootChance = "Chance for spawn Moonshine Recipe Book in all Zombies loot",
+    Sandbox_ExclusiveRecipeInZombiesLootChance = "Chance for spawn Moonshine Recipe Book in all Zombies loot",
 }

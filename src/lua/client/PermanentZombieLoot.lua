@@ -7,12 +7,14 @@
 PermanentZombieLoot = {}
 
 function PermanentZombieLoot.CheckChance(chance)
-    local rand = ZombRand(chance)
-
-    return rand <= chance
+    return ZombRand(100) <= chance
 end
 
 function PermanentZombieLoot.OnZombieDead(corpse)
+    if SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance <= 0 then
+        return
+    end
+
     if corpse == nil then
         return
     end
@@ -47,7 +49,7 @@ function PermanentZombieLoot.OnZombieDead(corpse)
     end
 
     if roomName == "bar" then
-        if PermanentZombieLoot.CheckChance(25) then
+        if PermanentZombieLoot.CheckChance(SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance) then
             zombieInventory:AddItems("Permanent.ExclusiveRecipe", 1);
         end
     end
