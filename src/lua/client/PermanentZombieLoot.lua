@@ -7,7 +7,7 @@
 PermanentZombieLoot = {}
 
 function PermanentZombieLoot.CheckChance(chance)
-    local generated = ZombRand(100)
+    local generated = ZombRand(99) + 1
 
     return generated <= chance
 end

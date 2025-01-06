@@ -53,8 +53,10 @@ PermanentContextMenu.doContextMenu = function(player, context, worldobjects, tes
         local distilMenu = ISContextMenu:getNew(context);
         context:addSubMenu(distilOption, distilMenu);
 
-        for _, recipe in pairs(PermanentRecipes.Recipes.Vanilla) do
-            PermanentContextMenu.AddBrewOption(distilMenu, character, object, recipe)
+        if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
+            for _, recipe in pairs(PermanentRecipes.Recipes.Vanilla) do
+                PermanentContextMenu.AddBrewOption(distilMenu, character, object, recipe)
+            end
         end
 
         if SandboxVars.Permanent.AllowBrewingExclusiveAlcohol then

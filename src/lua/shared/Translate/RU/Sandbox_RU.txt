@@ -5,5 +5,5 @@ Sandbox_RU = {
     Sandbox_CanBuildMoonshineStill = "Разрешить строить самогонный аппарат",
     Sandbox_AllowBrewingVanillaAlcohol = "Разрешить приготавливать ванильный алкоголь",
     Sandbox_AllowBrewingExclusiveAlcohol = "Разрешить приготавливать эксклюзивный алкоголь",
-    Sandbox_ExclusiveRecipeInZombiesLootChance = "Шанс появления Книги Рецептов Самогона во всех зомби",
+    Sandbox_ExclusiveRecipeInZombiesLootChance = "Шанс появления Книги Рецептов Самогона в зомби",
 }
