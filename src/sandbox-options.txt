@@ -37,8 +37,8 @@ option Permanent.AllowBrewingExclusiveAlcohol {
   translation = Permanent_AllowBrewingExclusiveAlcohol
 }
 
-option Permanent.ExclusiveRecipeInAllZombiesLootChance {
-  type        = boolean,
+option Permanent.ExclusiveRecipeInZombiesLootChance {
+  type        = integer,
   min         = 0,
   max         = 100,
   default     = 1,
