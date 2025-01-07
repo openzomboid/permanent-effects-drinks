@@ -70,11 +70,25 @@ PermanentRecipes = {
                 cookingSkill = 10,
                 usedItems = {
                     ["Permanent.ExclusiveRecipe"] = 1,
-                    ["Base.Wine2"] = 1,
-                    ["Base.Wine"] = 1,
                     ["Base.GrapeLeaves"] = 4,
-                    ["Base.Milk"] = 1,
                     ["Base.Pickles"] = 1,
+                },
+                fluids = {
+                    ["Base.Wine"] = {
+                        code = "Base.Wine",
+                        name = "Wine",
+                        amount = 1,
+                    },
+                    ["Base.Wine2"] = {
+                        code = "Base.Wine2",
+                        name = "Wine",
+                        amount = 1,
+                    },
+                    ["Base.Milk"] = {
+                        code = "Base.Milk",
+                        name = "CowMilk",
+                        amount = 1,
+                    },
                 },
                 result = "Permanent.SlenderDoe",
                 additionalResults = {},
