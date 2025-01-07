@@ -30,7 +30,7 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
             local buildMenu = context:getSubMenu(buildOption.subOption)
             if buildMenu then
                 local moonshineOption = buildMenu:addOption(getText("ContextMenu_Moonshine"), worldobjects, nil);
-                local moonshineMenu = ISContextMenu:getNew(context);
+                local moonshineMenu = buildMenu:getNew(buildMenu);
                 context:addSubMenu(moonshineOption, moonshineMenu);
 
                 PermanentBuildMenu.RegisterLines(player, context, worldobjects, moonshineMenu)
@@ -53,7 +53,7 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
 
     if isMoonshineStill and (SandboxVars.Permanent.AllowBrewingVanillaAlcohol or SandboxVars.Permanent.AllowBrewingExclusiveAlcohol) then
         local distilOption = context:addOption(getText("ContextMenu_DistillAlcohol"), worldobjects, nil);
-        local distilMenu = ISContextMenu:getNew(context);
+        local distilMenu = context:getNew(context);
         context:addSubMenu(distilOption, distilMenu);
 
         if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
@@ -64,7 +64,7 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
 
         if SandboxVars.Permanent.AllowBrewingExclusiveAlcohol then
             local distilExclusiveOption = distilMenu:addOption(getText("ContextMenu_DistillExclusiveAlcohol"), worldobjects, nil);
-            local distilExclusiveMenu = ISContextMenu:getNew(context);
+            local distilExclusiveMenu = distilMenu:getNew(distilMenu);
             context:addSubMenu(distilExclusiveOption, distilExclusiveMenu);
 
             for _, recipe in pairs(PermanentRecipes.Recipes.Exclusive) do
