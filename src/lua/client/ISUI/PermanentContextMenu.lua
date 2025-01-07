@@ -82,13 +82,67 @@ PermanentContextMenu.AddBrewOption = function(distilMenu, character, object, rec
         local option = distilMenu:addOption(optionName, worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
         option.iconTexture = getTexture(recipe.texture);
 
-        local toolTip = PermanentContextMenu.CanBrew(option, character, recipe);
+        local toolTip = PermanentContextMenu.CreateTooltip(option, character, recipe);
         toolTip:setName(optionName);
         toolTip:setTexture(recipe.texture);
     end
 end
 
-PermanentContextMenu.CanBrew = function(option, character, recipe)
+PermanentContextMenu.AddMaterialItemToTooltip = function(character, tooltip, itemCode, neededItemsCount)
+    local inventory = character:getInventory()
+    local enabled = true
+
+    local items = inventory:getAllType(itemCode)
+    local itemsCount = 0
+
+    if items then
+        for i=1, items:size() do
+            local itemToRemove = items:get(i-1);
+            if not PermanentRecipes.IsItemBlocked(character, itemToRemove) then
+                itemsCount = itemsCount + 1;
+            end
+        end
+    end
+
+    local color = PermanentContextMenu.ghs;
+    if itemsCount < neededItemsCount then
+        color = PermanentContextMenu.bhs
+        enabled = false;
+    end
+
+    tooltip.description = tooltip.description .. color .. getItemNameFromFullType(itemCode) .. " " .. itemsCount .. "/" .. neededItemsCount .. " <LINE>";
+
+    return tooltip, enabled
+end
+
+PermanentContextMenu.AddFluidItemToTooltip = function(character, tooltip, itemCode, fluid)
+    local inventory = character:getInventory()
+    local enabled = true
+
+    local items = inventory:getAllType(itemCode)
+    local itemsCount = 0
+
+    if items then
+        for i=1, items:size() do
+            local itemToRemove = items:get(i-1);
+            if not PermanentRecipes.IsItemBlocked(character, itemToRemove) and PermanentRecipes.IsFluidReady(itemToRemove, fluid) then
+                itemsCount = itemsCount + 1;
+            end
+        end
+    end
+
+    local color = PermanentContextMenu.ghs;
+    if itemsCount < 1 then
+        color = PermanentContextMenu.bhs
+        enabled = false;
+    end
+
+    tooltip.description = tooltip.description .. color .. getItemNameFromFullType(itemCode) .. " " .. itemsCount .. "/" .. "1" .. " <LINE>";
+
+    return tooltip, enabled
+end
+
+PermanentContextMenu.CreateTooltip = function(option, character, recipe)
     local inventory = character:getInventory()
     local cookingSkill = character:getPerkLevel(Perks.Cooking);
 
@@ -98,39 +152,28 @@ PermanentContextMenu.CanBrew = function(option, character, recipe)
         tooltip.footNote = getText("Tooltip_brew_footNote")
     end
 
-    local result = true;
+    local enabled = true;
     tooltip.description = getText("Tooltip_craft_Needs") .. ": <LINE>";
 
     for itemCode, neededItemsCount in pairs(recipe.usedItems) do
-        local items = inventory:getAllType(itemCode)
-        local itemsCount = 0
-        if items then
-            for i=1, items:size() do
-                local itemToRemove = items:get(i-1);
-                if not PermanentRecipes.IsItemBlocked(character, itemToRemove) then
-                    itemsCount = itemsCount + 1;
-                end
-            end
-        end
+        tooltip, enabled = PermanentContextMenu.AddMaterialItemToTooltip(character, tooltip, itemCode, neededItemsCount)
+    end
 
-        local color = PermanentContextMenu.ghs;
-        if itemsCount < neededItemsCount then
-            color = PermanentContextMenu.bhs
-            result = false;
+    if recipe.fluids then
+        for itemCode, fluid in pairs(recipe.fluids) do
+            tooltip, enabled = PermanentContextMenu.AddFluidItemToTooltip(character, tooltip, itemCode, fluid)
         end
-
-        tooltip.description = tooltip.description .. color .. getItemNameFromFullType(itemCode) .. " " .. itemsCount .. "/" .. neededItemsCount .. " <LINE>";
     end
 
     local color = PermanentContextMenu.ghs;
     if cookingSkill < recipe.cookingSkill then
         color = PermanentContextMenu.bhs
-        result = false;
+        enabled = false;
     end
 
     tooltip.description = tooltip.description .. "<LINE>" .. color .. getText("IGUI_perks_Cooking") .. " " .. cookingSkill .. "/" .. recipe.cookingSkill .. " <LINE>";
 
-    if not result then
+    if not enabled then
         option.onSelect = nil;
         option.notAvailable = true;
     end

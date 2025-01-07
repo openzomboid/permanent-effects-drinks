@@ -14,6 +14,10 @@ function PermanentsBrewingAction:isValid()
         return false
     end
 
+    if not PermanentRecipes.IsEnoughFluids(self.character, self.recipe) then
+        return false
+    end
+
     return true
 end
 

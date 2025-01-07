@@ -8,7 +8,7 @@ PermanentRecipes = {
     -- TODO: Add possibility to create custom recipes in server side Lua directory.
     Recipes = {
         Vanilla = {
-            ["MakeWhiskey"] = {
+            {
                 name = "MakeWhiskey",
                 type = "Vanilla",
                 disabled = false,
@@ -25,7 +25,7 @@ PermanentRecipes = {
                 result = "Base.WhiskeyFull",
                 additionalResults = {},
             },
-            ["MakeWine"] = {
+            {
                 name = "MakeWine",
                 type = "Vanilla",
                 disabled = false,
@@ -41,7 +41,7 @@ PermanentRecipes = {
                 result = "Base.Wine2",
                 additionalResults = {},
             },
-            ["MakeBeer"] = {
+            {
                 name = "MakeBeer",
                 type = "Vanilla",
                 disabled = false,
@@ -60,7 +60,7 @@ PermanentRecipes = {
         },
 
         Exclusive = {
-            ["MakeSlenderDoe"] = {
+            {
                 name = "MakeSlenderDoe",
                 type = "Exclusive",
                 disabled = false,
@@ -79,7 +79,7 @@ PermanentRecipes = {
                 result = "Permanent.SlenderDoe",
                 additionalResults = {},
             },
-            ["MakeNicotineOverdose"] = {
+            {
                 name = "MakeNicotineOverdose",
                 type = "Exclusive",
                 disabled = false,
@@ -89,10 +89,16 @@ PermanentRecipes = {
                 cookingSkill = 10,
                 usedItems = {
                     ["Permanent.ExclusiveRecipe"] = 1,
-                    ["Base.Whiskey"] = 1,
                     ["Base.Sugar"] = 1,
                     ["Base.CigaretteSingle"] = 100,
                     ["Base.Coffee2"] = 5,
+                },
+                fluids = {
+                    ["Base.Whiskey"] = {
+                        code = "Base.Whiskey",
+                        name = "Whiskey",
+                        amount = 1,
+                    },
                 },
                 result = "Permanent.NicotineOverdose",
                 additionalResults = {},
@@ -199,7 +205,7 @@ if pzversion == "41" then
     }
 end
 
-PermanentRecipes.IsEnoughMaterials = function(character, recipe)
+function PermanentRecipes.IsEnoughMaterials(character, recipe)
     if not recipe then return false end
 
     local inventory = character:getInventory()
@@ -233,7 +239,43 @@ PermanentRecipes.IsEnoughMaterials = function(character, recipe)
     return true
 end
 
-PermanentRecipes.IsItemBlocked = function(character, item)
+function PermanentRecipes.IsEnoughFluids(character, recipe)
+    if not recipe then return false end
+
+    local inventory = character:getInventory()
+
+    if recipe.fluids then
+        for itemCode, fluid in pairs(recipe.usedItems) do
+            local items = inventory:getAllType(itemCode)
+
+            if not items or items:size() < 1 then
+                return false
+            end
+
+            local inventoryItemsCount = 0
+
+            for i=1, items:size() do
+                local itemToRemove = items:get(i-1)
+
+                if not PermanentRecipes.IsItemBlocked(character, itemToRemove) and PermanentRecipes.IsFluidReady(itemToRemove, fluid) then
+                    if inventoryItemsCount >= 1 then
+                        break
+                    end
+
+                    inventoryItemsCount = inventoryItemsCount + 1
+                end
+            end
+
+            if inventoryItemsCount ~= 1 then
+                return false
+            end
+        end
+    end
+
+    return true
+end
+
+function PermanentRecipes.IsItemBlocked(character, item)
     if item:isBroken() then
         return true
     end
@@ -247,4 +289,43 @@ PermanentRecipes.IsItemBlocked = function(character, item)
     end
 
     return character:isEquipped(item) or character:isAttachedItem(item)
+end
+
+function PermanentRecipes.IsFluidReady(item, fluid)
+    if not fluid then
+        return true
+    end
+
+    if item:getFullType() ~= fluid.code then
+        return true
+    end
+
+    -- Temporary true while b42 is unstable.
+    -- TODO: Return false if item is not a FluidContainer.
+    if not item.getFluidContainer then
+        return true
+    end
+
+    local fluidContainer = item:getFluidContainer()
+
+    if fluidContainer:isEmpty() then
+        return false
+    end
+
+    local primaryFluid = fluidContainer:getPrimaryFluid()
+    if not primaryFluid then
+        return false
+    end
+
+    local primaryFluidName = primaryFluid:toString()
+    if primaryFluidName ~= fluid.name then
+        return false
+    end
+
+    local primaryFluidAmount = fluidContainer:getPrimaryFluidAmount()
+    if primaryFluidAmount < fluid.amount then
+        return false
+    end
+
+    return true
 end
