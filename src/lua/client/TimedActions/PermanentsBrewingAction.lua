@@ -9,6 +9,22 @@ require 'PermanentRecipes'
 
 PermanentsBrewingAction = ISBaseTimedAction:derive("PermanentsBrewingAction");
 
+function PermanentsBrewingAction:new(character, recipe, object)
+    local cookingLevel = character:getPerkLevel(Perks.Cooking)
+
+    local o = {}
+    setmetatable(o, self)
+    self.__index = self
+    o.character = character;
+    o.stopOnWalk = true;
+    o.stopOnRun = true;
+    o.maxTime = recipe.time - (cookingLevel * 20 - 100);
+    -- custom fields
+    o.object = object
+    o.recipe = recipe
+    return o
+end
+
 function PermanentsBrewingAction:isValid()
     if not PermanentRecipes.IsEnoughMaterials(self.character, self.recipe) then
         return false
@@ -28,12 +44,11 @@ end
 function PermanentsBrewingAction:update()
 end
 
+-- start starts brewing action.
+-- TODO: Add animation.
+-- local animation = PermanentRecipes.GetAnimation(self.recipe.animationType)
+-- self:setActionAnim(animation).
 function PermanentsBrewingAction:start()
-    local inventory = self.character:getInventory()
-
-    --local animation = PermanentRecipes.GetAnimation(self.recipe.animationType)
-    --self:setActionAnim(animation);
-
     self.sound = self.character:playSound(self.recipe.sound)
 end
 
@@ -42,6 +57,26 @@ function PermanentsBrewingAction:stop()
 end
 
 function PermanentsBrewingAction:perform()
+    local inventory = self.character:getInventory()
+
+    self:takeMaterials()
+    self:takeFluids()
+
+    -- Add results to player inventory.
+    inventory:AddItems(self.recipe.result, 1)
+    for itemCode, addItemsCount in pairs(self.recipe.additionalResults) do
+        inventory:AddItems(itemCode, addItemsCount)
+    end
+
+    return self:performNext()
+end
+
+-- performNext removes action from queue and allows to start next action.
+function PermanentsBrewingAction:performNext()
+    ISBaseTimedAction.perform(self)
+end
+
+function PermanentsBrewingAction:takeMaterials()
     local inventory = self.character:getInventory()
 
     for itemCode, neededItemsCount in pairs(self.recipe.usedItems) do
@@ -75,33 +110,44 @@ function PermanentsBrewingAction:perform()
             return self:performNext()
         end
     end
+end
 
-    -- Add results to player inventory.
-    inventory:AddItems(self.recipe.result, 1)
-    for itemCode, addItemsCount in pairs(self.recipe.additionalResults) do
-        inventory:AddItems(itemCode, addItemsCount)
+function PermanentsBrewingAction:takeFluids()
+    local inventory = self.character:getInventory()
+
+    if not self.recipe.fluids then
+        return
     end
 
-    return self:performNext()
-end
+    for itemCode, fluid in pairs(self.recipe.fluids) do
+        local items = inventory:getAllType(itemCode)
 
-function PermanentsBrewingAction:new(character, recipe, object)
-    local cookingLevel = character:getPerkLevel(Perks.Cooking)
+        if items:size() < 1 then
+            return self:performNext()
+        end
 
-    local o = {}
-    setmetatable(o, self)
-    self.__index = self
-    o.character = character;
-    o.stopOnWalk = true;
-    o.stopOnRun = true;
-    o.maxTime = recipe.time - (cookingLevel * 20 - 100);
-    -- custom fields
-    o.object = object
-    o.recipe = recipe
-    return o
-end
+        local removedItemsCount = 0
 
-function PermanentsBrewingAction:performNext()
-    -- needed to remove from queue / start next.
-    ISBaseTimedAction.perform(self)
+        for i=1, items:size() do
+            local itemToRemove = items:get(i-1)
+
+            if not PermanentRecipes.IsItemBlocked(self.character, itemToRemove) and PermanentRecipes.IsFluidReady(itemToRemove, fluid) then
+                if removedItemsCount >= 1 then
+                    break
+                end
+
+                if itemToRemove:getContainer() then
+                    itemToRemove:getContainer():Remove(itemToRemove)
+                else
+                    inventory:Remove(itemToRemove)
+                end
+
+                removedItemsCount = removedItemsCount + 1
+            end
+        end
+
+        if removedItemsCount ~= 1 then
+            return self:performNext()
+        end
+    end
 end
