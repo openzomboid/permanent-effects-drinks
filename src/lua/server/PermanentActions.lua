@@ -190,6 +190,7 @@ end
 
 local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
+-- TODO: Remove when b42 release on stable.
 if pzversion == "41" then
     -- DrinkHastyHerring adds action to drink Permanent.HastyHerring.
     function DrinkHastyHerring(items, result, player)

@@ -8,11 +8,12 @@ All notable changes to this project will be documented in this file.
 - Fixed changelog links.
 
 ### Added
-- Added library for tests (WIP).
 - Added Build 42 support.
+- Added library for tests (WIP).
 
 ### Changed
 - Changed exclusive recipes spawn logic.
+- Changed brewing recipes logic. Simple items and fluid items is now in separate lists (b42).
 
 ## [v0.11.0] - 2023-10-11
 ### Fixed
