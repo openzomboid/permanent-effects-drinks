@@ -12,7 +12,7 @@ PermanentContextMenu = {}
 PermanentContextMenu.ghs = " <RGB:" .. getCore():getGoodHighlitedColor():getR() .. "," .. getCore():getGoodHighlitedColor():getG() .. "," .. getCore():getGoodHighlitedColor():getB() .. "> "
 PermanentContextMenu.bhs = " <RGB:" .. getCore():getBadHighlitedColor():getR() .. "," .. getCore():getBadHighlitedColor():getG() .. "," .. getCore():getBadHighlitedColor():getB() .. "> "
 
--- doContextMenu adds the "ContextMenu_Moonshine" item to the context menu.
+-- doContextMenu adds "Build Moonshine" and "Brewing" options to context menu.
 function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
