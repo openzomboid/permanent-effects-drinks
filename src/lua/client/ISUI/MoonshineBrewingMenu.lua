@@ -6,14 +6,14 @@
 
 require 'PermanentRecipes'
 
--- PermanentContextMenu is the game context menu extender.
-PermanentContextMenu = {}
+-- MoonshineBrewingMenu is the game context menu extender.
+MoonshineBrewingMenu = {}
 
-PermanentContextMenu.ghs = " <RGB:" .. getCore():getGoodHighlitedColor():getR() .. "," .. getCore():getGoodHighlitedColor():getG() .. "," .. getCore():getGoodHighlitedColor():getB() .. "> "
-PermanentContextMenu.bhs = " <RGB:" .. getCore():getBadHighlitedColor():getR() .. "," .. getCore():getBadHighlitedColor():getG() .. "," .. getCore():getBadHighlitedColor():getB() .. "> "
+MoonshineBrewingMenu.ghs = " <RGB:" .. getCore():getGoodHighlitedColor():getR() .. "," .. getCore():getGoodHighlitedColor():getG() .. "," .. getCore():getGoodHighlitedColor():getB() .. "> "
+MoonshineBrewingMenu.bhs = " <RGB:" .. getCore():getBadHighlitedColor():getR() .. "," .. getCore():getBadHighlitedColor():getG() .. "," .. getCore():getBadHighlitedColor():getB() .. "> "
 
 -- doContextMenu adds "Build Moonshine" and "Brewing" options to context menu.
-function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
+function MoonshineBrewingMenu.doContextMenu(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
     local character = getSpecificPlayer(player)
@@ -58,7 +58,7 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
 
         if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
             for _, recipe in pairs(PermanentRecipes.Recipes.Vanilla) do
-                PermanentContextMenu.AddBrewOption(distilMenu, character, object, recipe)
+                MoonshineBrewingMenu.AddBrewOption(distilMenu, character, object, recipe)
             end
         end
 
@@ -68,7 +68,7 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
             context:addSubMenu(distilExclusiveOption, distilExclusiveMenu);
 
             for _, recipe in pairs(PermanentRecipes.Recipes.Exclusive) do
-                PermanentContextMenu.AddBrewOption(distilExclusiveMenu, character, object, recipe)
+                MoonshineBrewingMenu.AddBrewOption(distilExclusiveMenu, character, object, recipe)
             end
         end
     end
@@ -76,21 +76,21 @@ function PermanentContextMenu.doContextMenu(player, context, worldobjects, test)
     return true
 end
 
-function PermanentContextMenu.AddBrewOption(distilMenu, character, object, recipe)
+function MoonshineBrewingMenu.AddBrewOption(distilMenu, character, object, recipe)
     if recipe.disabled then
         return
     end
 
     local optionName = getText("ContextMenu_MakeAlcohol") .. " " .. getItemNameFromFullType(recipe.result)
-    local option = distilMenu:addOption(optionName, worldobjects, PermanentContextMenu.OnBrew, character, object, recipe);
+    local option = distilMenu:addOption(optionName, worldobjects, MoonshineBrewingMenu.OnBrew, character, object, recipe);
     option.iconTexture = getTexture(recipe.texture);
 
-    local toolTip = PermanentContextMenu.CreateBrewTooltip(option, character, recipe);
+    local toolTip = MoonshineBrewingMenu.CreateBrewTooltip(option, character, recipe);
     toolTip:setName(optionName);
     toolTip:setTexture(recipe.texture);
 end
 
-function PermanentContextMenu.CreateBrewTooltip(option, character, recipe)
+function MoonshineBrewingMenu.CreateBrewTooltip(option, character, recipe)
     local inventory = character:getInventory()
     local cookingSkill = character:getPerkLevel(Perks.Cooking);
 
@@ -104,7 +104,7 @@ function PermanentContextMenu.CreateBrewTooltip(option, character, recipe)
     tooltip.description = getText("Tooltip_craft_Needs") .. ": <LINE>";
 
     for itemCode, neededItemsCount in pairs(recipe.usedItems) do
-        local enabledItem = PermanentContextMenu.AddMaterialItemToBrewTooltip(tooltip, character, itemCode, neededItemsCount)
+        local enabledItem = MoonshineBrewingMenu.AddMaterialItemToBrewTooltip(tooltip, character, itemCode, neededItemsCount)
         if not enabledItem then
             enabled = false
         end
@@ -112,16 +112,16 @@ function PermanentContextMenu.CreateBrewTooltip(option, character, recipe)
 
     if recipe.fluids then
         for itemCode, fluid in pairs(recipe.fluids) do
-            local enabledItem = PermanentContextMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
+            local enabledItem = MoonshineBrewingMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
             if not enabledItem then
                 enabled = false
             end
         end
     end
 
-    local color = PermanentContextMenu.ghs;
+    local color = MoonshineBrewingMenu.ghs;
     if cookingSkill < recipe.cookingSkill then
-        color = PermanentContextMenu.bhs
+        color = MoonshineBrewingMenu.bhs
         enabled = false;
     end
 
@@ -137,7 +137,7 @@ function PermanentContextMenu.CreateBrewTooltip(option, character, recipe)
     return tooltip;
 end
 
-function PermanentContextMenu.AddMaterialItemToBrewTooltip(tooltip, character, itemCode, neededItemsCount)
+function MoonshineBrewingMenu.AddMaterialItemToBrewTooltip(tooltip, character, itemCode, neededItemsCount)
     local inventory = character:getInventory()
     local enabled = true
 
@@ -153,9 +153,9 @@ function PermanentContextMenu.AddMaterialItemToBrewTooltip(tooltip, character, i
         end
     end
 
-    local color = PermanentContextMenu.ghs;
+    local color = MoonshineBrewingMenu.ghs;
     if itemsCount < neededItemsCount then
-        color = PermanentContextMenu.bhs
+        color = MoonshineBrewingMenu.bhs
         enabled = false;
     end
 
@@ -164,7 +164,7 @@ function PermanentContextMenu.AddMaterialItemToBrewTooltip(tooltip, character, i
     return enabled
 end
 
-function PermanentContextMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
+function MoonshineBrewingMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
     local inventory = character:getInventory()
     local enabled = true
 
@@ -180,9 +180,9 @@ function PermanentContextMenu.AddFluidItemToBrewTooltip(tooltip, character, item
         end
     end
 
-    local color = PermanentContextMenu.ghs;
+    local color = MoonshineBrewingMenu.ghs;
     if itemsCount < 1 then
-        color = PermanentContextMenu.bhs
+        color = MoonshineBrewingMenu.bhs
         enabled = false;
     end
 
@@ -191,10 +191,10 @@ function PermanentContextMenu.AddFluidItemToBrewTooltip(tooltip, character, item
     return enabled
 end
 
-function PermanentContextMenu.OnBrew(worldobjects, character, object, recipe)
+function MoonshineBrewingMenu.OnBrew(worldobjects, character, object, recipe)
     if ISCampingMenu.walkToCampfire(character, object:getSquare()) then
         ISTimedActionQueue.add(PermanentsBrewingAction:new(character, recipe, object));
     end
 end
 
-Events.OnFillWorldObjectContextMenu.Add(PermanentContextMenu.doContextMenu);
+Events.OnFillWorldObjectContextMenu.Add(MoonshineBrewingMenu.doContextMenu);
