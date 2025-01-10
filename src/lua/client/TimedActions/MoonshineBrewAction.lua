@@ -7,9 +7,9 @@
 require "TimedActions/ISBaseTimedAction"
 require 'PermanentRecipes'
 
-PermanentsBrewingAction = ISBaseTimedAction:derive("PermanentsBrewingAction");
+MoonshineBrewAction = ISBaseTimedAction:derive("MoonshineBrewAction");
 
-function PermanentsBrewingAction:new(character, recipe, object)
+function MoonshineBrewAction:new(character, recipe, object)
     local cookingLevel = character:getPerkLevel(Perks.Cooking)
 
     local o = {}
@@ -25,7 +25,7 @@ function PermanentsBrewingAction:new(character, recipe, object)
     return o
 end
 
-function PermanentsBrewingAction:isValid()
+function MoonshineBrewAction:isValid()
     if not PermanentRecipes.IsEnoughMaterials(self.character, self.recipe) then
         return false
     end
@@ -37,26 +37,26 @@ function PermanentsBrewingAction:isValid()
     return true
 end
 
-function PermanentsBrewingAction:waitToStart()
+function MoonshineBrewAction:waitToStart()
     return false
 end
 
-function PermanentsBrewingAction:update()
+function MoonshineBrewAction:update()
 end
 
 -- start starts brewing action.
 -- TODO: Add animation.
 -- local animation = PermanentRecipes.GetAnimation(self.recipe.animationType)
 -- self:setActionAnim(animation).
-function PermanentsBrewingAction:start()
+function MoonshineBrewAction:start()
     self.sound = self.character:playSound(self.recipe.sound)
 end
 
-function PermanentsBrewingAction:stop()
+function MoonshineBrewAction:stop()
     ISBaseTimedAction.stop(self);
 end
 
-function PermanentsBrewingAction:perform()
+function MoonshineBrewAction:perform()
     local inventory = self.character:getInventory()
 
     self:takeMaterials()
@@ -72,11 +72,11 @@ function PermanentsBrewingAction:perform()
 end
 
 -- performNext removes action from queue and allows to start next action.
-function PermanentsBrewingAction:performNext()
+function MoonshineBrewAction:performNext()
     ISBaseTimedAction.perform(self)
 end
 
-function PermanentsBrewingAction:takeMaterials()
+function MoonshineBrewAction:takeMaterials()
     local inventory = self.character:getInventory()
 
     for itemCode, neededItemsCount in pairs(self.recipe.usedItems) do
@@ -112,7 +112,7 @@ function PermanentsBrewingAction:takeMaterials()
     end
 end
 
-function PermanentsBrewingAction:takeFluids()
+function MoonshineBrewAction:takeFluids()
     local inventory = self.character:getInventory()
 
     if not self.recipe.fluids then
