@@ -9,7 +9,7 @@ MoonshineBuildMenu = {}
 
 -- doContextMenu adds "Build Moonshine" option to context menu.
 -- TODO: Remove when b42 release on stable.
-function MoonshineBrewMenu.doContextMenu(player, context, worldobjects, test)
+function MoonshineBuildMenu.doContextMenu(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
     local character = getSpecificPlayer(player)
@@ -35,7 +35,7 @@ function MoonshineBrewMenu.doContextMenu(player, context, worldobjects, test)
 end
 
 -- AddBuildOption adds options to click menu.
-MoonshineBuildMenu.AddBuildOption = function(player, context, worldobjects, workbenchesSubMenu)
+function MoonshineBuildMenu.AddBuildOption(player, context, worldobjects, workbenchesSubMenu)
     local square = nil;
 
     -- Get the thumpable item (like wall/door/furniture etc.) if exist on the tile which right clicked.
@@ -68,4 +68,4 @@ MoonshineBuildMenu.OnBuildMoonshineStill = function(worldobjects, square, sprite
     getCell():setDrag(furniture, player);
 end
 
-Events.OnFillWorldObjectContextMenu.Add(MoonshineBrewMenu.doContextMenu);
+Events.OnFillWorldObjectContextMenu.Add(MoonshineBuildMenu.doContextMenu);
