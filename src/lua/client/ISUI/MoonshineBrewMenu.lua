@@ -177,7 +177,7 @@ end
 
 function MoonshineBrewMenu.OnBrew(worldobjects, character, object, recipe)
     if ISCampingMenu.walkToCampfire(character, object:getSquare()) then
-        ISTimedActionQueue.add(PermanentsBrewingAction:new(character, recipe, object));
+        ISTimedActionQueue.add(MoonshineBrewAction:new(character, recipe, object));
     end
 end
 
