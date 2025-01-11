@@ -4,15 +4,15 @@
 -- that can be found in the LICENSE file.
 --
 
-PermanentZombieLoot = {}
+MoonshineZombieLoot = {}
 
-function PermanentZombieLoot.CheckChance(chance)
+function MoonshineZombieLoot.CheckChance(chance)
     local generated = ZombRand(99) + 1
 
     return generated <= chance
 end
 
-function PermanentZombieLoot.OnZombieDead(corpse)
+function MoonshineZombieLoot.OnZombieDead(corpse)
     if SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance <= 0 then
         return
     end
@@ -51,7 +51,7 @@ function PermanentZombieLoot.OnZombieDead(corpse)
     end
 
     if roomName == "bar" then
-        local spawnAllowed = PermanentZombieLoot.CheckChance(SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance)
+        local spawnAllowed = MoonshineZombieLoot.CheckChance(SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance)
 
         if spawnAllowed then
             zombieInventory:AddItems("Permanent.ExclusiveRecipe", 1);
@@ -59,4 +59,4 @@ function PermanentZombieLoot.OnZombieDead(corpse)
     end
 end
 
-Events.OnZombieDead.Add(PermanentZombieLoot.OnZombieDead);
+Events.OnZombieDead.Add(MoonshineZombieLoot.OnZombieDead);

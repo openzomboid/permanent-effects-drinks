@@ -145,7 +145,7 @@ module Permanent {
         CustomEatSound    = DrinkingFromBottleGlass,
         ReplaceOnUse      = WhiskeyEmpty,
         EatType           = Bourbon,
-        OnEat             = OnEat_GreedySalvation,
+        OnEat             = OnDrink_GreedySalvation,
         Alcoholic         = true,
         AlcoholPower      = 2,
         BoredomChange     = -100,

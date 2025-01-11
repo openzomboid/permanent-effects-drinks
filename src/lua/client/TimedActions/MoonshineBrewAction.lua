@@ -5,7 +5,7 @@
 --
 
 require "TimedActions/ISBaseTimedAction"
-require 'PermanentRecipes'
+require 'MoonshineRecipes'
 
 MoonshineBrewAction = ISBaseTimedAction:derive("MoonshineBrewAction");
 
@@ -26,11 +26,11 @@ function MoonshineBrewAction:new(character, recipe, object)
 end
 
 function MoonshineBrewAction:isValid()
-    if not PermanentRecipes.IsEnoughMaterials(self.character, self.recipe) then
+    if not MoonshineRecipes.IsEnoughMaterials(self.character, self.recipe) then
         return false
     end
 
-    if not PermanentRecipes.IsEnoughFluids(self.character, self.recipe) then
+    if not MoonshineRecipes.IsEnoughFluids(self.character, self.recipe) then
         return false
     end
 
@@ -46,7 +46,7 @@ end
 
 -- start starts brewing action.
 -- TODO: Add animation.
--- local animation = PermanentRecipes.GetAnimation(self.recipe.animationType)
+-- local animation = MoonshineRecipes.GetAnimation(self.recipe.animationType)
 -- self:setActionAnim(animation).
 function MoonshineBrewAction:start()
     self.sound = self.character:playSound(self.recipe.sound)
@@ -91,7 +91,7 @@ function MoonshineBrewAction:takeMaterials()
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not PermanentRecipes.IsItemBlocked(self.character, itemToRemove) then
+            if not MoonshineRecipes.IsItemBlocked(self.character, itemToRemove) then
                 if removedItemsCount >= neededItemsCount then
                     break
                 end
@@ -131,7 +131,7 @@ function MoonshineBrewAction:takeFluids()
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not PermanentRecipes.IsItemBlocked(self.character, itemToRemove) and PermanentRecipes.IsFluidReady(itemToRemove, fluid) then
+            if not MoonshineRecipes.IsItemBlocked(self.character, itemToRemove) and MoonshineRecipes.IsFluidReady(itemToRemove, fluid) then
                 if removedItemsCount >= 1 then
                     break
                 end

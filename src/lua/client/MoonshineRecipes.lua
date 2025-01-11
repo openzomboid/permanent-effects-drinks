@@ -4,7 +4,7 @@
 -- that can be found in the LICENSE file.
 --
 
-PermanentRecipes = {
+MoonshineRecipes = {
     -- TODO: Add possibility to create custom recipes in server side Lua directory.
     Recipes = {
         Vanilla = {
@@ -124,7 +124,7 @@ PermanentRecipes = {
 local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
 if pzversion == "41" then
-    PermanentRecipes.Recipes = {
+    MoonshineRecipes.Recipes = {
         Vanilla = {
             ["MakeWhiskey"] = {
                 name = "MakeWhiskey",
@@ -219,7 +219,7 @@ if pzversion == "41" then
     }
 end
 
-function PermanentRecipes.IsEnoughMaterials(character, recipe)
+function MoonshineRecipes.IsEnoughMaterials(character, recipe)
     if not recipe then return false end
 
     local inventory = character:getInventory()
@@ -236,7 +236,7 @@ function PermanentRecipes.IsEnoughMaterials(character, recipe)
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not PermanentRecipes.IsItemBlocked(character, itemToRemove) then
+            if not MoonshineRecipes.IsItemBlocked(character, itemToRemove) then
                 if inventoryItemsCount >= neededItemsCount then
                     break
                 end
@@ -253,7 +253,7 @@ function PermanentRecipes.IsEnoughMaterials(character, recipe)
     return true
 end
 
-function PermanentRecipes.IsEnoughFluids(character, recipe)
+function MoonshineRecipes.IsEnoughFluids(character, recipe)
     if not recipe then return false end
 
     local inventory = character:getInventory()
@@ -271,7 +271,7 @@ function PermanentRecipes.IsEnoughFluids(character, recipe)
             for i=1, items:size() do
                 local itemToRemove = items:get(i-1)
 
-                if not PermanentRecipes.IsItemBlocked(character, itemToRemove) and PermanentRecipes.IsFluidReady(itemToRemove, fluid) then
+                if not MoonshineRecipes.IsItemBlocked(character, itemToRemove) and MoonshineRecipes.IsFluidReady(itemToRemove, fluid) then
                     if inventoryItemsCount >= 1 then
                         break
                     end
@@ -289,7 +289,7 @@ function PermanentRecipes.IsEnoughFluids(character, recipe)
     return true
 end
 
-function PermanentRecipes.IsItemBlocked(character, item)
+function MoonshineRecipes.IsItemBlocked(character, item)
     if item:isBroken() then
         return true
     end
@@ -305,7 +305,7 @@ function PermanentRecipes.IsItemBlocked(character, item)
     return character:isEquipped(item) or character:isAttachedItem(item)
 end
 
-function PermanentRecipes.IsFluidReady(item, fluid)
+function MoonshineRecipes.IsFluidReady(item, fluid)
     if not fluid then
         return true
     end

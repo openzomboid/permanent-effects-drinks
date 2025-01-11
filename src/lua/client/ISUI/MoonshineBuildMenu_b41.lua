@@ -5,10 +5,10 @@
 --
 
 -- MoonshineBuildMenu contains build options.
+-- TODO: Remove after release b42 on stable.
 MoonshineBuildMenu = {}
 
 -- doContextMenu adds "Build Moonshine" option to context menu.
--- TODO: Remove when b42 release on stable.
 function MoonshineBuildMenu.doContextMenu(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
