@@ -1,7 +1,7 @@
-# Permanent Effects Drinks
+# Moonshine Elixirs
 [![Steam Workshop](assets/steam.svg)](https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334)
 
-Permanent Effects Drinks adds drinks with a permanent effects to Project Zomboid game.  
+Moonshine Elixirs (ex Permanent Effects Drinks) adds Moonshine Still and drinks with various effects to Project Zomboid game.  
 
 ## Drink list
 Code               ^  Name                ^ Effect
@@ -31,8 +31,7 @@ In the sandbox settings there is a "Permanent Effects Drinks" tab where you can 
 * **Allow to build moonshine still** - Allow or disallow players to build Moonshine Still workbench.
 * **Allow to brew Vanilla alcohol** - Allow or disallow players to brew Vanilla alcohol such as Bourbon, Wine and Beer on the Moonshine Still workbench.
 * **Allow to brew Exclusive alcohol** - Allow or disallow players to brew Exclusive alcohol such as Slender Doe, Nicotine Overdose etc. on the Moonshine Still workbench.
-* **Allow to spawn Moonshine Recipe Book in Zombies loot**
-* **Chance for spawn Moonshine Recipe Book in all Zombies loot** - Value from 0 to 200 that configures the chance for found Moonshine Recipe Book in zombies. It is recommended to use values lower than 0.001. After saving small value such as 0.001 will be displayed as 1.0e-4. Don't panic, this is normal for this game. 
+* **Chance for spawn Moonshine Recipe Book in Zombies loot** - Value from 0 to 100 that configures the chance for found Moonshine Recipe Book in zombies.  
 
 ## Translations
 * English (EN)  
@@ -47,11 +46,11 @@ I will include it. That way there won't be extra unsupported copies of the mod a
 Don't worry: I will credit you properly.  
 
 ## Warning
-Modification Permanent Effect Drinks is under development and is being tested on the server [Last Day](https://last-day.wargm.ru). You can join our server or use the mod on your own server.
+Modification "Moonshine Elixirs" is under development and is being tested on the server [Last Day](https://last-day.wargm.ru). You can join our server or use the mod on your own server.
 If you think you have found a bug, write about it in the [bug reporting topic](https://steamcommunity.com/workshop/filedetails/discussion/*/*/)
-the Steam workshop or create issue in [github repository](https://github.com/openzomboid/permanent-effects-drinks).
+the Steam workshop or create issue in [github repository](https://github.com/openzomboid/moonshine-elixirs).
 
-**Modification Permanent Effect Drinks is under development and can be updated frequently.**  
+**Modification "Moonshine Elixirs" is under development and can be updated frequently.**  
 
 ## TODO List
 * Add the ability for server administrators to create their own recipes.
