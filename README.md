@@ -50,10 +50,7 @@ Modification "Moonshine Elixirs" is under development and is being tested on the
 If you think you have found a bug, write about it in the [bug reporting topic](https://steamcommunity.com/workshop/filedetails/discussion/*/*/)
 the Steam workshop or create issue in [github repository](https://github.com/openzomboid/moonshine-elixirs).
 
-**Modification "Moonshine Elixirs" is under development and can be updated frequently.**  
-
-## TODO List
-* Add the ability for server administrators to create their own recipes.
+**Modification "Moonshine Elixirs" is under development and can be updated frequently.**
 
 ## Thanks
 Thanks to everyone for the help and interest in this mod. You make this mod better.  
