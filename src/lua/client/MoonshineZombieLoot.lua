@@ -4,14 +4,17 @@
 -- that can be found in the LICENSE file.
 --
 
+-- MoonshineZombieLoot contains logic for zombies loot distributions.
 MoonshineZombieLoot = {}
 
+-- CheckChance checks chance for spawn loot in dead zombie.
 function MoonshineZombieLoot.CheckChance(chance)
     local generated = ZombRand(99) + 1
 
     return generated <= chance
 end
 
+-- OnZombieDead spawns items in zombie loot on zombie dead.
 function MoonshineZombieLoot.OnZombieDead(corpse)
     if SandboxVars.Permanent.ExclusiveRecipeInZombiesLootChance <= 0 then
         return
