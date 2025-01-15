@@ -7,6 +7,7 @@
 require "TimedActions/ISBaseTimedAction"
 require 'MoonshineRecipes'
 
+-- MoonshineBrewAction implements TimedAction for brew recipes.
 MoonshineBrewAction = ISBaseTimedAction:derive("MoonshineBrewAction");
 
 function MoonshineBrewAction:new(character, recipe, object)
