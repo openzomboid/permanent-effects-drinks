@@ -4,6 +4,7 @@
 -- that can be found in the LICENSE file.
 --
 
+-- MoonshineRecipes contains recipes for moonshine still.
 MoonshineRecipes = {
     -- TODO: Add possibility to create custom recipes in server side Lua directory.
     Recipes = {
@@ -219,6 +220,8 @@ if pzversion == "41" then
     }
 end
 
+-- IsEnoughMaterials checks character's inventory has enough materials
+-- for recipe.
 function MoonshineRecipes.IsEnoughMaterials(character, recipe)
     if not recipe then return false end
 
@@ -253,6 +256,8 @@ function MoonshineRecipes.IsEnoughMaterials(character, recipe)
     return true
 end
 
+-- MoonshineRecipes checks character's inventory has enough fluids
+-- for recipe.
 function MoonshineRecipes.IsEnoughFluids(character, recipe)
     if not recipe then return false end
 
@@ -289,6 +294,7 @@ function MoonshineRecipes.IsEnoughFluids(character, recipe)
     return true
 end
 
+-- IsItemBlocked returns true if item is not allowed for recipe.
 function MoonshineRecipes.IsItemBlocked(character, item)
     if item:isBroken() then
         return true
@@ -305,6 +311,7 @@ function MoonshineRecipes.IsItemBlocked(character, item)
     return character:isEquipped(item) or character:isAttachedItem(item)
 end
 
+-- IsFluidReady returns true if item with fluid is allowed for recipe.
 function MoonshineRecipes.IsFluidReady(item, fluid)
     if not fluid then
         return true
