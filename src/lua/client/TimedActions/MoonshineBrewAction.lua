@@ -10,6 +10,7 @@ require 'MoonshineRecipes'
 -- MoonshineBrewAction implements TimedAction for brew recipes.
 MoonshineBrewAction = ISBaseTimedAction:derive("MoonshineBrewAction");
 
+-- new creates instance of MoonshineBrewAction TimedAction.
 function MoonshineBrewAction:new(character, recipe, object)
     local cookingLevel = character:getPerkLevel(Perks.Cooking)
 
@@ -26,6 +27,8 @@ function MoonshineBrewAction:new(character, recipe, object)
     return o
 end
 
+-- isValid returns true if recipe is allowed and character's inventory has
+-- enough materials.
 function MoonshineBrewAction:isValid()
     if not MoonshineRecipes.IsEnoughMaterials(self.character, self.recipe) then
         return false
@@ -38,6 +41,7 @@ function MoonshineBrewAction:isValid()
     return true
 end
 
+-- waitToStart returns false. Needed for TimedAction implementation.
 function MoonshineBrewAction:waitToStart()
     return false
 end
