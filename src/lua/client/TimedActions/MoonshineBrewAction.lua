@@ -21,7 +21,6 @@ function MoonshineBrewAction:new(character, recipe, object)
     o.stopOnWalk = true;
     o.stopOnRun = true;
     o.maxTime = recipe.time - (cookingLevel * 20 - 100);
-    -- custom fields
     o.object = object
     o.recipe = recipe
     return o
@@ -46,6 +45,7 @@ function MoonshineBrewAction:waitToStart()
     return false
 end
 
+-- update does nothing. Needed for TimedAction implementation.
 function MoonshineBrewAction:update()
 end
 
@@ -57,10 +57,12 @@ function MoonshineBrewAction:start()
     self.sound = self.character:playSound(self.recipe.sound)
 end
 
+-- stop stops brewing action.
 function MoonshineBrewAction:stop()
     ISBaseTimedAction.stop(self);
 end
 
+-- perform takes recipe materials and spawns recipe result.
 function MoonshineBrewAction:perform()
     local inventory = self.character:getInventory()
 
@@ -81,6 +83,7 @@ function MoonshineBrewAction:performNext()
     ISBaseTimedAction.perform(self)
 end
 
+-- takeMaterials removes recipe materials from character's inventory.
 function MoonshineBrewAction:takeMaterials()
     local inventory = self.character:getInventory()
 
@@ -117,6 +120,7 @@ function MoonshineBrewAction:takeMaterials()
     end
 end
 
+-- takeFluids removes recipe fluids from character's inventory.
 function MoonshineBrewAction:takeFluids()
     local inventory = self.character:getInventory()
 
