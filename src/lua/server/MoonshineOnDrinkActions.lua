@@ -5,8 +5,6 @@
 -- Permanent Effects Drinks adds drinks with a permanent effect
 --
 
-local version = "0.11.0"
-
 -- PerkLevelup creates level up for perk.
 function PerkLevelup(player, perkType)
     local perkLevel = player:getPerkLevel(perkType);
