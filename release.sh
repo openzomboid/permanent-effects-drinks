@@ -57,6 +57,8 @@ function make_release() {
   cp README.md "${dir_42}"
   cp CHANGELOG.md "${dir}"
   cp CHANGELOG.md "${dir_42}"
+  cp VERSION "${dir}"
+  cp VERSION "${dir_42}"
 
   cd "${dir_workshop}/Contents/mods/" && {
     tar -zcvf "../../../${RELEASE_NAME}.tar.gz" "${MOD_NAME}"
