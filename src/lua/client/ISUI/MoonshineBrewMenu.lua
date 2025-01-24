@@ -4,7 +4,7 @@
 -- that can be found in the LICENSE file.
 --
 
-require 'MoonshineRecipes'
+require 'MoonshineRecipesClient'
 
 -- MoonshineBrewMenu is the game context menu extender.
 MoonshineBrewMenu = {}
@@ -41,7 +41,7 @@ function MoonshineBrewMenu.doContextMenu(player, context, worldobjects, test)
         context:addSubMenu(distilOption, distilMenu);
 
         if SandboxVars.Permanent.AllowBrewingVanillaAlcohol then
-            for _, recipe in pairs(MoonshineRecipes.Recipes.Vanilla) do
+            for _, recipe in pairs(MoonshineRecipesClient.Recipes.Vanilla) do
                 MoonshineBrewMenu.AddBrewOption(distilMenu, character, object, recipe)
             end
         end
@@ -51,7 +51,7 @@ function MoonshineBrewMenu.doContextMenu(player, context, worldobjects, test)
             local distilExclusiveMenu = distilMenu:getNew(distilMenu);
             context:addSubMenu(distilExclusiveOption, distilExclusiveMenu);
 
-            for _, recipe in pairs(MoonshineRecipes.Recipes.Exclusive) do
+            for _, recipe in pairs(MoonshineRecipesClient.Recipes.Exclusive) do
                 MoonshineBrewMenu.AddBrewOption(distilExclusiveMenu, character, object, recipe)
             end
         end
@@ -131,7 +131,7 @@ function MoonshineBrewMenu.AddMaterialItemToBrewTooltip(tooltip, character, item
     if items then
         for i=1, items:size() do
             local itemToRemove = items:get(i-1);
-            if not MoonshineRecipes.IsItemBlocked(character, itemToRemove) then
+            if not MoonshineRecipesClient.IsItemBlocked(character, itemToRemove) then
                 itemsCount = itemsCount + 1;
             end
         end
@@ -158,7 +158,7 @@ function MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCod
     if items then
         for i=1, items:size() do
             local itemToRemove = items:get(i-1);
-            if not MoonshineRecipes.IsItemBlocked(character, itemToRemove) and MoonshineRecipes.IsFluidReady(itemToRemove, fluid) then
+            if not MoonshineRecipesClient.IsItemBlocked(character, itemToRemove) and MoonshineRecipesClient.IsFluidReady(itemToRemove, fluid) then
                 itemsCount = itemsCount + 1;
             end
         end

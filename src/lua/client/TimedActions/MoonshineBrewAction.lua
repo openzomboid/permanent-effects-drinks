@@ -5,7 +5,7 @@
 --
 
 require "TimedActions/ISBaseTimedAction"
-require 'MoonshineRecipes'
+require 'MoonshineRecipesClient'
 
 -- MoonshineBrewAction implements TimedAction for brew recipes.
 MoonshineBrewAction = ISBaseTimedAction:derive("MoonshineBrewAction");
@@ -29,11 +29,11 @@ end
 -- isValid returns true if recipe is allowed and character's inventory has
 -- enough materials.
 function MoonshineBrewAction:isValid()
-    if not MoonshineRecipes.IsEnoughMaterials(self.character, self.recipe) then
+    if not MoonshineRecipesClient.IsEnoughMaterials(self.character, self.recipe) then
         return false
     end
 
-    if not MoonshineRecipes.IsEnoughFluids(self.character, self.recipe) then
+    if not MoonshineRecipesClient.IsEnoughFluids(self.character, self.recipe) then
         return false
     end
 
@@ -51,7 +51,7 @@ end
 
 -- start starts brewing action.
 -- TODO: Add animation.
--- local animation = MoonshineRecipes.GetAnimation(self.recipe.animationType)
+-- local animation = MoonshineRecipesClient.GetAnimation(self.recipe.animationType)
 -- self:setActionAnim(animation).
 function MoonshineBrewAction:start()
     self.sound = self.character:playSound(self.recipe.sound)
@@ -99,7 +99,7 @@ function MoonshineBrewAction:takeMaterials()
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not MoonshineRecipes.IsItemBlocked(self.character, itemToRemove) then
+            if not MoonshineRecipesClient.IsItemBlocked(self.character, itemToRemove) then
                 if removedItemsCount >= neededItemsCount then
                     break
                 end
@@ -140,7 +140,7 @@ function MoonshineBrewAction:takeFluids()
         for i=1, items:size() do
             local itemToRemove = items:get(i-1)
 
-            if not MoonshineRecipes.IsItemBlocked(self.character, itemToRemove) and MoonshineRecipes.IsFluidReady(itemToRemove, fluid) then
+            if not MoonshineRecipesClient.IsItemBlocked(self.character, itemToRemove) and MoonshineRecipesClient.IsFluidReady(itemToRemove, fluid) then
                 if removedItemsCount >= 1 then
                     break
                 end
