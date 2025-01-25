@@ -10,8 +10,6 @@ MoonshineRecipesClient = {
         Vanilla = {},
         Exclusive = {},
     },
-
-    Ticker = {}
 }
 
 -- IsEnoughMaterials checks character's inventory has enough materials
@@ -147,28 +145,11 @@ end
 
 -- onGameStart handles onGameStart Lua event.
 function MoonshineRecipesClient.onGameStart()
-    print("AAA: onGameStart 1")
+   local character = getPlayer();
 
-    local started = false
-
-    MoonshineRecipesClient.Ticker.OnTick = function()
-        if started then
-            return
-        end
-
-        started = true
-
-        local character = getPlayer();
-
-        print("AAA: onGameStart 2")
-
-        if character then
-            sendClientCommand(character, "Permanent", "GetRecipes", {})
-            print("AAA: onGameStart 3")
-        end
+    if character then
+        sendClientCommand(character, "Permanent", "GetRecipes", {})
     end
-
-    Events.OnTick.Add(MoonshineRecipesClient.Ticker.OnTick);
 end
 
 -- OnServerCommand handles commands from server.
@@ -188,7 +169,6 @@ function MoonshineRecipesClient.onServerCommand(module, command, args)
     if command == "GetRecipes" then
         print("AAA: onServerCommand 4")
         MoonshineRecipesClient.Recipes = args.recipes
-        Events.OnTick.Remove(MoonshineRecipesClient.Ticker.OnTick);
     end
 end
 
