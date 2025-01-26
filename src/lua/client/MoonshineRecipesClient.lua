@@ -152,7 +152,7 @@ function MoonshineRecipesClient.onGameStart()
     end
 end
 
--- OnServerCommand handles commands from server.
+-- onServerCommand handles commands from server.
 function MoonshineRecipesClient.onServerCommand(module, command, args)
     print("AAA: onServerCommand 1")
 
