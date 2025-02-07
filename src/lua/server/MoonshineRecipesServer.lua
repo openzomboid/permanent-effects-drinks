@@ -222,7 +222,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
     return recipes
 end
 
-function MoonshineRecipesServer.onClientCommand(module, command, character, args)
+function MoonshineRecipesServer.OnClientCommand(module, command, character, args)
     print("BBB: MoonshineOnClientCommand 1")
 
     if module ~= "Permanent" then
@@ -242,4 +242,4 @@ function MoonshineRecipesServer.onClientCommand(module, command, character, args
     end
 end
 
-Events.OnClientCommand.Add(MoonshineRecipesServer.onClientCommand)
+Events.OnClientCommand.Add(MoonshineRecipesServer.OnClientCommand)

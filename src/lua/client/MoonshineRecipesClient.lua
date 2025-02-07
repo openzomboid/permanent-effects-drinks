@@ -143,8 +143,8 @@ function MoonshineRecipesClient.IsFluidReady(item, fluid)
     return true
 end
 
--- onGameStart handles onGameStart Lua event.
-function MoonshineRecipesClient.onGameStart()
+-- OnGameStart handles onGameStart Lua event.
+function MoonshineRecipesClient.OnGameStart()
    local character = getPlayer();
 
     if character then
@@ -152,8 +152,8 @@ function MoonshineRecipesClient.onGameStart()
     end
 end
 
--- onServerCommand handles commands from server.
-function MoonshineRecipesClient.onServerCommand(module, command, args)
+-- OnServerCommand handles commands from server.
+function MoonshineRecipesClient.OnServerCommand(module, command, args)
     print("AAA: onServerCommand 1")
 
     if not isClient() then return end
@@ -172,5 +172,5 @@ function MoonshineRecipesClient.onServerCommand(module, command, args)
     end
 end
 
-Events.OnGameStart.Add(MoonshineRecipesClient.onGameStart);
-Events.OnServerCommand.Add(MoonshineRecipesClient.onServerCommand);
+Events.OnGameStart.Add(MoonshineRecipesClient.OnGameStart);
+Events.OnServerCommand.Add(MoonshineRecipesClient.OnServerCommand);
