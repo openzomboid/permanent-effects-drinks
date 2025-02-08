@@ -242,4 +242,9 @@ function MoonshineRecipesServer.OnClientCommand(module, command, character, args
     end
 end
 
+function MoonshineRecipesServer.OnServerStarted()
+    print("BBB: OnServerStarted 1")
+end
+
 Events.OnClientCommand.Add(MoonshineRecipesServer.OnClientCommand)
+Events.OnServerStarted.Add(MoonshineRecipesServer.OnServerStarted)
