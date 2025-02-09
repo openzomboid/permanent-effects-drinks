@@ -242,6 +242,8 @@ function MoonshineRecipesServer.OnClientCommand(module, command, character, args
     end
 end
 
+-- OnServerStarted handles OnServerStarted Lua event.
+-- FIXME: Doesn't work on build 42 Unstable. Find another way to build 42 Unstable.
 function MoonshineRecipesServer.OnServerStarted()
     print("BBB: OnServerStarted 1")
 end
