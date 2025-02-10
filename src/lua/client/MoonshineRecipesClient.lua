@@ -143,7 +143,7 @@ function MoonshineRecipesClient.IsFluidReady(item, fluid)
     return true
 end
 
--- OnGameStart handles onGameStart Lua event.
+-- OnGameStart handles OnGameStart Lua event.
 function MoonshineRecipesClient.OnGameStart()
    local character = getPlayer();
 
