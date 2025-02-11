@@ -153,6 +153,7 @@ function MoonshineRecipesClient.OnGameStart()
 end
 
 -- OnServerCommand handles commands from server.
+-- TODO: Remove debug information.
 function MoonshineRecipesClient.OnServerCommand(module, command, args)
     print("AAA: onServerCommand 1")
 
