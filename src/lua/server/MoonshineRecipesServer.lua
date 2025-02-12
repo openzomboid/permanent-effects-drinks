@@ -6,6 +6,7 @@
 
 MoonshineRecipesServer = {}
 
+-- GetDefaultRecipes returns default recipes.
 function MoonshineRecipesServer.GetDefaultRecipes()
     local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
 
@@ -222,6 +223,8 @@ function MoonshineRecipesServer.GetDefaultRecipes()
     return recipes
 end
 
+-- OnClientCommand handles commands from client.
+-- TODO: Remove debug information.
 function MoonshineRecipesServer.OnClientCommand(module, command, character, args)
     print("BBB: MoonshineOnClientCommand 1")
 
