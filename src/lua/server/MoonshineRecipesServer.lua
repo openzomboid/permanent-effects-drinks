@@ -4,15 +4,16 @@
 -- that can be found in the LICENSE file.
 --
 
+local json = require "vendor/json/json"
+local json_pretty_options = {pretty = true, indent = "  ", align_keys = false, array_newline = true}
+
 MoonshineRecipesServer = {}
 
 -- GetDefaultRecipes returns default recipes.
 function MoonshineRecipesServer.GetDefaultRecipes()
-    local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
-
     local recipes = {
         Vanilla = {
-            {
+            ["MakeWhiskey"] = {
                 name = "MakeWhiskey",
                 type = "Vanilla",
                 disabled = false,
@@ -21,7 +22,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 time = 300,
                 cookingSkill = 3,
                 usedItems = {
-                    ["Base.BottleCrafted"] = 1,
+                    ["Base.WhiskeyWaterFull"] = 1,
                     ["Base.Yeast"] = 1,
                     ["Base.Corn"] = 1,
                     ["Base.UnusableWood"] = 1,
@@ -29,7 +30,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 result = "Base.WhiskeyFull",
                 additionalResults = {},
             },
-            {
+            ["MakeWine"] = {
                 name = "MakeWine",
                 type = "Vanilla",
                 disabled = false,
@@ -38,14 +39,14 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 time = 300,
                 cookingSkill = 3,
                 usedItems = {
-                    ["Base.BottleCrafted"] = 1,
+                    ["Base.WineWaterFull"] = 1,
                     ["Base.Sugar"] = 1,
                     ["Base.Grapes"] = 1,
                 },
                 result = "Base.Wine2",
                 additionalResults = {},
             },
-            {
+            ["MakeBeer"] = {
                 name = "MakeBeer",
                 type = "Vanilla",
                 disabled = false,
@@ -54,7 +55,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 time = 300,
                 cookingSkill = 3,
                 usedItems = {
-                    ["Base.BottleCrafted"] = 1,
+                    ["Base.BeerWaterFull"] = 1,
                     ["Base.Sugar"] = 1,
                     ["Base.Corn"] = 1,
                 },
@@ -64,7 +65,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
         },
 
         Exclusive = {
-            {
+            ["MakeSlenderDoe"] = {
                 name = "MakeSlenderDoe",
                 type = "Exclusive",
                 disabled = false,
@@ -74,30 +75,16 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 cookingSkill = 10,
                 usedItems = {
                     ["Permanent.ExclusiveRecipe"] = 1,
+                    ["Base.Wine2"] = 1,
+                    ["Base.Wine"] = 1,
                     ["Base.GrapeLeaves"] = 4,
+                    ["Base.Milk"] = 1,
                     ["Base.Pickles"] = 1,
-                },
-                fluids = {
-                    ["Base.Wine"] = {
-                        code = "Base.Wine",
-                        name = "Wine",
-                        amount = 1,
-                    },
-                    ["Base.Wine2"] = {
-                        code = "Base.Wine2",
-                        name = "Wine",
-                        amount = 1,
-                    },
-                    ["Base.Milk"] = {
-                        code = "Base.Milk",
-                        name = "CowMilk",
-                        amount = 1,
-                    },
                 },
                 result = "Permanent.SlenderDoe",
                 additionalResults = {},
             },
-            {
+            ["MakeNicotineOverdose"] = {
                 name = "MakeNicotineOverdose",
                 type = "Exclusive",
                 disabled = false,
@@ -107,16 +94,10 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 cookingSkill = 10,
                 usedItems = {
                     ["Permanent.ExclusiveRecipe"] = 1,
+                    ["Base.WhiskeyFull"] = 1,
                     ["Base.Sugar"] = 1,
-                    ["Base.CigaretteSingle"] = 100,
+                    ["Base.Cigarettes"] = 1000,
                     ["Base.Coffee2"] = 5,
-                },
-                fluids = {
-                    ["Base.Whiskey"] = {
-                        code = "Base.Whiskey",
-                        name = "Whiskey",
-                        amount = 1,
-                    },
                 },
                 result = "Permanent.NicotineOverdose",
                 additionalResults = {},
@@ -124,10 +105,11 @@ function MoonshineRecipesServer.GetDefaultRecipes()
         },
     }
 
-    if pzversion == "41" then
+    local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
+    if pzversion == "42" then
         recipes = {
             Vanilla = {
-                ["MakeWhiskey"] = {
+                {
                     name = "MakeWhiskey",
                     type = "Vanilla",
                     disabled = false,
@@ -136,7 +118,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     time = 300,
                     cookingSkill = 3,
                     usedItems = {
-                        ["Base.WhiskeyWaterFull"] = 1,
+                        ["Base.BottleCrafted"] = 1,
                         ["Base.Yeast"] = 1,
                         ["Base.Corn"] = 1,
                         ["Base.UnusableWood"] = 1,
@@ -144,7 +126,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     result = "Base.WhiskeyFull",
                     additionalResults = {},
                 },
-                ["MakeWine"] = {
+                {
                     name = "MakeWine",
                     type = "Vanilla",
                     disabled = false,
@@ -153,14 +135,14 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     time = 300,
                     cookingSkill = 3,
                     usedItems = {
-                        ["Base.WineWaterFull"] = 1,
+                        ["Base.BottleCrafted"] = 1,
                         ["Base.Sugar"] = 1,
                         ["Base.Grapes"] = 1,
                     },
                     result = "Base.Wine2",
                     additionalResults = {},
                 },
-                ["MakeBeer"] = {
+                {
                     name = "MakeBeer",
                     type = "Vanilla",
                     disabled = false,
@@ -169,7 +151,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     time = 300,
                     cookingSkill = 3,
                     usedItems = {
-                        ["Base.BeerWaterFull"] = 1,
+                        ["Base.BottleCrafted"] = 1,
                         ["Base.Sugar"] = 1,
                         ["Base.Corn"] = 1,
                     },
@@ -179,7 +161,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
             },
 
             Exclusive = {
-                ["MakeSlenderDoe"] = {
+                {
                     name = "MakeSlenderDoe",
                     type = "Exclusive",
                     disabled = false,
@@ -189,16 +171,30 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     cookingSkill = 10,
                     usedItems = {
                         ["Permanent.ExclusiveRecipe"] = 1,
-                        ["Base.Wine2"] = 1,
-                        ["Base.Wine"] = 1,
                         ["Base.GrapeLeaves"] = 4,
-                        ["Base.Milk"] = 1,
                         ["Base.Pickles"] = 1,
+                    },
+                    fluids = {
+                        ["Base.Wine"] = {
+                            code = "Base.Wine",
+                            name = "Wine",
+                            amount = 1,
+                        },
+                        ["Base.Wine2"] = {
+                            code = "Base.Wine2",
+                            name = "Wine",
+                            amount = 1,
+                        },
+                        ["Base.Milk"] = {
+                            code = "Base.Milk",
+                            name = "CowMilk",
+                            amount = 1,
+                        },
                     },
                     result = "Permanent.SlenderDoe",
                     additionalResults = {},
                 },
-                ["MakeNicotineOverdose"] = {
+                {
                     name = "MakeNicotineOverdose",
                     type = "Exclusive",
                     disabled = false,
@@ -208,10 +204,16 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     cookingSkill = 10,
                     usedItems = {
                         ["Permanent.ExclusiveRecipe"] = 1,
-                        ["Base.WhiskeyFull"] = 1,
                         ["Base.Sugar"] = 1,
-                        ["Base.Cigarettes"] = 1000,
+                        ["Base.CigaretteSingle"] = 100,
                         ["Base.Coffee2"] = 5,
+                    },
+                    fluids = {
+                        ["Base.Whiskey"] = {
+                            code = "Base.Whiskey",
+                            name = "Whiskey",
+                            amount = 1,
+                        },
                     },
                     result = "Permanent.NicotineOverdose",
                     additionalResults = {},
@@ -223,32 +225,117 @@ function MoonshineRecipesServer.GetDefaultRecipes()
     return recipes
 end
 
+-- LoadRecipes gets and returns recipes from moonshine-pecipes.json
+-- file in Zomboid/Lua directory.
+-- TODO: Remove debug information.
+function MoonshineRecipesServer.LoadRecipes()
+    if MoonshineRecipesServer.Recipes then
+        print("[MoonshineLoggerServer] LoadRecipes: return preloaded recipes")
+        return MoonshineRecipesServer.Recipes
+    end
+
+    local recipeFileName = "moonshine-recipes.json"
+    local pzversion = string.sub(getCore():getVersionNumber(), 1, 2)
+    if pzversion == "42" then
+        recipeFileName = "moonshine-recipes-b42.json"
+    end
+
+    local recipes = MoonshineRecipesServer.ReadFile(recipeFileName)
+    if not recipes then
+        print("[MoonshineLoggerServer] LoadRecipes: return default recipes")
+        recipes = MoonshineRecipesServer.GetDefaultRecipes()
+
+        MoonshineRecipesServer.WriteFile(recipeFileName, recipes)
+    end
+
+    MoonshineRecipesServer.Recipes = recipes
+
+    return recipes
+end
+
+-- WriteFile saves values to file in Zomboid/Lua directory.
+-- TODO: Add function to openutils.
+function MoonshineRecipesServer.WriteFile(filename, data)
+    local writer = getFileWriter(filename, false, false)
+    if not writer then
+        return false
+    end
+
+    if data ~= nil then
+        local encodeddata = json:encode_pretty(data, nil, json_pretty_options)
+        if encodeddata ~= nil then
+            writer:write(encodeddata)
+        end
+    end
+
+    writer:close()
+
+    return true
+end
+
+-- ReadFile reads instance values from file in Zomboid/Lua directory.
+-- TODO: Add function to openutils.
+function MoonshineRecipesServer.ReadFile(filename)
+    print("[MoonshineLoggerServer] ReadFile: start read " .. filename)
+
+    local reader = getFileReader(filename, false)
+    if not reader then
+        return
+    end
+    print("[MoonshineLoggerServer] ReadFile: get reader success")
+
+    local rawdata = ""
+
+    while true do
+        local line = reader:readLine()
+        if not line then
+            reader:close()
+            break
+        end
+
+        rawdata = rawdata .. line
+    end
+
+    if rawdata ~= "" then
+        local data = json:decode(rawdata)
+        print("[MoonshineLoggerServer] ReadFile: read file success")
+        return data
+    end
+
+    print("[MoonshineLoggerServer] ReadFile: rawdata is empty")
+end
+
 -- OnClientCommand handles commands from client.
 -- TODO: Remove debug information.
 function MoonshineRecipesServer.OnClientCommand(module, command, character, args)
-    print("BBB: MoonshineOnClientCommand 1")
+    print("[MoonshineLoggerServer] MoonshineOnClientCommand: got command from client")
 
     if module ~= "Permanent" then
         return
     end
 
-    print("BBB: MoonshineOnClientCommand 2")
+    print("[MoonshineLoggerServer] MoonshineOnClientCommand: got relevant Permanent module")
 
     if command == "GetRecipes" then
-        print("BBB: MoonshineOnClientCommand 3")
+        print("[MoonshineLoggerServer] MoonshineOnClientCommand: got relevant GetRecipes command")
+
+        local recipes = MoonshineRecipesServer.LoadRecipes()
 
         if isServer() then
-            sendServerCommand(character, "Permanent", "GetRecipes", {recipes = MoonshineRecipesServer.GetDefaultRecipes()})
+            print("[MoonshineLoggerServer] MoonshineOnClientCommand: send recipes to client")
+            sendServerCommand(character, "Permanent", "GetRecipes", {recipes = recipes})
         else
-            MoonshineRecipesClient.Recipes = MoonshineRecipesServer.GetDefaultRecipes()
+            print("[MoonshineLoggerServer] MoonshineOnClientCommand: regular return recipes")
+            MoonshineRecipesClient.Recipes = recipes
         end
     end
 end
 
 -- OnServerStarted handles OnServerStarted Lua event.
--- FIXME: Doesn't work on build 42 Unstable. Find another way to build 42 Unstable.
 function MoonshineRecipesServer.OnServerStarted()
-    print("BBB: OnServerStarted 1")
+    print("[MoonshineLoggerServer] OnServerStarted: start loading recipes")
+
+    local _ = MoonshineRecipesServer.LoadRecipes()
 end
 
 Events.OnClientCommand.Add(MoonshineRecipesServer.OnClientCommand)

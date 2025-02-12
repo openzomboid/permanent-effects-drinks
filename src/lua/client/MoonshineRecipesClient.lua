@@ -143,6 +143,23 @@ function MoonshineRecipesClient.IsFluidReady(item, fluid)
     return true
 end
 
+-- OnServerCommand handles commands from server.
+-- TODO: Remove debug information.
+function MoonshineRecipesClient.OnServerCommand(module, command, args)
+    print("[MoonshineLoggerClient] OnServerCommand: got command from server")
+
+    if module ~= "Permanent" then
+        return
+    end
+
+    print("[MoonshineLoggerClient] OnServerCommand: got relevant Permanent module")
+
+    if command == "GetRecipes" then
+        print("[MoonshineLoggerClient] OnServerCommand: got relevant GetRecipes command")
+        MoonshineRecipesClient.Recipes = args.recipes
+    end
+end
+
 -- OnGameStart handles OnGameStart Lua event.
 function MoonshineRecipesClient.OnGameStart()
    local character = getPlayer();
@@ -152,26 +169,5 @@ function MoonshineRecipesClient.OnGameStart()
     end
 end
 
--- OnServerCommand handles commands from server.
--- TODO: Remove debug information.
-function MoonshineRecipesClient.OnServerCommand(module, command, args)
-    print("AAA: onServerCommand 1")
-
-    if not isClient() then return end
-
-    print("AAA: onServerCommand 2")
-
-    if module ~= "Permanent" then
-        return
-    end
-
-    print("AAA: onServerCommand 3")
-
-    if command == "GetRecipes" then
-        print("AAA: onServerCommand 4")
-        MoonshineRecipesClient.Recipes = args.recipes
-    end
-end
-
-Events.OnGameStart.Add(MoonshineRecipesClient.OnGameStart);
-Events.OnServerCommand.Add(MoonshineRecipesClient.OnServerCommand);
+Events.OnServerCommand.Add(MoonshineRecipesClient.OnServerCommand)
+Events.OnGameStart.Add(MoonshineRecipesClient.OnGameStart)
