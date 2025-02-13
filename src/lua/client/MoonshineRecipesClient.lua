@@ -6,10 +6,7 @@
 
 -- MoonshineRecipesClient contains recipes for moonshine still.
 MoonshineRecipesClient = {
-    Recipes = {
-        Vanilla = {},
-        Exclusive = {},
-    },
+    RecipesLoadTicker = {}
 }
 
 -- IsEnoughMaterials checks character's inventory has enough materials
@@ -146,8 +143,6 @@ end
 -- OnServerCommand handles commands from server.
 -- TODO: Remove debug information.
 function MoonshineRecipesClient.OnServerCommand(module, command, args)
-    print("[MoonshineLoggerClient] OnServerCommand: got command from server")
-
     if module ~= "Permanent" then
         return
     end
@@ -162,12 +157,33 @@ end
 
 -- OnGameStart handles OnGameStart Lua event.
 function MoonshineRecipesClient.OnGameStart()
-   local character = getPlayer();
+    print("[MoonshineLoggerClient] OnGameStart: start")
+    local character = getPlayer();
 
     if character then
+        print("[MoonshineLoggerClient] OnGameStart: sendClientCommand")
         sendClientCommand(character, "Permanent", "GetRecipes", {})
     end
 end
 
+-- OnCreatePlayer handles OnCreatePlayer Lua event.
+function MoonshineRecipesClient.OnCreatePlayer(id)
+    print("[MoonshineLoggerClient] OnCreatePlayer: start")
+
+    MoonshineRecipesClient.RecipesLoadTicker.OnTick = function()
+        local character = getPlayer();
+
+        if character then
+            print("[MoonshineLoggerClient] OnCreatePlayer: sendClientCommand")
+            sendClientCommand(character, "Permanent", "GetRecipes", {})
+
+            Events.OnTick.Remove(MoonshineRecipesClient.RecipesLoadTicker.OnTick)
+        end
+    end
+
+    Events.OnTick.Add(MoonshineRecipesClient.RecipesLoadTicker.OnTick);
+end
+
 Events.OnServerCommand.Add(MoonshineRecipesClient.OnServerCommand)
-Events.OnGameStart.Add(MoonshineRecipesClient.OnGameStart)
+--Events.OnGameStart.Add(MoonshineRecipesClient.OnGameStart)
+Events.OnCreatePlayer.Add(MoonshineRecipesClient.OnCreatePlayer);

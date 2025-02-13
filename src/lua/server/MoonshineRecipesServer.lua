@@ -255,7 +255,10 @@ end
 
 -- WriteFile saves values to file in Zomboid/Lua directory.
 -- TODO: Add function to openutils.
+-- TODO: Remove debug information.
 function MoonshineRecipesServer.WriteFile(filename, data)
+    print("[MoonshineLoggerServer] WriteFile: start write " .. filename)
+
     local writer = getFileWriter(filename, false, false)
     if not writer then
         return false
@@ -275,6 +278,7 @@ end
 
 -- ReadFile reads instance values from file in Zomboid/Lua directory.
 -- TODO: Add function to openutils.
+-- TODO: Remove debug information.
 function MoonshineRecipesServer.ReadFile(filename)
     print("[MoonshineLoggerServer] ReadFile: start read " .. filename)
 
@@ -308,8 +312,6 @@ end
 -- OnClientCommand handles commands from client.
 -- TODO: Remove debug information.
 function MoonshineRecipesServer.OnClientCommand(module, command, character, args)
-    print("[MoonshineLoggerServer] MoonshineOnClientCommand: got command from client")
-
     if module ~= "Permanent" then
         return
     end
