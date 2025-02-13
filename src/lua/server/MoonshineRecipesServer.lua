@@ -7,6 +7,7 @@
 local json = require "vendor/json/json"
 local json_pretty_options = {pretty = true, indent = "  ", align_keys = false, array_newline = true}
 
+-- MoonshineRecipesServer contains recipes for moonshine still.
 MoonshineRecipesServer = {}
 
 -- GetDefaultRecipes returns default recipes.
@@ -227,10 +228,8 @@ end
 
 -- LoadRecipes gets and returns recipes from moonshine-pecipes.json
 -- file in Zomboid/Lua directory.
--- TODO: Remove debug information.
 function MoonshineRecipesServer.LoadRecipes()
     if MoonshineRecipesServer.Recipes then
-        print("[MoonshineLoggerServer] LoadRecipes: return preloaded recipes")
         return MoonshineRecipesServer.Recipes
     end
 
@@ -242,7 +241,6 @@ function MoonshineRecipesServer.LoadRecipes()
 
     local recipes = MoonshineRecipesServer.ReadFile(recipeFileName)
     if not recipes then
-        print("[MoonshineLoggerServer] LoadRecipes: return default recipes")
         recipes = MoonshineRecipesServer.GetDefaultRecipes()
 
         MoonshineRecipesServer.WriteFile(recipeFileName, recipes)
@@ -255,10 +253,7 @@ end
 
 -- WriteFile saves values to file in Zomboid/Lua directory.
 -- TODO: Add function to openutils.
--- TODO: Remove debug information.
 function MoonshineRecipesServer.WriteFile(filename, data)
-    print("[MoonshineLoggerServer] WriteFile: start write " .. filename)
-
     local writer = getFileWriter(filename, false, false)
     if not writer then
         return false
@@ -278,15 +273,11 @@ end
 
 -- ReadFile reads instance values from file in Zomboid/Lua directory.
 -- TODO: Add function to openutils.
--- TODO: Remove debug information.
 function MoonshineRecipesServer.ReadFile(filename)
-    print("[MoonshineLoggerServer] ReadFile: start read " .. filename)
-
     local reader = getFileReader(filename, false)
     if not reader then
         return
     end
-    print("[MoonshineLoggerServer] ReadFile: get reader success")
 
     local rawdata = ""
 
@@ -302,32 +293,22 @@ function MoonshineRecipesServer.ReadFile(filename)
 
     if rawdata ~= "" then
         local data = json:decode(rawdata)
-        print("[MoonshineLoggerServer] ReadFile: read file success")
         return data
     end
-
-    print("[MoonshineLoggerServer] ReadFile: rawdata is empty")
 end
 
 -- OnClientCommand handles commands from client.
--- TODO: Remove debug information.
 function MoonshineRecipesServer.OnClientCommand(module, command, character, args)
     if module ~= "Permanent" then
         return
     end
 
-    print("[MoonshineLoggerServer] MoonshineOnClientCommand: got relevant Permanent module")
-
     if command == "GetRecipes" then
-        print("[MoonshineLoggerServer] MoonshineOnClientCommand: got relevant GetRecipes command")
-
         local recipes = MoonshineRecipesServer.LoadRecipes()
 
         if isServer() then
-            print("[MoonshineLoggerServer] MoonshineOnClientCommand: send recipes to client")
             sendServerCommand(character, "Permanent", "GetRecipes", {recipes = recipes})
         else
-            print("[MoonshineLoggerServer] MoonshineOnClientCommand: regular return recipes")
             MoonshineRecipesClient.Recipes = recipes
         end
     end
@@ -335,8 +316,6 @@ end
 
 -- OnServerStarted handles OnServerStarted Lua event.
 function MoonshineRecipesServer.OnServerStarted()
-    print("[MoonshineLoggerServer] OnServerStarted: start loading recipes")
-
     local _ = MoonshineRecipesServer.LoadRecipes()
 end
 
