@@ -9,11 +9,13 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Added Build 42 support.
+- Added the ability to create your own recipes. Use moonshine-recipes.json in the Zomboid/Lua folder to add or edit recipes.
 - Added library for tests (WIP).
 
 ### Changed
 - Changed exclusive recipes spawn logic.
 - Changed brewing recipes logic. Simple items and fluid items is now in separate lists (b42).
+- Changed mod name from Permanent Effect Drinks to Moonshine Elixirs.
 
 ## [v0.11.0] - 2023-10-11
 ### Fixed

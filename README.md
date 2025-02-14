@@ -1,27 +1,30 @@
 # Moonshine Elixirs
 [![Steam Workshop](assets/steam.svg)](https://steamcommunity.com/sharedfiles/filedetails/?id=1866992334)
 
-Moonshine Elixirs (ex Permanent Effects Drinks) adds Moonshine Still and drinks with various effects to Project Zomboid game.  
+Moonshine Elixirs (ex Permanent Effects Drinks) adds Moonshine Still and drinks with various effects to Project Zomboid game. Fully compatible with build 41 in singleplayer and multiplayer. Also, the mod is compatible with the unstable version of build 42.  
 
 ## Drink list
-Code               ^  Name                ^ Effect
------------------- |----------------------| -------------
-HastyHerring       | Hasty Herring        | Permanently increases Sprinting by 1
-DoubleHastyHerring | Double Hasty Herring | Permanently increases Fitness by 1, Sprinting by 1
-GreedyHammer       | Greedy Hammer        | Permanently increases Blunt Accuracy by 1
-DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1, Blunt Accuracy by 1
-GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy by 1
-DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1
-StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1
-SlipperyFish       | Slippery Fish        | Permanently increases Nimble by 1
-SolidAdventurer    | Solid Adventurer     | Permanently increases Maintenance by 1
-SlenderDoe         | Slender Doe          | Sets the character's weight to 80 kg (fix broken ingame weight loss)
-NicotineOverdose   | Nicotine Overdose    | The best way to quit smoking
-GreedySalvation    | Greedy Salvation     | Cures Zombie Virus
+| Code               | Name                 | Effect                                                               |
+|--------------------|----------------------|----------------------------------------------------------------------|
+| HastyHerring       | Hasty Herring        | Permanently increases Sprinting by 1                                 |
+| DoubleHastyHerring | Double Hasty Herring | Permanently increases Fitness by 1, Sprinting by 1                   |
+| GreedyHammer       | Greedy Hammer        | Permanently increases Blunt Accuracy by 1                            |
+| DoubleGreedyHammer | Double Greedy Hammer | Permanently increases Strength by 1, Blunt Accuracy by 1             |
+| GreedyAxe          | Greedy Axe           | Permanently increases Blade Accuracy by 1                            |
+| DoubleGreedyAxe    | Double Greedy Axe    | Permanently increases Strength by 1, Blade Accuracy by 1             |
+| StrayBullet        | Stray Bullet         | Permanently increases Firearm Aiming by 1                            |
+| SlipperyFish       | Slippery Fish        | Permanently increases Nimble by 1                                    |
+| SolidAdventurer    | Solid Adventurer     | Permanently increases Maintenance by 1                               |
+| SlenderDoe         | Slender Doe          | Sets the character's weight to 80 kg (fix broken ingame weight loss) |
+| NicotineOverdose   | Nicotine Overdose    | The best way to quit smoking                                         |
+| GreedySalvation    | Greedy Salvation     | Cures Zombie Virus                                                   |
 
 ## How to Use
 1. You can spawn drinks as admin. Use /additem Permanent.Code to add drink to inventory.  
 2. Or configure recipes on sandbox settings and allow players to craft drinks.
+
+### How to create new recipes?
+After the first launch of the game with the Moonshine Elixirs mod, a moonshine-recipes.json (or moonshine-recipes-b42.json) file will be created in the ~/Zomboid/Lua folder. It contains all available recipes in json format. You can change any values in them and add new recipes. The file must contain two blocks: Vanilla for vanilla drink recipes that are already in the game and Exclusive for drink recipes from the Moonshine Elixirs mod.  
 
 ## Configuration
 In the sandbox settings there is a "Permanent Effects Drinks" tab where you can change the following settings:  
