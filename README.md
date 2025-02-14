@@ -58,10 +58,13 @@ the Steam workshop or create issue in [github repository](https://github.com/ope
 ## Thanks
 Thanks to everyone for the help and interest in this mod. You make this mod better.  
 
-* [Mixa100100100](https://steamcommunity.com/profiles/76561198028625569) - For the main mod logo
-* [Tasnex](https://steamcommunity.com/profiles/76561198080983473), [Kilenhad](http://steamcommunity.com/profiles/76561198096794210) - For previous pixel icons for bottles
 * [@imopssi](http://steamcommunity.com/profiles/76561198041180030) - For Moonshine still texture
 * [@Unfainthful](https://steamcommunity.com/profiles/76561198072217531) - For Moonshine still texture and 3d models for bottles
 
 ## License
 Apache License 2.0, see [LICENCE](LICENSE)  
+
+## TODO
+- Add skills to recipes
+- Add items weight to recipes (?)
+- Add items freshness to recipe checks

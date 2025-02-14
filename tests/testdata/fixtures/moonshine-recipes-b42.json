@@ -1,0 +1,108 @@
+{
+  "Exclusive": [
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": {
+        "Base.Milk": {
+          "amount": 1,
+          "name": "CowMilk"
+        },
+        "Base.Wine": {
+          "amount": 1,
+          "name": "Wine"
+        },
+        "Base.Wine2": {
+          "amount": 1,
+          "name": "Wine"
+        }
+      },
+      "name": "MakeSlenderDoe",
+      "result": "Permanent.SlenderDoe",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_SlenderDoe.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.GrapeLeaves": 4,
+        "Base.Pickles": 1,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": {
+        "Base.Whiskey": {
+          "amount": 1,
+          "name": "Whiskey"
+        }
+      },
+      "name": "MakeNicotineOverdose",
+      "result": "Permanent.NicotineOverdose",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_NicotineOverdose.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.CigaretteSingle": 100,
+        "Base.Coffee2": 5,
+        "Base.Sugar": 1,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    }
+  ],
+  "Vanilla": [
+    {
+      "additionalResults": [],
+      "cookingSkill": 3,
+      "disabled": false,
+      "name": "MakeWhiskey",
+      "result": "Base.WhiskeyFull",
+      "sound": "PourWaterIntoObject",
+      "texture": "Item_WhiskeyFull",
+      "time": 300,
+      "type": "Vanilla",
+      "usedItems": {
+        "Base.BottleCrafted": 1,
+        "Base.Corn": 1,
+        "Base.UnusableWood": 1,
+        "Base.Yeast": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 3,
+      "disabled": false,
+      "name": "MakeWine",
+      "result": "Base.Wine2",
+      "sound": "PourWaterIntoObject",
+      "texture": "Item_Wine2Full",
+      "time": 300,
+      "type": "Vanilla",
+      "usedItems": {
+        "Base.BottleCrafted": 1,
+        "Base.Grapes": 1,
+        "Base.Sugar": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 3,
+      "disabled": false,
+      "name": "MakeBeer",
+      "result": "Base.BeerBottle",
+      "sound": "PourWaterIntoObject",
+      "texture": "Item_BeerBottle",
+      "time": 300,
+      "type": "Vanilla",
+      "usedItems": {
+        "Base.BottleCrafted": 1,
+        "Base.Corn": 1,
+        "Base.Sugar": 1
+      }
+    }
+  ]
+}

@@ -127,8 +127,6 @@ description=
 description=[h1]Thanks[/h1]
 description=Thanks to everyone for the help and interest in this mod. You make this mod better.
 description=[list]
-description=    [*][url=https://steamcommunity.com/profiles/76561198028625569]@Mixa100100100[/url] - For the main mod logo
-description=    [*][url=https://steamcommunity.com/profiles/76561198080983473]@Tasnex[/url], [url=https://steamcommunity.com/profiles/76561198096794210]@Kilenhad[/url] - For previous pixel icons for bottles
 description=    [*][url=http://steamcommunity.com/profiles/76561198041180030]@imopssi[/url] - For Moonshine still texture
 description=    [*][url=http://steamcommunity.com/profiles/76561198072217531]@Unfainthful[/url] - For Moonshine still texture and 3d models for bottles
 description=

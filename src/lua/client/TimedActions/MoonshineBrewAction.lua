@@ -129,7 +129,11 @@ function MoonshineBrewAction:takeFluids()
     end
 
     for itemCode, fluid in pairs(self.recipe.fluids) do
-        local items = inventory:getAllType(itemCode)
+        if not fluid.code then
+            fluid.code = itemCode
+        end
+
+        local items = inventory:getAllType(fluid.code)
 
         if items:size() < 1 then
             return self:performNext()

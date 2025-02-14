@@ -64,7 +64,6 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                 additionalResults = {},
             },
         },
-
         Exclusive = {
             ["MakeSlenderDoe"] = {
                 name = "MakeSlenderDoe",
@@ -160,7 +159,6 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                     additionalResults = {},
                 },
             },
-
             Exclusive = {
                 {
                     name = "MakeSlenderDoe",
@@ -176,21 +174,9 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                         ["Base.Pickles"] = 1,
                     },
                     fluids = {
-                        ["Base.Wine"] = {
-                            code = "Base.Wine",
-                            name = "Wine",
-                            amount = 1,
-                        },
-                        ["Base.Wine2"] = {
-                            code = "Base.Wine2",
-                            name = "Wine",
-                            amount = 1,
-                        },
-                        ["Base.Milk"] = {
-                            code = "Base.Milk",
-                            name = "CowMilk",
-                            amount = 1,
-                        },
+                        ["Base.Wine"] = {name = "Wine", amount = 1},
+                        ["Base.Wine2"] = {name = "Wine", amount = 1},
+                        ["Base.Milk"] = {name = "CowMilk", amount = 1},
                     },
                     result = "Permanent.SlenderDoe",
                     additionalResults = {},
@@ -210,11 +196,7 @@ function MoonshineRecipesServer.GetDefaultRecipes()
                         ["Base.Coffee2"] = 5,
                     },
                     fluids = {
-                        ["Base.Whiskey"] = {
-                            code = "Base.Whiskey",
-                            name = "Whiskey",
-                            amount = 1,
-                        },
+                        ["Base.Whiskey"] = {name = "Whiskey", amount = 1},
                     },
                     result = "Permanent.NicotineOverdose",
                     additionalResults = {},
