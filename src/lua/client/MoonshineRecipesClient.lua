@@ -53,11 +53,7 @@ function MoonshineRecipesClient.IsEnoughFluids(character, recipe)
     local inventory = character:getInventory()
 
     if recipe.fluids then
-        for itemCode, fluid in pairs(recipe.fluids) do
-            if not fluid.code then
-                fluid.code = itemCode
-            end
-
+        for _, fluid in pairs(recipe.fluids) do
             local items = inventory:getAllType(fluid.code)
 
             if not items or items:size() < 1 then

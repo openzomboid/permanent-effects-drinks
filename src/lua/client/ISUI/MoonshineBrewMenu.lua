@@ -81,7 +81,7 @@ function MoonshineBrewMenu.CreateBrewTooltip(option, character, recipe)
     local tooltip = ISWorldObjectContextMenu.addToolTip();
     option.toolTip = tooltip;
     if recipe.type == "Vanilla" then
-        tooltip.footNote = getText("Tooltip_brew_footNote")
+        tooltip.footNote = getText("Tooltip_brew_FootNote")
     end
 
     local enabled = true;
@@ -95,8 +95,8 @@ function MoonshineBrewMenu.CreateBrewTooltip(option, character, recipe)
     end
 
     if recipe.fluids then
-        for itemCode, fluid in pairs(recipe.fluids) do
-            local enabledItem = MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
+        for _, fluid in pairs(recipe.fluids) do
+            local enabledItem = MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, fluid)
             if not enabledItem then
                 enabled = false
             end
@@ -148,11 +148,11 @@ function MoonshineBrewMenu.AddMaterialItemToBrewTooltip(tooltip, character, item
     return enabled
 end
 
-function MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCode, fluid)
+function MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, fluid)
     local inventory = character:getInventory()
     local enabled = true
 
-    local items = inventory:getAllType(itemCode)
+    local items = inventory:getAllType(fluid.code)
     local itemsCount = 0
 
     if items then
@@ -170,7 +170,7 @@ function MoonshineBrewMenu.AddFluidItemToBrewTooltip(tooltip, character, itemCod
         enabled = false;
     end
 
-    tooltip.description = tooltip.description .. color .. getItemNameFromFullType(itemCode) .. " " .. itemsCount .. "/" .. "1" .. " <LINE>";
+    tooltip.description = tooltip.description .. color .. getItemNameFromFullType(fluid.code) .. " " .. itemsCount .. "/" .. "1" .. " <LINE>";
 
     return enabled
 end
