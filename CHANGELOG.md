@@ -4,18 +4,21 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [v0.12.0] - 2025-02-17
 ### Fixed
 - Fixed changelog links.
 
 ### Added
 - Added Build 42 support.
+- Added recipes for all mod drinks except Greedy Salvation.
 - Added the ability to create your own recipes. Use moonshine-recipes.json in the Zomboid/Lua folder to add or edit recipes.
 - Added library for tests (WIP).
 
 ### Changed
 - Changed exclusive recipes spawn logic.
 - Changed brewing recipes logic. Simple items and fluid items is now in separate lists (b42).
-- Changed mod name from Permanent Effect Drinks to Moonshine Elixirs.
+- Changed mod name from Permanent Effects Drinks to Moonshine Elixirs.
 
 ## [v0.11.0] - 2023-10-11
 ### Fixed
@@ -110,7 +113,8 @@ All notable changes to this project will be documented in this file.
 Slender Doe. 
 - Added EN and RU translations.
 
-[Unreleased]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.11.0...HEAD
+[Unreleased]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.12.0...HEAD
+[v0.12.0]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.11.0...v0.12.0
 [v0.11.0]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.10.0...v0.11.0
 [v0.10.0]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.9.0...v0.10.0
 [v0.9.0]: https://github.com/openzomboid/permanent-effects-drinks/compare/v0.8.0...v0.9.0

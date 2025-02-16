@@ -4,29 +4,24 @@
       "additionalResults": [],
       "cookingSkill": 10,
       "disabled": false,
-      "fluids": {
-        "Base.Milk": {
-          "amount": 1,
-          "name": "CowMilk"
-        },
-        "Base.Wine": {
-          "amount": 1,
-          "name": "Wine"
-        },
-        "Base.Wine2": {
-          "amount": 1,
-          "name": "Wine"
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
         }
-      },
-      "name": "MakeSlenderDoe",
-      "result": "Permanent.SlenderDoe",
+      ],
+      "name": "MakeHastyHerring",
+      "result": "Permanent.HastyHerring",
       "sound": "PourWaterIntoObject",
-      "texture": "media/textures/Item_SlenderDoe.png",
+      "texture": "media/textures/Item_HastyHerring.png",
       "time": 300,
       "type": "Exclusive",
       "usedItems": {
-        "Base.GrapeLeaves": 4,
-        "Base.Pickles": 1,
+        "Base.Butter": 5,
+        "Base.Ginseng": 10,
+        "Base.HollyBerry": 5,
+        "Base.Pike": 5,
         "Permanent.ExclusiveRecipe": 1
       }
     },
@@ -34,12 +29,253 @@
       "additionalResults": [],
       "cookingSkill": 10,
       "disabled": false,
-      "fluids": {
-        "Base.Whiskey": {
-          "amount": 1,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
           "name": "Whiskey"
         }
-      },
+      ],
+      "name": "MakeDoubleHastyHerring",
+      "result": "Permanent.DoubleHastyHerring",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_DoubleHastyHerring.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Ginseng": 30,
+        "Base.Pike": 10,
+        "Base.Violets": 50,
+        "Base.Yeast": 10,
+        "Permanent.ExclusiveRecipe": 1,
+        "Permanent.HastyHerring": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeGreedyHammer",
+      "result": "Permanent.GreedyHammer",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_GreedyHammer.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Acorn": 5,
+        "Base.Base.Salt": 5,
+        "Base.Base.WildEggs": 10,
+        "Base.Sledgehammer": 1,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeDoubleGreedyHammer",
+      "result": "Permanent.DoubleGreedyHammer",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_DoubleGreedyHammer.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Acorn": 25,
+        "Base.Base.WildEggs": 20,
+        "Base.Violets": 50,
+        "Base.Yeast": 10,
+        "Permanent.ExclusiveRecipe": 1,
+        "Permanent.GreedyHammer": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeGreedyAxe",
+      "result": "Permanent.GreedyAxe",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_GreedyAxe.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Acorn": 10,
+        "Base.Axe": 1,
+        "Base.Base.WildEggs": 10,
+        "Base.Pepper": 5,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeDoubleGreedyAxe",
+      "result": "Permanent.DoubleGreedyAxe",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_DoubleGreedyAxe.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Acorn": 25,
+        "Base.Base.WildEggs": 20,
+        "Base.Violets": 50,
+        "Base.Yeast": 10,
+        "Permanent.ExclusiveRecipe": 1,
+        "Permanent.GreedyAxe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeStrayBullet",
+      "result": "Permanent.StrayBullet",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_StrayBullet.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.308Bullets": 20,
+        "Base.556Bullets": 20,
+        "Base.ShotgunShells": 20,
+        "Base.Worm": 100,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
+      "name": "MakeSlipperyFish",
+      "result": "Permanent.SlipperyFish",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_SlipperyFish.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Butter": 10,
+        "Base.OilOlive": 5,
+        "Base.OilVegetable": 5,
+        "Base.RemouladeFull": 5,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        },
+        {
+          "amount": 5,
+          "code": "Base.Wine2",
+          "name": "Wine"
+        }
+      ],
+      "name": "MakeSolidAdventurer",
+      "result": "Permanent.SolidAdventurer",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_SolidAdventurer.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.Bacon": 25,
+        "Base.Pencil": 10,
+        "Base.WildGarlic2": 25,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Wine2",
+          "name": "Wine"
+        },
+        {
+          "amount": 5,
+          "code": "Base.Wine",
+          "name": "Wine"
+        },
+        {
+          "amount": 5,
+          "code": "Base.Milk",
+          "name": "CowMilk"
+        }
+      ],
+      "name": "MakeSlenderDoe",
+      "result": "Permanent.SlenderDoe",
+      "sound": "PourWaterIntoObject",
+      "texture": "media/textures/Item_SlenderDoe.png",
+      "time": 300,
+      "type": "Exclusive",
+      "usedItems": {
+        "Base.GrapeLeaves": 25,
+        "Base.Pickles": 10,
+        "Permanent.ExclusiveRecipe": 1
+      }
+    },
+    {
+      "additionalResults": [],
+      "cookingSkill": 10,
+      "disabled": false,
+      "fluids": [
+        {
+          "amount": 5,
+          "code": "Base.Whiskey",
+          "name": "Whiskey"
+        }
+      ],
       "name": "MakeNicotineOverdose",
       "result": "Permanent.NicotineOverdose",
       "sound": "PourWaterIntoObject",
@@ -49,7 +285,8 @@
       "usedItems": {
         "Base.CigaretteSingle": 100,
         "Base.Coffee2": 5,
-        "Base.Sugar": 1,
+        "Base.LemonGrass": 25,
+        "Base.Sugar": 10,
         "Permanent.ExclusiveRecipe": 1
       }
     }
@@ -59,6 +296,13 @@
       "additionalResults": [],
       "cookingSkill": 3,
       "disabled": false,
+      "fluids": [
+        {
+          "amount": 1,
+          "code": "Base.Whiskey",
+          "name": "Water"
+        }
+      ],
       "name": "MakeWhiskey",
       "result": "Base.WhiskeyFull",
       "sound": "PourWaterIntoObject",
@@ -66,7 +310,6 @@
       "time": 300,
       "type": "Vanilla",
       "usedItems": {
-        "Base.BottleCrafted": 1,
         "Base.Corn": 1,
         "Base.UnusableWood": 1,
         "Base.Yeast": 1
@@ -76,6 +319,13 @@
       "additionalResults": [],
       "cookingSkill": 3,
       "disabled": false,
+      "fluids": [
+        {
+          "amount": 1,
+          "code": "Base.BottleCrafted",
+          "name": "Water"
+        }
+      ],
       "name": "MakeWine",
       "result": "Base.Wine2",
       "sound": "PourWaterIntoObject",
@@ -83,7 +333,6 @@
       "time": 300,
       "type": "Vanilla",
       "usedItems": {
-        "Base.BottleCrafted": 1,
         "Base.Grapes": 1,
         "Base.Sugar": 1
       }
@@ -92,6 +341,13 @@
       "additionalResults": [],
       "cookingSkill": 3,
       "disabled": false,
+      "fluids": [
+        {
+          "amount": 1,
+          "code": "Base.BeerEmpty",
+          "name": "Water"
+        }
+      ],
       "name": "MakeBeer",
       "result": "Base.BeerBottle",
       "sound": "PourWaterIntoObject",
@@ -99,7 +355,6 @@
       "time": 300,
       "type": "Vanilla",
       "usedItems": {
-        "Base.BottleCrafted": 1,
         "Base.Corn": 1,
         "Base.Sugar": 1
       }
