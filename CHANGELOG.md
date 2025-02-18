@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Fixed Russian tooltips.
 
 ## [v0.12.0] - 2025-02-17
 ### Fixed
